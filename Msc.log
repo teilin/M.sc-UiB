@@ -1,8 +1,8 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=latex 2011.7.3)  22 FEB 2012 14:58
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=latex 2011.7.3)  23 FEB 2012 11:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**Msc.tex
+**Msc
 (./Msc.tex
 LaTeX2e <2009/09/24>
 Babel <v3.8l> and hyphenation patterns for english, dumylang, nohyphenation, ge
@@ -108,24 +108,25 @@ File: uibugle.eps Graphic file (type eps)
 
 ] [2] (./Msc.toc
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 5.
+(Font)              <12> on input line 4.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 5.
+(Font)              <8> on input line 4.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 5.
+(Font)              <6> on input line 4.
 )
 \tf@toc=\write3
 \openout3 = `Msc.toc'.
 
- [3] [4] [5] (./content/background.tex)
-[6] [7] [8] [9] [10] (./Msc.aux) ) 
+ [3] [4] (./content/introduction.tex)
+(./content/background.tex) (./content/motivation.tex) [5] [6] [7] [8] [9]
+(./Msc.bbl) [10] (./Msc.aux) ) 
 Here is how much of TeX's memory you used:
- 949 strings out of 493634
- 11860 string characters out of 3143401
- 62966 words of memory out of 3000000
- 4272 multiletter control sequences out of 15000+200000
+ 964 strings out of 493634
+ 12064 string characters out of 3143401
+ 63966 words of memory out of 3000000
+ 4278 multiletter control sequences out of 15000+200000
  10523 words of font info for 36 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
- 32i,4n,23p,209b,253s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 32i,4n,23p,205b,253s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on Msc.dvi (10 pages, 3524 bytes).
+Output written on Msc.dvi (10 pages, 4740 bytes).
