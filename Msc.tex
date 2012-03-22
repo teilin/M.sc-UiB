@@ -1,8 +1,9 @@
 \documentclass[12pt,twoside,onecolumn]{article}
 \usepackage{a4}
-\usepackage[latin1]{inputenc}  % Use latin-1 character set for input
-\usepackage[english]{babel}    % Use English hyphenation
+\usepackage[utf8]{inputenc}  % Use latin-1 character set for input
+\usepackage[norsk]{babel}    % Use English hyphenation
 \usepackage[dvips]{epsfig}     % To include PostScript
+\usepackage[parfill]{parskip} % New line instead of tab for paragraphs
 
 \begin{document}
 
@@ -12,10 +13,10 @@
   %Tittel
   \vspace{5mm}          % Vertikalt mellomrom
   \LARGE
-  \textbf{Extended Schuduling in the oil industry} \\
+  \textbf{Automatisk planlegging i oljeindustrien} \\
   \Large
   \vspace{5mm}
-  \textbf{by} \\
+  \textbf{av} \\
   \vspace{5mm}
   %Forfatter
   \large
@@ -29,21 +30,21 @@
   %%%%%%%OLD%%%%%%{\bf{\textsl{CANDIDATUS SCIENTIARUM}}} \\
   {\bf{\textsl{MASTER OF SCIENCE}}} \\
   \vspace{5mm}
-  {\large \textsl {(Master i Programutviklingsteori)}}\\
+  {\large \textsl {Master's Thesis, Department of Informatics}}\\
   \vspace{10mm}
   \centerline{\includegraphics[width=4cm,height=4cm]{uibugle}}
   \vspace{5mm}
   % \textsl{Mechanics Division, Department of Mathematics} \\
   \textsl{Faculty of Mathematics and Natural Sciences} \\
-  \textsl{University of Bergen} \\
+  \textsl{Universitetet i Bergen} \\
   %Maaned, aar
   \vspace{10mm}
   \large
-  \textsl{June 2012} \\
+  \textsl{Juli 2012} \\
   \vspace{5mm}
   \normalsize
   % \textsl{Avdeling for mekanikk, Matematisk institutt} \\
-  \textsl{Det matematisk- naturvitenskapelige fakultet} \\
+  \textsl{Faculty of Mathematics and Natural Sciences} \\
   \textsl{Universitetet i Bergen} \\
 \end{center}
 % START OF DOCUMENT
@@ -62,14 +63,15 @@ TEST
 \newpage
 
 %Preface
-\section{Preface}
+\section{Forord}
 \newpage
 
 %Introduction
-\section{Introduction}
+\section{Introduksjon}
 \input{content/introduction}
 \input{content/background}
 \input{content/motivation}
+\input{content/problem}
 \newpage
 
 %New methods - find a title that describe the method
@@ -77,15 +79,15 @@ TEST
 \newpage
 
 %Experiments
-\section{Experiments}
+\section{Eksperimenter}
 \newpage
 
 %Future work
-\section{Future work}
+\section{Fremtidig arbeid}
 \newpage
 
 %Conclusion
-\section{Conclusion}
+\section{Konklusjon}
 \newpage
 
 %Appendix

@@ -1,13 +1,14 @@
-\select@language {english}
-\contentsline {section}{\numberline {1}Preface}{4}
-\contentsline {section}{\numberline {2}Introduction}{5}
-\contentsline {subsection}{\numberline {2.1}Background}{5}
-\contentsline {subsection}{\numberline {2.2}Aim of the project}{5}
-\contentsline {subsection}{\numberline {2.3}Motivation}{5}
-\contentsline {subsubsection}{\numberline {2.3.1}Brief on Constraint Programming}{5}
-\contentsline {subsubsection}{\numberline {2.3.2}Brief on ILOG}{5}
-\contentsline {subsubsection}{\numberline {2.3.3}Challenges with Constraint Programming}{5}
+\select@language {norsk}
+\contentsline {section}{\numberline {1}Forord}{4}
+\contentsline {section}{\numberline {2}Introduksjon}{5}
+\contentsline {subsection}{\numberline {2.1}Backgrund}{5}
+\contentsline {subsection}{\numberline {2.2}M\IeC {\r a}let med prosjeket}{5}
+\contentsline {subsection}{\numberline {2.3}Motivasjon}{5}
+\contentsline {subsubsection}{\numberline {2.3.1}Kort om begrensningsprogrammering}{5}
+\contentsline {subsubsection}{\numberline {2.3.2}Kort om ILOG}{5}
+\contentsline {subsubsection}{\numberline {2.3.3}Utfordringer med begrensingsprogrammering}{5}
+\contentsline {subsection}{\numberline {2.4}Problembeskrivelse}{5}
 \contentsline {section}{\numberline {3}NEW METHODS}{6}
-\contentsline {section}{\numberline {4}Experiments}{7}
-\contentsline {section}{\numberline {5}Future work}{8}
-\contentsline {section}{\numberline {6}Conclusion}{9}
+\contentsline {section}{\numberline {4}Eksperimenter}{7}
+\contentsline {section}{\numberline {5}Fremtidig arbeid}{8}
+\contentsline {section}{\numberline {6}Konklusjon}{9}
