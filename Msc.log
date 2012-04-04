@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=latex 2011.7.3)  22 MAR 2012 11:19
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=latex 2011.7.3)  4 APR 2012 21:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -298,24 +298,59 @@ File: dvips.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
 )
 (/usr/local/texlive/2011/texmf-dist/tex/latex/parskip/parskip.sty
 Package: parskip 2001/04/09 non-zero parskip adjustments
-) (./Msc.aux)
+)
+(/usr/local/texlive/2011/texmf-dist/tex/latex/nomencl/nomencl.sty
+Package: nomencl 2005/09/22 v4.2 Nomenclature package (LN)
+\nomlabelwidth=\dimen108
+\nom@tempdim=\dimen109
+\nomitemsep=\skip43
+)
+(/usr/local/texlive/2011/texmf-dist/tex/latex/draftwatermark/draftwatermark.sty
+Package: draftwatermark 2006/06/30 1.0 Put a gray textual watermark on document
+ pages
+(/usr/local/texlive/2011/texmf-dist/tex/latex/everypage/everypage.sty
+Package: everypage 2007/06/20 1.1 Hooks to run on every page
+)
+(/usr/local/texlive/2011/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
+
+(/usr/local/texlive/2011/texmf-dist/tex/latex/latexconfig/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: dvips.def on input line 130.
+
+(/usr/local/texlive/2011/texmf-dist/tex/latex/graphics/dvipsnam.def
+File: dvipsnam.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+))
+\sc@wm@fontsize=\skip44
+)
+\@nomenclaturefile=\write3
+\openout3 = `Msc.nlo'.
+
+
+Writing nomenclature file Msc.nlo
+(./Msc.aux)
 \openout1 = `Msc.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
 File: uibugle.eps Graphic file (type eps)
+ <uibugle.eps>
 
-<uibugle.eps> [1
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <142.26378> not available
+(Font)              size <24.88> substituted on input line 55.
+
+[1
 
 ] [2] (./Msc.toc
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -325,19 +360,39 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 4.
 )
-\tf@toc=\write3
-\openout3 = `Msc.toc'.
+\tf@toc=\write4
+\openout4 = `Msc.toc'.
 
- [3] [4] (./content/introduction.tex)
-(./content/background.tex) (./content/motivation.tex) (./content/problem.tex)
-[5] [6] [7] [8] [9] (./Msc.bbl) [10] (./Msc.aux) ) 
+ [3] [4] (./Msc.nls) [5] (./content/introduction.tex)
+(./content/background.tex
+Overfull \hbox (1.36111pt too wide) in paragraph at lines 2--3
+\OT1/cmr/m/n/12 Begrensningsprogrammering er en pro-gram-me-rings-pa-ra-dig-me 
+hvor re-la-sjo-ner mel-
+ []
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 4.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 4.
+) (./content/motivation.tex
+Overfull \hbox (1.36111pt too wide) in paragraph at lines 5--6
+\OT1/cmr/m/n/12 Begrensningsprogrammering er en pro-gram-me-rings-pa-ra-dig-me 
+hvor re-la-sjo-ner mel-
+ []
+
+[6]) (./content/problem.tex) [7] [8] [9] [10] [11] (./Msc.bbl) [12] (./Msc.aux)
+
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 117.38377pt have occurred.
+
+ ) 
 Here is how much of TeX's memory you used:
- 1181 strings out of 493634
- 14050 string characters out of 3143401
- 66371 words of memory out of 3000000
- 4480 multiletter control sequences out of 15000+200000
- 10523 words of font info for 36 fonts, out of 3000000 for 9000
+ 1508 strings out of 493634
+ 19272 string characters out of 3143401
+ 70047 words of memory out of 3000000
+ 4782 multiletter control sequences out of 15000+200000
+ 11169 words of font info for 38 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
- 32i,4n,24p,261b,249s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 32i,10n,28p,743b,258s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on Msc.dvi (10 pages, 5232 bytes).
+Output written on Msc.dvi (12 pages, 9536 bytes).

@@ -1,9 +1,13 @@
-\documentclass[12pt,twoside,onecolumn]{article}
+\documentclass[12pt,twoside,norsk,onecolumn]{article}
 \usepackage{a4}
 \usepackage[utf8]{inputenc}  % Use latin-1 character set for input
 \usepackage[norsk]{babel}    % Use English hyphenation
 \usepackage[dvips]{epsfig}     % To include PostScript
 \usepackage[parfill]{parskip} % New line instead of tab for paragraphs
+\usepackage{nomencl}
+\usepackage[firstpage]{draftwatermark}
+
+\makenomenclature
 
 \begin{document}
 
@@ -48,7 +52,6 @@
   \textsl{Universitetet i Bergen} \\
 \end{center}
 % START OF DOCUMENT
-
 \newpage
 \vspace*{\fill}
 %Abstract
@@ -64,6 +67,11 @@ TEST
 
 %Preface
 \section{Forord}
+\newpage
+
+\begin{center}
+\printnomenclature[2.5 cm]
+\end{center}
 \newpage
 
 %Introduction

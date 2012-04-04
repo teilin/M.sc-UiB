@@ -3,46 +3,44 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: Msc.aux
 The style file: plain.bst
 Database file #1: ref.bib
-Warning--empty journal in tvedtbezem
 You've used 1 entry,
             2118 wiz_defined-function locations,
-            501 strings with 4087 characters,
-and the built_in function-call counts, 259 in all, are:
-= -- 22
-> -- 13
+            502 strings with 4121 characters,
+and the built_in function-call counts, 224 in all, are:
+= -- 20
+> -- 7
 < -- 0
-+ -- 5
-- -- 4
-* -- 14
-:= -- 53
++ -- 3
+- -- 2
+* -- 10
+:= -- 48
 add.period$ -- 3
 call.type$ -- 1
-change.case$ -- 5
+change.case$ -- 4
 chr.to.int$ -- 0
-cite$ -- 2
+cite$ -- 1
 duplicate$ -- 10
 empty$ -- 18
-format.name$ -- 4
-if$ -- 48
+format.name$ -- 2
+if$ -- 42
 int.to.chr$ -- 0
 int.to.str$ -- 1
 missing$ -- 1
 newline$ -- 8
 num.names$ -- 2
-pop$ -- 7
+pop$ -- 4
 preamble$ -- 1
-purify$ -- 4
+purify$ -- 3
 quote$ -- 0
-skip$ -- 8
+skip$ -- 7
 stack$ -- 0
 substring$ -- 5
-swap$ -- 0
+swap$ -- 1
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 4
-warning$ -- 1
+warning$ -- 0
 while$ -- 2
 width$ -- 2
-write$ -- 11
-(There was 1 warning)
+write$ -- 12

@@ -1,14 +1,14 @@
 \select@language {norsk}
 \contentsline {section}{\numberline {1}Forord}{4}
-\contentsline {section}{\numberline {2}Introduksjon}{5}
-\contentsline {subsection}{\numberline {2.1}Backgrund}{5}
-\contentsline {subsection}{\numberline {2.2}M\IeC {\r a}let med prosjeket}{5}
-\contentsline {subsection}{\numberline {2.3}Motivasjon}{5}
-\contentsline {subsubsection}{\numberline {2.3.1}Kort om begrensningsprogrammering}{5}
-\contentsline {subsubsection}{\numberline {2.3.2}Kort om ILOG}{5}
-\contentsline {subsubsection}{\numberline {2.3.3}Utfordringer med begrensingsprogrammering}{5}
-\contentsline {subsection}{\numberline {2.4}Problembeskrivelse}{5}
-\contentsline {section}{\numberline {3}NEW METHODS}{6}
-\contentsline {section}{\numberline {4}Eksperimenter}{7}
-\contentsline {section}{\numberline {5}Fremtidig arbeid}{8}
-\contentsline {section}{\numberline {6}Konklusjon}{9}
+\contentsline {section}{\numberline {2}Introduksjon}{6}
+\contentsline {subsection}{\numberline {2.1}Bakgrunn}{6}
+\contentsline {subsection}{\numberline {2.2}M\IeC {\r a}let med prosjeket}{6}
+\contentsline {subsection}{\numberline {2.3}Motivasjon}{6}
+\contentsline {subsubsection}{\numberline {2.3.1}Kort om begrensningsprogrammering}{6}
+\contentsline {subsubsection}{\numberline {2.3.2}Kort om ILOG}{7}
+\contentsline {subsubsection}{\numberline {2.3.3}Utfordringer med begrensingsprogrammering}{7}
+\contentsline {subsection}{\numberline {2.4}Problembeskrivelse}{7}
+\contentsline {section}{\numberline {3}NEW METHODS}{8}
+\contentsline {section}{\numberline {4}Eksperimenter}{9}
+\contentsline {section}{\numberline {5}Fremtidig arbeid}{10}
+\contentsline {section}{\numberline {6}Konklusjon}{11}

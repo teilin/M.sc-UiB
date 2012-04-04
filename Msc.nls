@@ -1,0 +1,9 @@
+\begin{thenomenclature} 
+
+ \nomgroup{A}
+
+  \item [{CP}]\begingroup Constraint programming\nomeqref {0}
+		\nompageref{6}
+  \item [{ILOG}]\begingroup IBM biblotek\nomeqref {0}\nompageref{6}
+
+\end{thenomenclature}
