@@ -1,0 +1,14 @@
+\subsection{Bakgrunn}
+Begrensningsprogrammering er en programmeringsparadigme hvor relasjoner mellom variable er gitt i form av begrensinger.
+
+For å gjennomføre prosjektet er det brukt et biblotek til programmeringsspråket C++. Bibloteket er produsert av IBM og er et annerkjent verktøy til å løse problemer med begrensningsprogrammering. Bibloteket heter ILOG\nomenclature{ILOG}{IBM biblotek} og det finnes to varianter av bibloteket, ILOG CP\nomenclature{CP}{Constraint programming} og ILOG CPlex, men i denne oppgaven er det brukt CP\footnote{Constraint programming som her er oversatt til begrensningsprogrammering}. For å kunne løse problemer med ILOG CP, må det lages en modell hvor aktiviteter og ressurser blir definert med begrensninger. Deretter lages det en solver med ILOG CP, hvor løsningsstrategien blir definert.
+
+I dette prosjektet er det blitt vidreutviklet på et program som er utviklet av Bård Henning Tvedt. Programmet som prosjektet er bygget på er begrenset i den grad det ikke var tatt med så mange ressurser og begrensinger, så søketreet var stort og ILOG brukle lang tid på å finne en løsning om ILOG i det hele tatt fant en løsning.
+
+\subsection{Målet med prosjeket}
+Målet med prosjektet er å finne ut om det å legge til flere begrensinger til benchmarksettene vil gjøre søketreet mindret og føre til at ILOG CP finner flere og bedre løsninger.
+
+\begin{itemize}
+\item Utvidet eksisterende løsning med flere ressurser og begrensinger.
+\item Analysere hvordan løsningene blir med de ekstra ressursene.
+\end{itemize}
