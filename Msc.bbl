@@ -1,3 +1,18 @@
-\begin{thebibliography}{}
+\begin{thebibliography}{1}
+
+\bibitem{cpwikipedia}
+Wikipedia.
+\newblock \url{http://en.wikipedia.org/wiki/Constraint_programming}.
+
+\bibitem{cpsolverilog}
+IBM.
+\newblock {\em IBM ILOG Solver V6.8}.
+\newblock IBM.
+
+\bibitem{Pape94implementationof}
+Claude~Le Pape.
+\newblock Implementation of resource constraints in ilog schedule: A library
+  for the development of constraint-based scheduling systems.
+\newblock {\em Intelligent Systems Engineering}, 3:55--66, 1994.
 
 \end{thebibliography}

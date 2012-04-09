@@ -1,4 +1,10 @@
 \subsection{Problembeskrivelse}
-Hvordan påvirker ekstra ressureser og begrensinger løsningene i ILOG?
+Problemstillingen tar utgangspunkt i den opprinnelige problemstillingen til \bht, men er utvidet med ekstra ressurser  på beligenhet. Hvert mannskap avgir en varme og hver lokasjon har en gitt varmekapasitet. Summen av varme kan ikke overstige varmekapasiteten.
+\[ \forall t,l: \sum\{c_{heat}(Crew_j) \mid t \in [ v_{sta}(Act_{i}), w_{end}(Act_{i})) \wedge c_{crew}(Act_{i}) = Crew_{j} \]
+\[ \wedge c_{loc}(Act_{i}) = Loc_{l} ] \} \le c_{heatcap}(Loc_{l}) \]
 
-Tester paragraf.
+I tillegg kan en beliggenhet ha begrensninger på hvor mange av et gitt mannskap, som kan arbeide på en lokasjon samtidig.
+\[ \forall t,l: \sharp \{ Crew_{j} \mid  t \in [v_{sta}(Act_{i}), w_{end}(Act_{i})) \wedge c_{crew}(Act_{i} = Crew_{j})] \]
+\[ \wedge c_{crewlimit}(Loc_{l}) = Crew_{j} \} \le c_{crewcapacity}(Loc_{l}) \]
+
+Antallet beligenheter er redusert fra 25 i de opprinnelige problemene til 10 i de modifiserte. Med aktiviteter spredt utover 25 beligenheter, så ville dte vært så få aktiviteter på hver beligenhet at varmekapasiteten til en lokasjon aldri ville blitt oversteget. Det er ikke sjekket om en reduksjon til 10 beligenheter er tilstrekkelig.

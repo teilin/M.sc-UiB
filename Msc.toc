@@ -3,12 +3,13 @@
 \contentsline {section}{\numberline {2}Introduksjon}{6}
 \contentsline {subsection}{\numberline {2.1}Bakgrunn}{6}
 \contentsline {subsection}{\numberline {2.2}M\IeC {\r a}let med prosjektet}{6}
-\contentsline {subsection}{\numberline {2.3}Motivasjon}{6}
+\contentsline {subsection}{\numberline {2.3}Motivasjon}{7}
 \contentsline {subsubsection}{\numberline {2.3.1}Kort om begrensningsprogrammering}{7}
 \contentsline {subsubsection}{\numberline {2.3.2}Kort om ILOG}{7}
 \contentsline {subsubsection}{\numberline {2.3.3}Utfordringer med begrensingsprogrammering}{7}
-\contentsline {subsection}{\numberline {2.4}Problembeskrivelse}{7}
-\contentsline {section}{\numberline {3}NEW METHODS}{8}
-\contentsline {section}{\numberline {4}Eksperimenter}{9}
-\contentsline {section}{\numberline {5}Fremtidig arbeid}{10}
-\contentsline {section}{\numberline {6}Konklusjon}{11}
+\contentsline {subsubsection}{\numberline {2.3.4}Begrensingsprogrammeringsverkt\IeC {\o }y idag}{7}
+\contentsline {subsection}{\numberline {2.4}Problembeskrivelse}{8}
+\contentsline {section}{\numberline {3}NEW METHODS}{9}
+\contentsline {section}{\numberline {4}Eksperimenter}{10}
+\contentsline {section}{\numberline {5}Fremtidig arbeid}{11}
+\contentsline {section}{\numberline {6}Konklusjon}{12}
