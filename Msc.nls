@@ -2,7 +2,13 @@
 
  \nomgroup{A}
 
+  \item [{Concert}]\begingroup IBM ILOG Concert Technology\nomeqref {0}
+		\nompageref{10}
   \item [{CP}]\begingroup Constraint programming\nomeqref {0}
 		\nompageref{6}
+  \item [{Scheduler}]\begingroup IBM ILOG Scheduler\nomeqref {0}
+		\nompageref{11}
+  \item [{Solver}]\begingroup IBM ILOG Solver\nomeqref {0}
+		\nompageref{10}
 
 \end{thenomenclature}

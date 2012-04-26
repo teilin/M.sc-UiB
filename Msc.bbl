@@ -4,10 +4,20 @@
 Wikipedia.
 \newblock \url{http://en.wikipedia.org/wiki/Constraint_programming}.
 
+\bibitem{cpschedulerilog}
+IBM.
+\newblock {\em IBM ILOG Scheduler V6.8}.
+\newblock IBM.
+
 \bibitem{cpsolverilog}
 IBM.
 \newblock {\em IBM ILOG Solver V6.8}.
 \newblock IBM.
+
+\bibitem{cpconcertilog}
+ILOG.
+\newblock {\em ILOG Concert Technology 2.0 Reference Manual}.
+\newblock ILOG.
 
 \bibitem{Pape94implementationof}
 Claude~Le Pape.

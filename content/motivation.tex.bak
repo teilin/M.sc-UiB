@@ -1,14 +1,18 @@
 \subsection{Motivasjon}
-Motivation
+Forskningen er motivert av praktisk erfaring at planleggingsproblemer er veldig aktuelt i bedrifter og i sammfunnet idag. Det er ikke bare i oljeindustrien som jeg fokuserer oppgaven på hvor planleggingsløsninger er aktuelt, men generelt bemmaningsproblematikken som alle personalavdelinger sitter med i det daglige. I det hverdagen er det også mange planleggingsproblemer fra buss- og togtabeller til personlige gjøremål med å få tid til alt man skal ha tid til.
+
+Planlegging i oljeindustrien er er viktig for å på en mest mulig effektiv måte benytte seg av de ressursene som er tilgjengelig til enhver tid, samtidig som visse begrensinger blir fastsatt med tanke på sikkerheten. Det er mye penger involvert i olje- og gassindustrien og det å utføre aktiviteter på en ineffektiv måte kan koste selskapene veldig mye penger. Det er derfor viktig å ha gode løsninger for å ta seg av planleggingen av aktivitetene og ressursene.
 
 \subsubsection{Kort om begrensningsprogrammering}
 nn
 
 \subsubsection{Kort om ILOG}
-ILOG
+ILOG\cite{cpsolverilog}
 
 \subsubsection{Utfordringer med begrensingsprogrammering}
 Challenges
 
-\subsection{Begrensingsprogrammeringsverktøy idag}
-Verktøy
+\subsubsection{Begrensingsprogrammeringsverktøy idag}
+Det finnes idag flere forskjellige verktøy for begrensningsprogrammering, både i form av egne programmeringsspråk som er skreddersydd for begrensningsprogrammering og bibloteker til godt kjente programmeringsspråk som Java\footnote{Java} og C++\footnote{C++}. I begge disse kategoriene så finnes det løsninger som er kommersielle og med åpen kildekode. Noen eksempler på egne programmeringsspråk for begrensningsprogrammering er Prolog og Comet\footnote{Comet}. Sistnevnte er et programmeringspråk for begrensingsprogrammering med lokalt søk og er en kommersiell løsning. Eksempler på begrensningsprogrammeringsbiblotek så er det IBM ILOG CP.
+
+Dette er ikke løsninger som passer uansett hva slags del innenfor begrensningsprogrammering du skal gjøre. Logisk programløsning eller planleggingsløsning må tas til med når det skal bestemmes hvilke verktøy som brukes.
