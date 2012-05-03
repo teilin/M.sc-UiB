@@ -2,6 +2,8 @@
 
  \nomgroup{A}
 
+  \item [{AI}]\begingroup Kunstig intelligens (engelsk: artificial inteligence)\nomeqref {0}
+		\nompageref{6}
   \item [{Concert}]\begingroup IBM ILOG Concert Technology\nomeqref {0}
 		\nompageref{10}
   \item [{CP}]\begingroup Constraint programming\nomeqref {0}

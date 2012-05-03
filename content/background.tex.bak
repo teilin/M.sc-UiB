@@ -1,22 +1,25 @@
 \subsection{Bakgrunn}
-Begrensningsprogrammering er en programmeringsparadigme hvor relasjoner mellom variable blir satt i form av begrensninger. Begrensninger er en form for deklarativ programmering, som skiller seg fra den mer vanlige imperativ programmeringsspråk\footnote{Imperativ progrgrammeringspråk har sekvenser med som blir utført.} ved at løsningen blir til ved å tilfredstille begrensningene. Det er forskjellige områder i begrensningsprogrammering som "Consreaint Satisfaction problems" og planleggingsproblemer. Det mest kjente planleggingsproblemet er "Job Shop Scheduling".\cite{cpwikipedia}
-
-I dette prosjektet, verktøyene som er brukt for å utføre eksperimenter på emnet er ILOG Schuduler som er endel av IBM sitt ILOG CP\nomenclature{CP}{Constraint programming}. ILOG Scheduler er et C++ biblotek som gjør det mulig å definere planleggingsbegrensninger i form av ressurser og aktiviteter. Planlegging er en prosess ved å tildele ressurser til aktiviteter og tildele en tid til aktivitene så det ikke er noen konflikt med begrensingene.\cite{Pape94implementationof}
+I dette prosjektet, verktøyene som er brukt for å utføre eksperimenter på emnet er ILOG Schuduler som er endel av IBM sitt ILOG CP\nomenclature{CP}{Constraint programming}. ILOG Scheduler er et C++ bibliotek som gjør det mulig å definere planleggingsbegrensninger i form av ressurser og aktiviteter. Planlegging er en prosess ved å tildele ressurser til aktiviteter og tildele en tid til aktiviteter så det ikke er noen konflikt med begrensingene.\cite{Pape94implementationof} Automatisk planlegging er endel av det som kalles kunstig inteligens (AI) \nomenclature{AI}{Kunstig inteligens (engelsk: artificial inteligence)}.
 
 Det overordnede målet med denne avhandlingen er å utvide ILOG Scheduler løsningen til \bht med flere resursser for å sjekke om det å legge til flere ressurser vil gi bedre og flere løsninger enn de opprinnelige løsningene til \bht.
+
+\subsubsection{Relatert arbeid}
+\colorbox{red}{Skrive om tidligere gjort forskning på området.}
 
 \subsection{Målet med prosjektet}
 Målet med prosjektet er todelt, og består i å vurdere den modifiserte problemstillingen mot den opprinnelige i forhold til:
 \begin{itemize}
+\item minimere \textit{makespan}
 \item antall begrensninger
 \item implementasjon i \ilog
 \end{itemize}
 
-I den opprinnelige problemstillingen vil noen aktiviteter være relativt lite begrenset. Dette gjør at løsniingsrommet er stort, og traverseringen opp og ned i søketreet tar lang tid.
-
-På tross av et antatt stort løsningsrom så sliter den \ilog implementerte løsningsstrategien med å finne løsninger i mange av probleminstansene.
+I den opprinnelige problemstillingen vil noen aktiviteter være relativt lite begrenset. Dette gjør at løsningsrommet er stort, og traverseringen opp og ned i søketreet tar lang tid. På tross av et antatt stort løsningsrom så sliter den \ilog implementerte løsningsstrategien med å finne løsninger i mange av probleminstansene.
 
 \begin{itemize}
 \item Vil flere begrensninger gjøre det lettere å finne en løsning?
-\item Er det noe spesielt med akkurat disse instansene eller er det implementasjonen i \ilog som er årsaken?
+\item Er det noe spesielt med akkurat disse instansene eller er det implementasjon i \ilog som er årsaken?
 \end{itemize}
+
+\subsection{Beskrivelse av kommende kapitler}
+I kapitellet om metode, vil fremgangsmåten for prosjektet bli lagt frem og hvordan løsningene har blitt evaluert. I kapitellet om eksperimenteringen vil det legges frem løsninger ved forskjellige strategier og med og uten ressursene. Her vil også løsningene bli kommentert og tilslutt vil det bli sammenfattet en konklusjon over det arbeidet som er gjort.

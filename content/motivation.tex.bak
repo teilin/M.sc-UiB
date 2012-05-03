@@ -1,18 +1,26 @@
 \subsection{Motivasjon}
-Forskningen er motivert av praktisk erfaring at planleggingsproblemer er veldig aktuelt i bedrifter og i sammfunnet idag. Det er ikke bare i oljeindustrien som jeg fokuserer oppgaven på hvor planleggingsløsninger er aktuelt, men generelt bemmaningsproblematikken som alle personalavdelinger sitter med i det daglige. I det hverdagen er det også mange planleggingsproblemer fra buss- og togtabeller til personlige gjøremål med å få tid til alt man skal ha tid til.
+Forskningen er motivert av praktisk erfaring at planleggingsproblemer er veldig aktuelt i bedrifter og i samfunnet idag. Det er ikke bare i oljeindustrien som jeg fokuserer oppgaven på hvor planleggingsløsninger er aktuelt, men generelt bemmaningsproblematikken som alle personalavdelinger sitter med i det daglige. I hverdagen er det også mange planleggingsproblemer fra buss- og togtabeller til personlige gjøremål med å få tid til alt man skal ha tid til.
 
-Planlegging i oljeindustrien er er viktig for å på en mest mulig effektiv måte benytte seg av de ressursene som er tilgjengelig til enhver tid, samtidig som visse begrensinger blir fastsatt med tanke på sikkerheten. Det er mye penger involvert i olje- og gassindustrien og det å utføre aktiviteter på en ineffektiv måte kan koste selskapene veldig mye penger. Det er derfor viktig å ha gode løsninger for å ta seg av planleggingen av aktivitetene og ressursene.
+Planlegging i oljeindustrien er viktig for å på en mest mulig effektiv måte benytte seg av de ressursene som er tilgjengelig til enhver tid, samtidig som visse begrensinger blir fastsatt med tanke på sikkerheten. Det er mye penger involvert i olje- og gassindustrien og det å utføre aktiviteter på en ineffektiv måte kan koste selskapene veldig mye penger. Det er derfor viktig å ha gode løsninger for å ta seg av planleggingen av aktivitetene og ressursene. Operatører innen olje- og gassektorens mål er å minimere antallet farlige situasjoner, minimere miljømessige fotspor og maksimere produksjon. Det å imøtekomme disse kompliserte og utfordrende målene, kan det i enkelte situasjoner oppstå konflikter.
+
+Spesifikke planleggingssituasjoner har forskjellige forutsettninger i forhold til om plattformen er offshore eller på land. Offshore kan mange aktiviteter bli utført på et relativt lite lukket område, mens platformer på land kan ha mange aktiviteter utført på et relativt stort område. Selvom forutsettningene for disse to typene plattformer er ganske forskjellige, så har de flere likhetstrekk som:
+\begin{itemize}
+\item størrelse - antall aktiviteter kan være noen hunder til titusen, for å gjøre planleggingen interaktiv.
+\item kompleksitet - et stort antall av begrensningene som skal bli gjennomført, gjør en mulig planlegging vanskelig.
+\item dynamikk - avhengigheter som vær, logistikk og utstyr som feiler kan avbryte planleggingen.
+\end{itemize}
 
 \subsubsection{Kort om begrensningsprogrammering}
-nn
-
-\subsubsection{Kort om ILOG}
-ILOG\cite{cpsolverilog}
+Begrensningsprogrammering er en programmeringsparadigme hvor relasjoner mellom variable blir satt i form av begrensninger. Begrensninger er en form for deklarativ programmering, som skiller seg fra den mer vanlige imperativ programmeringsspråk\footnote{Imperativ progrgrammeringspråk har sekvenser med som blir utført.} ved at løsningen blir til ved å tilfredsstille begrensningene. Det er forskjellige områder i begrensningsprogrammering som "Consreaint Satisfaction problems" og planleggingsproblemer. Det mest kjente planleggingsproblemet er "Job Shop Scheduling".\cite{cpwikipedia}
 
 \subsubsection{Utfordringer med begrensingsprogrammering}
-Challenges
+Utfordringene ved begrensingsprogrammering er å bygge opp en modell 
 
 \subsubsection{Begrensingsprogrammeringsverktøy idag}
 Det finnes idag flere forskjellige verktøy for begrensningsprogrammering, både i form av egne programmeringsspråk som er skreddersydd for begrensningsprogrammering og bibloteker til godt kjente programmeringsspråk som Java\footnote{Java} og C++\footnote{C++}. I begge disse kategoriene så finnes det løsninger som er kommersielle og med åpen kildekode. Noen eksempler på egne programmeringsspråk for begrensningsprogrammering er Prolog og Comet\footnote{Comet}. Sistnevnte er et programmeringspråk for begrensingsprogrammering med lokalt søk og er en kommersiell løsning. Eksempler på begrensningsprogrammeringsbiblotek så er det IBM ILOG CP.
 
-Dette er ikke løsninger som passer uansett hva slags del innenfor begrensningsprogrammering du skal gjøre. Logisk programløsning eller planleggingsløsning må tas til med når det skal bestemmes hvilke verktøy som brukes.
+Det er ingen løsninger som passer uansett hva slags del innenfor begrensningsprogrammering du skal gjøre. Logisk programløsning eller planleggingsløsning må tas med når det skal bestemmes hvilke verktøy som brukes.
+
+%\subsubsection{Forbedringerspotensiale i verktøyene}
+
+%\subsubsection{Relevans for forskingen}

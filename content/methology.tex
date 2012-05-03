@@ -1,41 +1,51 @@
-I denne delen, verktøy og teknologier som er brukt i prosjektet blir beskrevet. I tilegg vil forskingsmetoder og som er brukt og beskrivelse av strategiene for evaluering av løsningene.
+I denne delen, blir verktøy og teknologier som er brukt i prosjektet beskrevet. I tilegg vil forskingsmetoder som er brukt bli beskrevet og beskrivelse av strategiene for evaluering av løsningene.
 
 \subsection{Verktøy brukt i prosjektet}
 De følgende verktøyene og teknologiene utviklet av IBM var brukt for å gjennomføre formålet med prosjektet.
 
 \subsection{Kort om IBM ILOG Concert Technology}\nomenclature{Concert}{IBM ILOG Concert Technology}
-Concert er et C++ biblotek med funksjoner som gir mulighet til å designe modeller av problemer innen matematisk programmering og innen begrensningsprogrammering. Det er ikke noe eget programmeringsspråk, som da gir muligheter til å bruke datastrukturer og kontrollstrukturer som allerede finnes i C++. Igjen så gir det gode muligheter til å integrere Concert i allerede eksisterende løsninger og systemer. Alle navn på typer, klasser og funksjoner har prefiksen Ilo.
+Concert er et C++ bibliotek med funksjoner som gir mulighet til å designe modeller av problemer innen matematisk programmering og innen begrensningsprogrammering. Det er ikke noe eget programmeringsspråk, som da gir muligheter til å bruke datastrukturer og kontrollstrukturer som allerede finnes i C++. Igjen så gir det gode muligheter til å integrere Concert i allerede eksisterende løsninger og systemer. Alle navn på typer, klasser og funksjoner har prefiksen Ilo.
 
 De enkleste klassene (eks. IloNumVar og IloConstraint) i Concert har også tilhørende en klasse med matriser hvor matrisen er instanser av den enkle klassen. Et eksempel på det er IloConstraintArray er instanser av klassen IloConstraint.\cite{cpconcertilog}
 
 Concert gjør det mulig å lage en modell av optimaliseringsproblemer uavhengig av algoritmene som er brukt for å løse det. Det tilbyr en utvidelse  modelerings lag tatt fra flere forskjellige algoritmer som er klare til å brukes ut av boksen. Dette modeleringslaget gjør det mulig å endre modellen uten å skrive om applikasjonen.\cite{cpsolverilog}
 
 \subsection{Kort om IBM ILOG Solver}\nomenclature{Solver}{IBM ILOG Solver}
-IBM ILOG Solver er et C++ biblotek utviklet for å løse komplekse kombinatoriske problemer innen forskjellige områder. Eksempler på anvendelsesområder kan være produksjonsplanlegging, resurs tildeling, timeplanplanlegging, personellplanlegging, osv. Solver er basert på Concert. Som i Concert, så er heller ikke Solver noe eget programmeringssrpåk, som gir mulighetene til å bruke egenskapene til C++.
+IBM ILOG Solver er et C++ bibliotek utviklet for å løse komplekse kombinatoriske problemer innen forskjellige områder. Eksempler på anvendelsesområder kan være produksjonsplanlegging, resurs tildeling, timeplanplanlegging, personellplanlegging, osv. Solver er basert på Concert. Som i Concert, så er heller ikke Solver noe eget programmeringsspråk, som gir mulighetene til å bruke egenskapene til C++.
 
-Det å gjøre det enkelest mulig å omgjøre applikasjoner fra platformer til platformer, Solver og Concert utelukkes karraktertrekk som skiller seg fra forskjellige systemer. Av den grunn, anbefales det å bytte ut de enkle typene i C++ med ILOG sine egne:
+Det å gjøre det enkelest mulig å omgjøre applikasjoner fra plattformer til plattformer, Solver og Concert utelukkes karaktertrekk som skiller seg fra forskjellige systemer. Av den grunn, anbefales det å bytte ut de enkle typene i C++ med ILOG sine egne:
 \begin{itemize}
 \item IloInt som er signed long integers
 \item IloAny som er pekere
-\item IloNum som er double persisjon floating-point verdier
+\item IloNum som er double presisjon floating-point verdier
 \item IloBool som er boolean verdier: IloTrue og IloFalse
 \end{itemize}
 Solver bruker begrensningsprogrammering for å finne løsninger til optimaliseringsproblemer. Det å finne løsninger med Solver er basert på tre steg: beskrive, modell og løse. De tre stegene nærmere forklart følger:
 
 Først må problemet beskrives i programmeringsspråket som brukes.
 
-Det andre steget er å bruke Concert klassene for å opprette en modell av problemet. Modellen blir da satt sammen av besluttningsvariable og begrensninger. Besluttningsvariablene er den ukjente informasjonen i problemet som skal løses. Alle besluttingsvariablene har et domene med mulige verdier. Begrensningene setter grensene for kombinasjonene av verdier for de besluttningsvariablene.
+Det andre steget er å bruke Concert klassene for å opprette en modell av problemet. Modellen blir da satt sammen av besluttningsvariable og begrensninger. Besluttningsvariablene er den ukjente informasjonen i problemet som skal løses. Alle besluttingsvariablene har et domene med mulige verdier. Begrensningene setter grensene for kombinasjonene av verdier for de besluttingsvariablene.
 
-Det siste steget er å bruke Solver for å løse problemet. Det inneholder å finne verdier for alle besluttningsvariablene samt ikke bryte noen av de definerte begrensningene og dermed enten maksimere eller minimere målet, hvis det er et mål inkludert i modellen. Solver ser etter løsninger i et søkeområdet. Søkeområdet er alle mulige kobinasjoner av verdier.\cite{cpsolverilog}
+Det siste steget er å bruke Solver for å løse problemet. Det inneholder å finne verdier for alle besluttingsvariablene samt ikke bryte noen av de definerte begrensningene og dermed enten maksimere eller minimere målet, hvis det er et mål inkludert i modellen. Solver ser etter løsninger i et søkeområdet. Søkeområdet er alle mulige kombinasjoners av verdier.\cite{cpsolverilog}
 
 \subsection{Kort om IBM ILOG Scheduler}\nomenclature{Scheduler}{IBM ILOG Scheduler}
-IBM ILOG Scheduler hjelper med å utvikle problemløsningsapplikasjoner som krever behandling av ressurser fordelt på tid. Scheduler er et C++ biblotek som baserer seg på Solver, og som Solver, så gir det alle mulighetene med objektorientering og begrensningsprogrammering. Scheduler har spesifisert funksjonalitet på å løse problemer innen planlegging og ressurs tildeling.\cite{cpschedulerilog}
+IBM ILOG Scheduler hjelper med å utvikle problemløsnings-applikasjoner som krever behandling av ressurser fordelt på tid. Scheduler er et C++ bibliotek som baserer seg på Solver, og som Solver, så gir det alle mulighetene med objektorientering og begrensningsprogrammering. Scheduler har spesifisert funksjonalitet på å løse problemer innen planlegging og ressurs tildeling.\cite{cpschedulerilog}
 
 \subsection{Forskningsmetoder}
+Forskningsmetoden som er brukt i prosjektet er å eksperimentere med implementasjonen av ressursene og løsningsstrategien.
 
-\subsubsection{...}
+\subsubsection{Implementeringsprosessen}
+Første delen av implementeringsprosessen er å utvide modellen for å inkludere de nye ressursene. For å gjøre det eksperimenterte jeg litt med Scheduler for prøve å finne den beste måten å implementere det på.
+
+Den andre delen av implementeringsprosessen er å eksperimentere med forskjellige løsningstrategier gitt av i Solver. Her er det mange forskjellige kombinasjoner og rekkefølgen de forskjellige strategiene (i ILOG; Goals) kan ha en innvirkning på løsningen tilslutt.
+
+Tilslutt så kommer det an på tidsgrensen som blir satt på hvor lenge ILOG skal søke etter bedre løsninger.
+
+\colorbox{red}{Denne delen skal utvides ytterligere.}
 
 \subsubsection{Evaluering av prosessen}
+Prosessen med eksperimenteringen av implementasjonen blir evaluert ved å undersøke makespan opp mot teoretisk øvregrense og teoretisk nedregrense i både løsningene uten tilleggsressurser og med tilleggsressurser. Løsningene fra prosessen med og uten tilleggsresursene vil også bli evaluert opp mot hverandre. Dette innebærer bruk av kvantitative metoder.
+
+Forskningsmetoden vil bli evaluert ved å bruke genererte benchmarksett, som er generert av et eksternt program. Benchmarksettene som genereres kan bestemmes hvor mange av de forskjellige ressursene som skal være med i benchmarksettet. I dette prosjektet er det et sprang på 50 - 5000 aktiviteter som implementasjon blir evaluert på.
 
 \subsection{Evalueringsstrategi}
-

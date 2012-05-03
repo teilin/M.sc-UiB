@@ -1,7 +1,7 @@
 \subsection{Problembeskrivelse}
-Problemstillingen tar utgangspunkt i den opprinnelige problemstillingen til \bht. Problemet er på en innbilt oljeplatform inndelt i et sett av lokasjoner. Utstyr som er krevd for vedlikehold er tilfeldig plassert rundt på plattformen, og ulike aktiviteter skal bli planlagt. Aktivitetene blir opprettet med et gitt sett av ressurskrav og muligens avhengheter til andre aktiviteter. Alle aktiviteter krever et mannskap til å utføre dem og en lokasjon til å bli utført på. I tillegg krever noen aktiviteter kranressurser, fordi tung løfting er involvert. Mannskap- og kranressurser er knappe, som betyr at de er begrenset tilførsel.
+Problemstillingen tar utgangspunkt i den opprinnelige problemstillingen til \bht. Problemet er på en innbilt oljeplattform inndelt i et sett av lokasjoner. Utstyr som er krevd for vedlikehold er tilfeldig plassert rundt på plattformen, og ulike aktiviteter skal bli planlagt. Aktivitetene blir opprettet med et gitt sett av ressurskrav og muligens avhengigheter til andre aktiviteter. Alle aktiviteter krever et mannskap til å utføre dem og en lokasjon til å bli utført på. I tillegg krever noen aktiviteter kranressurser, fordi tung løfting er involvert. Mannskap- og kranressurser er knappe, som betyr at de er begrenset tilførsel.
 
-En utvidet problemstilling med ekstra ressurser på beligenhet, hvor hvert mannskap avgir en varme og hver lokasjon har en gitt varmekapasitet. Summen av varme kan ikke overstige varmekapasiteten.
+En utvidet problemstilling med ekstra ressurser på beliggenhet, hvor hvert mannskap avgir en varme og hver lokasjon har en gitt varmekapasitet. Summen av varme kan ikke overstige varmekapasiteten.
 \[ \forall t,l: \sum\{c_{heat}(Crew_j) \mid t \in [ v_{sta}(Act_{i}), w_{end}(Act_{i})) \wedge c_{crew}(Act_{i}) = Crew_{j} \]
 \[ \wedge c_{loc}(Act_{i}) = Loc_{l} ] \} \le c_{heatcap}(Loc_{l}) \]
 
@@ -9,5 +9,5 @@ I tillegg kan en beliggenhet ha begrensninger på hvor mange av et gitt mannskap
 \[ \forall t,l: \sharp \{ Crew_{j} \mid  t \in [v_{sta}(Act_{i}), w_{end}(Act_{i})) \wedge c_{crew}(Act_{i} = Crew_{j})] \]
 \[ \wedge c_{crewlimit}(Loc_{l}) = Crew_{j} \} \le c_{crewcapacity}(Loc_{l}) \]
 
-Antallet beligenheter er redusert fra 25 i de opprinnelige problemene til 10 i de modifiserte. Med aktiviteter spredt utover 25 beligenheter, så ville dte vært så få aktiviteter på hver beligenhet at varmekapasiteten til en lokasjon aldri ville blitt oversteget. Det er ikke sjekket om en reduksjon til 10 beligenheter er tilstrekkelig. Målet for løsningen er å minimalisere 
+Antallet beliggenheter er redusert fra 25 i de opprinnelige problemene til 10 i de modifiserte. Med aktiviteter spredt utover 25 beliggenheter, så ville det vært så få aktiviteter på hver beliggenhet at varmekapasiteten til en lokasjon aldri ville blitt oversteget. Det er ikke sjekket om en reduksjon til 10 beliggenheter er tilstrekkelig. Målet for løsningen er å minimalisere 
 makespan, den totale tiden på å fullføre alle aktivitetene.

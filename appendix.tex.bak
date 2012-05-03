@@ -1,0 +1,59 @@
+\begin{center}								
+\begin{table}[h]								
+\begin{tabular}{ | l | c | c | c |}								
+\hline								
+Benchmark &	Theoretical lower bound	& Theoretical upper bound &	Makespan \\	\hline
+Act1000Loc10Crew5Crane2\_1 & 416	& 3529 & 449	\\
+Act100Loc10Crew5Crane2\_1 &	50	&	356	&	50	\\	
+Act100Loc10Crew5Crane2\_2 &	66	&	364	&	67	\\	
+Act100Loc10Crew5Crane2\_3 &	55	&	352	&	56	\\	
+Act200Loc10Crew5Crane2\_1 &	92	&	711	&	104	\\	
+Act200Loc10Crew5Crane2\_2 &	124	&	742	&	124	\\	
+Act200Loc10Crew5Crane2\_3 &	66	&	704	&	89	\\	
+Act200Loc10Crew5Crane2\_4 &	71	&	734	&	109	\\	
+Act200Loc10Crew5Crane2\_5 &	88	&	698	&	93	\\	
+Act300Loc10Crew5Crane2\_1 &	144	&	1049	&	144	\\	
+Act300Loc10Crew5Crane2\_4 &	137	&	1071	&	148	\\	
+Act400Loc10Crew5Crane2\_1 &	177	&	1400	&	192	\\	
+Act400Loc10Crew5Crane2\_3 &	198	&	1369	&	198	\\	
+Act400Loc10Crew5Crane2\_4 &	168	&	1362	&	187	\\	
+Act400Loc10Crew5Crane2\_5 &	136	&	1361	&	190	\\	
+Act500Loc10Crew5Crane2\_2 &	234	&	1723	&	257	\\	
+Act500Loc10Crew5Crane2\_4 &	212	&	1798	&	243	\\	
+Act600Loc10Crew5Crane2\_2 &	282	&	2201	&	297	\\	
+Act500Loc25Crew5Crane2\_5 &	223	&	1708	&	223	\\	
+Act50Loc10Crew5Crane2\_1 & 28	&	177	&	34	\\	
+Act50Loc10Crew5Crane2\_4 & 21	&	172	&	22	\\	
+Act50Loc10Crew5Crane2\_5 & 22	&	177	&	27	\\	
+Act60Loc10Crew5Crane2\_1 & 29	&	211	&	35	\\	
+Act60Loc10Crew5Crane2\_2 & 31	&	215	&	39	\\	
+Act60Loc10Crew5Crane2\_3 & 31	&	209	&	38	\\	
+Act60Loc10Crew5Crane2\_4 & 27	&	203	&	27	\\	
+Act60Loc10Crew5Crane2\_5 & 27	&	205	&	46	\\	
+\hline								
+\end{tabular}								
+\caption{Løsninger uten tilleggsressurser og tidsgrense på 10 sekunder}								
+\label{tab:without10}								
+\end{table}								
+\end{center}
+
+\begin{center}
+\begin{table}[h]
+\begin{tabular}{ | l | c | c | c | }
+\hline
+Benchmark &	Teoretisk nedregrense & Teoretisk øvregrense &	Makespan \\ \hline
+Act500Loc25Crew5Crane2\_5 & 223	& 1708 & 223	\\
+Act50Loc10Crew5Crane2\_1	& 28 &	177	& 34	\\
+Act50Loc10Crew5Crane2\_4	& 21 &	172	& 23	\\
+Act50Loc10Crew5Crane2\_5	& 22 &	177	& 29	\\
+Act60Loc10Crew5Crane2\_1	& 29 &	211	& 32	\\
+Act60Loc10Crew5Crane2\_2	& 31 &	215	& 41	\\
+Act60Loc10Crew5Crane2\_3	& 31 &	209	& 36	\\
+Act60Loc10Crew5Crane2\_4	& 27 &	203	& 27	\\
+Act60Loc10Crew5Crane2\_5	& 27 &	205	& 46	\\
+\hline
+\end{tabular}
+\caption{Løsninger med tilleggsressurser og tidsgrense på 10 sekunder}
+\label{tab:with10}
+\end{table}
+\end{center}

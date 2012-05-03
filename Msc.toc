@@ -1,15 +1,13 @@
 \select@language {norsk}
 \contentsline {section}{\numberline {1}Introduksjon}{6}
 \contentsline {subsection}{\numberline {1.1}Bakgrunn}{6}
-\contentsline {subsubsection}{\numberline {1.1.1}Tidligere arbeid}{6}
+\contentsline {subsubsection}{\numberline {1.1.1}Relatert arbeid}{6}
 \contentsline {subsection}{\numberline {1.2}M\IeC {\r a}let med prosjektet}{6}
 \contentsline {subsection}{\numberline {1.3}Beskrivelse av kommende kapitler}{7}
 \contentsline {subsection}{\numberline {1.4}Motivasjon}{7}
 \contentsline {subsubsection}{\numberline {1.4.1}Kort om begrensningsprogrammering}{8}
-\contentsline {subsubsection}{\numberline {1.4.2}Utfordringer med begrensingsprogrammering}{8}
+\contentsline {subsubsection}{\numberline {1.4.2}Utfordringer med begrensningsprogrammering}{8}
 \contentsline {subsubsection}{\numberline {1.4.3}Begrensingsprogrammeringsverkt\IeC {\o }y idag}{8}
-\contentsline {subsubsection}{\numberline {1.4.4}Forbedringerspotensiale i verkt\IeC {\o }yene}{8}
-\contentsline {subsubsection}{\numberline {1.4.5}Relevans for forskingen}{8}
 \contentsline {subsection}{\numberline {1.5}Problembeskrivelse}{9}
 \contentsline {section}{\numberline {2}Metode}{10}
 \contentsline {subsection}{\numberline {2.1}Verkt\IeC {\o }y brukt i prosjektet}{10}
@@ -17,9 +15,12 @@
 \contentsline {subsection}{\numberline {2.3}Kort om IBM ILOG Solver}{10}
 \contentsline {subsection}{\numberline {2.4}Kort om IBM ILOG Scheduler}{11}
 \contentsline {subsection}{\numberline {2.5}Forskningsmetoder}{11}
-\contentsline {subsubsection}{\numberline {2.5.1}...}{11}
-\contentsline {subsubsection}{\numberline {2.5.2}Evaluering av prosessen}{11}
-\contentsline {subsection}{\numberline {2.6}Evalueringsstrategi}{11}
-\contentsline {section}{\numberline {3}Eksperimenter}{12}
-\contentsline {section}{\numberline {4}Fremtidig arbeid}{13}
-\contentsline {section}{\numberline {5}Konklusjon}{14}
+\contentsline {subsubsection}{\numberline {2.5.1}Implementeringsprosessen}{12}
+\contentsline {subsubsection}{\numberline {2.5.2}Evaluering av prosessen}{12}
+\contentsline {subsection}{\numberline {2.6}Evalueringsstrategi}{12}
+\contentsline {section}{\numberline {3}Eksperimenter}{13}
+\contentsline {subsection}{\numberline {3.1}Uten tilleggsressurser}{13}
+\contentsline {subsection}{\numberline {3.2}Med tilleggsressurser}{13}
+\contentsline {section}{\numberline {4}Fremtidig arbeid}{14}
+\contentsline {section}{\numberline {5}Konklusjon}{15}
+\contentsline {section}{\numberline {6}Vedlegg}{16}
