@@ -4,13 +4,19 @@
 
   \item [{AI}]\begingroup Kunstig intelligens (engelsk: artificial inteligence)\nomeqref {0}
 		\nompageref{6}
+  \item [{Avgjøringsvariable}]\begingroup På engelsk: decision variable\nomeqref {0}
+		\nompageref{9}
+  \item [{Avledningsvariable}]\begingroup Derived variable\nomeqref {0}
+		\nompageref{9}
   \item [{Concert}]\begingroup IBM ILOG Concert Technology\nomeqref {0}
-		\nompageref{10}
-  \item [{CP}]\begingroup Constraint programming\nomeqref {0}
+		\nompageref{14}
+  \item [{CP}]\begingroup Begrensningsprogrammering (engelsk: Constraint programming)\nomeqref {0}
 		\nompageref{6}
-  \item [{Scheduler}]\begingroup IBM ILOG Scheduler\nomeqref {0}
-		\nompageref{11}
-  \item [{Solver}]\begingroup IBM ILOG Solver\nomeqref {0}
+  \item [{Monooperatorressurs}]\begingroup På engelsk: Unary resource\nomeqref {0}
 		\nompageref{10}
+  \item [{Scheduler}]\begingroup IBM ILOG Scheduler\nomeqref {0}
+		\nompageref{15}
+  \item [{Solver}]\begingroup IBM ILOG Solver\nomeqref {0}
+		\nompageref{14}
 
 \end{thenomenclature}

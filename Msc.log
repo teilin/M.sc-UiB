@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=latex 2011.7.3)  3 MAY 2012 23:07
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=latex 2011.7.3)  9 MAY 2012 19:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -386,6 +386,24 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
 LaTeX Info: Redefining \[ on input line 2666.
 LaTeX Info: Redefining \] on input line 2667.
 )
+(/usr/local/texlive/2011/texmf-dist/tex/latex/tools/longtable.sty
+Package: longtable 2004/02/01 v4.11 Multi-page Table package (DPC)
+\LTleft=\skip48
+\LTright=\skip49
+\LTpre=\skip50
+\LTpost=\skip51
+\LTchunksize=\count100
+\LTcapwidth=\dimen119
+\LT@head=\box28
+\LT@firsthead=\box29
+\LT@foot=\box30
+\LT@lastfoot=\box31
+\LT@cols=\count101
+\LT@rows=\count102
+\c@LT@tables=\count103
+\c@LT@chunks=\count104
+\LT@p@ftn=\toks22
+)
 \@nomenclaturefile=\write3
 \openout3 = `Msc.nlo'.
 
@@ -394,23 +412,23 @@ Writing nomenclature file Msc.nlo
 (./Msc.aux)
 \openout1 = `Msc.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
 File: uibugle.eps Graphic file (type eps)
  <uibugle.eps>
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <142.26378> not available
-(Font)              size <24.88> substituted on input line 61.
+(Font)              size <24.88> substituted on input line 62.
 
 [1
 
@@ -418,8 +436,12 @@ LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <142.26378> not available
 \tf@toc=\write4
 \openout4 = `Msc.toc'.
 
- [3] [4] (./Msc.nls) [5] (./content/introduction.tex)
-(./content/background.tex
+ [3] (./forord.tex
+Overfull \hbox (2.03896pt too wide) in paragraph at lines 1--3
+[][][][][][] \OT1/cmr/m/n/12 F^^\rst ^^\ns-ker jeg ^^Wa tak-
+ []
+
+) [4] (./Msc.nls) [5] (./content/introduction.tex) (./content/background.tex
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 14.
 
 (/usr/local/texlive/2011/texmf-dist/tex/latex/base/omscmr.fd
@@ -434,38 +456,74 @@ Overfull \hbox (1.36111pt too wide) in paragraph at lines 14--15
 hvor re-la-sjo-ner mel-
  []
 
-) (./content/problem.tex [8]) [9] (./content/methology.tex
+) (./content/problem.tex [8] [9] [10]
+Overfull \hbox (14.04625pt too wide) detected at line 44
+\OMS/cmsy/m/n/12 8\OML/cmm/m/it/12 i; i[] \OMS/cmsy/m/n/12 6\OT1/cmr/m/n/12 = \
+OML/cmm/m/it/12 i \OT1/cmr/m/n/12 : \OML/cmm/m/it/12 v[]\OT1/cmr/m/n/12 (\OML/c
+mm/m/it/12 Act[]\OT1/cmr/m/n/12 ) = \OML/cmm/m/it/12 Crane[] \OMS/cmsy/m/n/12 ^
+ \OML/cmm/m/it/12 c[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 Act[]\OT1/cmr/m/n/12 ) =
+ \OML/cmm/m/it/12 c[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 Crane[]\OT1/cmr/m/n/12 )
+ \OMS/cmsy/m/n/12 ! :\OML/cmm/m/it/12 overlap\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 
+Act[]; Act[]\OT1/cmr/m/n/12 )
+ []
+
+[11]) [12] [13] (./content/methology.tex
 Overfull \hbox (12.9063pt too wide) in paragraph at lines 9--10
 []\OT1/cmr/m/n/12 De enk-les-te klas-se-ne (eks. Ilo-Num-Var og IloCon-straint)
  i Con-cert har ogs^^Wa tilh^^\rende
  []
 
-[10] [11]) [12] (./content/experiments.tex) [13] [14] [15] (./appendix.tex
-Overfull \hbox (91.50874pt too wide) in paragraph at lines 3--35
-[][] 
+[14] [15]) [16] (./content/experiments.tex) [17] [18] [19] (./appendix.tex
+Overfull \hbox (37.04832pt too wide) in alignment at lines 2--24
+ [] [] [] [] [] 
  []
 
 
-Overfull \hbox (49.40501pt too wide) in paragraph at lines 42--56
-[][] 
+Underfull \vbox (badness 10000) detected at line 24
  []
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+Overfull \hbox (37.04832pt too wide) in alignment at lines 24--41
+ [] [] [] [] [] 
+ []
 
-) [16] (./Msc.bbl) [17] (./Msc.aux)
+
+Overfull \hbox (42.92326pt too wide) in alignment at lines 45--67
+ [] [] [] [] [] 
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 67
+ []
+
+
+Overfull \hbox (42.92326pt too wide) in alignment at lines 67--87
+ [] [] [] [] [] 
+ []
+
+[20]
+Overfull \hbox (42.92326pt too wide) in alignment at lines 87--107
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (42.92326pt too wide) in alignment at lines 107--123
+ [] [] [] [] [] 
+ []
+
+[21]) [22] (./Msc.bbl) [23] (./Msc.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 117.38377pt have occurred.
 
  ) 
 Here is how much of TeX's memory you used:
- 2224 strings out of 493634
- 27625 string characters out of 3143401
- 89507 words of memory out of 3000000
- 5464 multiletter control sequences out of 15000+200000
+ 2320 strings out of 493634
+ 28782 string characters out of 3143401
+ 106994 words of memory out of 3000000
+ 5553 multiletter control sequences out of 15000+200000
  12466 words of font info for 44 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
- 32i,10n,28p,768b,262s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 32i,10n,28p,964b,280s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on Msc.dvi (17 pages, 40176 bytes).
+Output written on Msc.dvi (23 pages, 71108 bytes).

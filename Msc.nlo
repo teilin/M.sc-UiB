@@ -1,5 +1,8 @@
-\nomenclatureentry{aCP@[{CP}]\begingroup Constraint programming\nomeqref {0}|nompageref}{6}
+\nomenclatureentry{aCP@[{CP}]\begingroup Begrensningsprogrammering (engelsk: Constraint programming)\nomeqref {0}|nompageref}{6}
 \nomenclatureentry{aAI@[{AI}]\begingroup Kunstig intelligens (engelsk: artificial inteligence)\nomeqref {0}|nompageref}{6}
-\nomenclatureentry{aConcert@[{Concert}]\begingroup IBM ILOG Concert Technology\nomeqref {0}|nompageref}{10}
-\nomenclatureentry{aSolver@[{Solver}]\begingroup IBM ILOG Solver\nomeqref {0}|nompageref}{10}
-\nomenclatureentry{aScheduler@[{Scheduler}]\begingroup IBM ILOG Scheduler\nomeqref {0}|nompageref}{11}
+\nomenclatureentry{aAvgjøringsvariable@[{Avgjøringsvariable}]\begingroup På engelsk: decision variable\nomeqref {0}|nompageref}{9}
+\nomenclatureentry{aAvledningsvariable@[{Avledningsvariable}]\begingroup Derived variable\nomeqref {0}|nompageref}{9}
+\nomenclatureentry{aMonooperatorressurs@[{Monooperatorressurs}]\begingroup På engelsk: Unary resource\nomeqref {0}|nompageref}{10}
+\nomenclatureentry{aConcert@[{Concert}]\begingroup IBM ILOG Concert Technology\nomeqref {0}|nompageref}{14}
+\nomenclatureentry{aSolver@[{Solver}]\begingroup IBM ILOG Solver\nomeqref {0}|nompageref}{14}
+\nomenclatureentry{aScheduler@[{Scheduler}]\begingroup IBM ILOG Scheduler\nomeqref {0}|nompageref}{15}

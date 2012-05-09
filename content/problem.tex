@@ -1,13 +1,58 @@
 \subsection{Problembeskrivelse}
 Problemstillingen tar utgangspunkt i den opprinnelige problemstillingen til \bht. Problemet er på en innbilt oljeplattform inndelt i et sett av lokasjoner. Utstyr som er krevd for vedlikehold er tilfeldig plassert rundt på plattformen, og ulike aktiviteter skal bli planlagt. Aktivitetene blir opprettet med et gitt sett av ressurskrav og muligens avhengigheter til andre aktiviteter. Alle aktiviteter krever et mannskap til å utføre dem og en lokasjon til å bli utført på. I tillegg krever noen aktiviteter kranressurser, fordi tung løfting er involvert. Mannskap- og kranressurser er knappe, som betyr at de er begrenset tilførsel.
 
-En utvidet problemstilling med ekstra ressurser på beliggenhet, hvor hvert mannskap avgir en varme og hver lokasjon har en gitt varmekapasitet. Summen av varme kan ikke overstige varmekapasiteten.
-\[ \forall t,l: \sum\{c_{heat}(Crew_j) \mid t \in [ v_{sta}(Act_{i}), w_{end}(Act_{i})) \wedge c_{crew}(Act_{i}) = Crew_{j} \]
-\[ \wedge c_{loc}(Act_{i}) = Loc_{l} ] \} \le c_{heatcap}(Loc_{l}) \]
+Så langt er problemet klassifisert som et "Resource-Constrained Project Scheduling Problem", som kjennetegnes ved:
+\begin{itemize}
+\item Et sett av ressurser med en gitt kapasitet
+\item Et sett av ikke-forstyrrede aktiviteter som er gitt en prosseseringstid
+\item Et netverk av begrensinger mellom aktiviteter
+\item En mengde av ressurser som er krevd av aktivitetene
+\end{itemize}
 
-I tillegg kan en beliggenhet ha begrensninger på hvor mange av et gitt mannskap, som kan arbeide på en lokasjon samtidig.
-\[ \forall t,l: \sharp \{ Crew_{j} \mid  t \in [v_{sta}(Act_{i}), w_{end}(Act_{i})) \wedge c_{crew}(Act_{i} = Crew_{j})] \]
-\[ \wedge c_{crewlimit}(Loc_{l}) = Crew_{j} \} \le c_{crewcapacity}(Loc_{l}) \]
+Det er en mengde planleggingsproblemer som ikke kan klassifiseres under beskrivelsen av RCPSP, selvom det er et bredt antall planleggingsproblemer som gjør det. Det er mange tilleggsbegrensinger, typisk i oljeindustrien og andre store industrier, som ikke passer inn i denne klassifiseringen. Siden målet er å generere probleminstanser med begrensinger som finnes i industrien, så må det legges til andre mer komplekse begrensinger. Et eksempel  er sikkerhetsbegrensing rundt farlig arbeid, for eksempel kranbruk. I planleggingspløsninger i dag blir informasjon som sikkerhetsbegrensninger lagt til manuelt av de som planlegger aktivitetene på platformen. Ved å definere forutsetninger som aktiverer sikkerhetsbegrensninger blir resultatet et veldefinert problembeskrivelse. En løsning til et problem $ S(P_{i}) $ er en planlegging hvor aktiviteter er tilegnet en starttid og begrensningene er holdt.
 
-Antallet beliggenheter er redusert fra 25 i de opprinnelige problemene til 10 i de modifiserte. Med aktiviteter spredt utover 25 beliggenheter, så ville det vært så få aktiviteter på hver beliggenhet at varmekapasiteten til en lokasjon aldri ville blitt oversteget. Det er ikke sjekket om en reduksjon til 10 beliggenheter er tilstrekkelig. Målet for løsningen er å minimalisere 
-makespan, den totale tiden på å fullføre alle aktivitetene.
+\subsubsection{Notasjoner og termonologi}
+En probleminstans $ P $ inneholder aktiviteter som skal gjennomføres, ressurser som er påkrevd for å gjennomføre aktivitene og begrensninger som blandt annet er begrensinger mellom aktiviteter og ressursbruk. Det blir skillt mellom forskjellige typer variable som \textit{avgjørelsesvariable}\nomenclature{Avgjøringsvariable}{På engelsk: decision variable}, \textit{konstanter} og \textit{avledetvariable}\nomenclature{Avledningsvariable}{Derived variable}. Et eksempel på en avgjøringsvariabel er starttiden til en aktivitet $ Act_{i} $ betegnet som $ v_{sta}(Act_{i}) $. En aktivitets varighet blir betegnet som fast og er derfor en konstant, betegnet som $ c_{dur}(Act_{i}) $. Tilslutt så er det avledetvariable som for eksempel er en aktivitets sluttid, som er summen av starttiden og varigheten, som er betegnet $ w_{end}(Act_{i}) $. Objekter som aktiviteter og ressurser er skrevet med en stor bokstav.
+
+\subsubsection{Ressurser}
+En \textit{lokasjon} $ Loc_{l} \in Locs = \{ Loc_{1},\dots,Loc_{n} \} $ er stedet hvor aktiviter blir utført. Selvom lokasjoner blir vist som ressurser, så er det ikke noen begrensinger på hvor mange aktiviter som kan bli utført samtidig på en lokasjon. Det er begrensinger når farlig arbeid som tung løfting blir utført, da er lokasjonen utilgjengelig for alle andre aktiviteter. Når en lokasjon er stengt på grunn av kranbruk sier vi at en sikkerhetsone har blitt opprettet.
+
+\textit{Mannskaper} er ansvarlige for utførelsene av aktivitetene. Et mannskap er betegnet $ Crew_{j} \in Crews = \{ Crew_{1},\dots,Crew_{n} \} $. \colorbox{red}{Utfylling her}
+
+En \textit{kran} $ Crane_{k} \in Cranes = \{ Crane_{1},\dots,Crane_{n} \} $ er en potensiell ressurs for aktiviteter. Noen aktiviteter trenger kran og alle probleminstanser har et mindre antall av aktiviteter som krever kranbruk. Kraner er monooperatorressurser \nomenclature{Monooperatorressurs}{På engelsk: Unary resource} som betyr at de kun kan utføre en aktivitet av gangen. En aktivitet som krever kran, spesifiserer ikke en spesifikk kran, men kun sier den trenger kran. En gyldig løsning må derfor tildele en kran til alle aktiviteter som krever kran fra et sett av kraner tilgjengelig, gitt av $ v_{crane}(Act_{i}) \in Cranes $. Dette gjør settet av kraner til en alternativ ressurs.
+
+Kraner har en lokasjon $ c_{loc}(Crane_{k}) \in Locs $, og hver lokasjon kan bare ha en kran. På grunn av at tung løfting er et farlig arbeid, er kranbruk omgitt med sikkerhetssoner. Disse sikkerhetssonene er satt til både loksjonen hvor aktiviteten som krever kranbruk er utført og kranens egen lokasjon. Sikkerhetssonen som blir satt vil derfor variere ut ifra hvilken kran som er tilegnet til aktiviteten.
+
+\subsubsection{Aktiviteter}
+En \textit{aktivitet} $ Act_{i} \in Acts = \{ Act_{i},\dots,Act_{n} \} $ kommer med en startvariabel, en konstant varighet og ressurskrav. Initielt er domenet til startvariabelen er $ v_{sta}(Act_{i}) \in [ 0, c_{hor}(P)) $, hvor horisonten, indikerer planleggingens maksimale fullføringstid, som er gitt ved $ c_{hor}(P) = \sum_{i} c_{dur}(Act_{i}) $.
+
+En aktivitet $ Act_{i} $ krever et mannskap $ c_{crew}(Act_{i}) \in Crews $ for å utføre den og en lokasjon $ c_{loc}(Act_{i}) \in Locs $ til å bli utført på. En aktivitet avhenger av et enkelt medlem av et mannskap og det er ikke mulig å samle ressurser for å redusere varigheten. Kraner er den siste ressursen som er tilgjengelig, men er ikke nødvenndig for alle aktivitetene.
+
+I tilegg til ressurskravene, en aktivitet kan avhenge på andre aktiviteter, det betyr at en aktivitet ikke kan starte før en annen aktivitet er ferdig utført.
+
+\colorbox{red}{Sjekk om dette stemmer også etter varme!}
+
+\subsubsection{Begrensinger}
+\textit{Avhengigheter} mellom aktiviteter er vanlig i industrien. En vedlikeholdsaktivitet kan for eksempel være avhengig av både levering av reservedeler og stillasbygging for å sikre tilgang til området hvor vedlikeholdet skal gjøres. Forholdet som viser at aktivitet $ Act_{i'} $ avhenger av aktivitet $ Act_{i} $ er uttrykt ved følgende begrensning: \[ w_{end}(Act_{i}) \leq v_{sta}(Act_{i'}) \]
+
+En \textit{kummulativ ressurs begrensing} påføres alle mannskaper for å være sikkert på at den totale ressursbruken ikke overstiger tilgjengelig kapasitet. Det er utrykt ved: \[ \forall t,j \# \{ Act_{i} | t \in [(v_{sta}(Act_{i}), w_{end}(Act_{i})) \wedge c_{crew}(Act_{i}) = Crew_{j}] \} \] \[ \leq c_{cap}(Crew_{j}) \] hvor $ c_cap{Crew_{j}} $ er kapasiteten av j's mannskap.
+
+Kraner er unik induvidielle og er derfor modellert som et sett av monopolatorressursbegrensninger. Begrensingene tar for seg hvis to aktiviteter er tilegnet den samme kranen, så kan de ikke bli utført samtidig. Vi starter ved å definere de underliggende overlapping uttrykt som to aktiviteter overlapper i tid: \[ overlap(Act_{i},Act_{i'}) \equiv \exists t : v_{sta}(Act_{i}),v_{sta}(Act_{i'}) \leq t < w_{end}(Act_{i}),w_{end}(Act_{i'}) \] Den gjensidge uttelukkelsen opprettet av den monopolatoriskeressursbegrensningen blir da: \[ \forall i,i' \neq i : c_{crane}(Act_{i}) = v_{crane}(Act_{i'}) \rightarrow \neg overlap(Act_{i},Act_{i'}) \] for alle aktiviteter som krever kran.
+
+\textit{Sikkerhetsbegrensningene} er uttrykt i form av lokasjonen til aktiviten som krever kran og lokasjonen til den valgte kranen. Den første lokasjonen er kjent på forhånd, mens den andre avhenger av hvilken kran som blir brukt. Tilfellet at begrensingene i problemet endrer seg etter hvert som avgjørelser tas er interessangt på grunn av den tilagte kompleksiteten det medfører.
+
+Sikkerhetsbegrensningene utelukker bruken av lokasjonen hvor en aktivitet som krever kran befinner seg: \[ \forall i,i' \neq i : c_{crane}(Act_{i}) \wedge c_{loc}(Act_{i}) = c_{loc}(Act_{i'}) \wedge \neg overlap(Act_{i},Act_{i'}) \] når sikkerhetsbegrensingene utelukker bruken av lokasjonen til denne krannen er gitt ved: \[ \forall i,i' \neq i : v_{crane}(Act_{i}) = Crane_{j} \wedge c_{loc}(Act_{i'}) = c_{loc}(Crane_{j}) \rightarrow \neg overlap(Act_{i},Act_{i'}) \]
+
+Den siste begrensningen er varmebegrensningen. De er uttrykt som kummulativressursbegrensning og er påført lokasjon for å være sikkert på at total varme bruk ikke oversitiger varmekapasiteten tilgjengelig på hver lokasjon. Den er uttrykt ved: \[ \forall t,l: \sum\{c_{heat}(Crew_j) \mid t \in [ v_{sta}(Act_{i}), w_{end}(Act_{i})) \wedge c_{crew}(Act_{i}) = Crew_{j} \] \[ \wedge c_{loc}(Act_{i}) = Loc_{l} ] \} \le c_{heatcap}(Loc_{l}) \]
+\colorbox{red}{Skriv denne ferdig}
+
+\subsubsection{Mål}
+Målet er å minimalisere makespan $ w_{ms}(P) $ eller varigheten av planleggingen er definert ved: \[ w_{ms}(P) = max_{i} \{ w_{end}(A_{i}) \} \in [0,c_{hor}(P)] \] som sier at makespanet er likt den siste slutten eller fullføringstiden i settet av aktiviteter.
+
+\subsubsection{Probleminstanser}
+Problemene er beskrevet ved størrelsen fastsatt av det totale nummeret av aktiviteter, $ \#Acts \in \{ 50,60, 100, 200, 300, 400, 500, 600, 800, 900, 1000, 5000 \} $ og kraner, $ \#Cranes = [2,3] $. Det ble generert totalt 5 probleminstanser for hver av de 24 problem størrelsene, som summert opp blir 120 instanser.
+
+Probleminstansene ble tilfeldig generert, ved å tilegne mannskaper til aktiviteter, lokasjoner til aktiviteter, lokasjoner til kraner, avhengigheter mellom aktiviteter og aktiviteter som trenger kran. Når instansene ble generert, er det spesifisert at det ikke skal forekomme sirkulasjoner på aktivitetsavhengigheter og at det ikke skal være mer enn en kran på en lokasjon. Så alle 120 instansene er gyldige.
+
+Alle probleme har 10 lokasjoner, som er redusert fra 25 i de opprinnelige probleminstansene til \bht, for at det skal kunne være flere aktiviteter på lokasjonen enn om det var 25 lokasjoner, og 4 forskjellige mannskaper med kapasitet $ c_{cap}(Crew_{j}) \in [2,3] $ tatt fra en uniform fordeling. Domenet for aktivitenes startvariabel er generelt $ v_{sta}(Act_{i}) = [0,c_{hor}(P)] $ og de konstante varighetene $ c_{dur}(Act_{i}) $ er tilfeldig tatt fra en uniform fordeling i området $ [1,6] $ tidssteg. Omtrent 20\% av aktivitetene er tilfeldig valgt til å bruke kran og omtrent 10\% av aktivitetene er begrenset ved avhengighet til en annen aktivitet.
+\colorbox{red}{Skriv denne ferdig. Sjekk antall kraner i problemene}

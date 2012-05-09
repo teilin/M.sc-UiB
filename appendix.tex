@@ -1,59 +1,124 @@
-\begin{center}								
-\begin{table}[h]								
-\begin{tabular}{ | l | c | c | c |}								
-\hline								
-Benchmark &	Teoretisk nedregrense  	& Teoretisk øvregrense bound &	Makespan \\	\hline
-Act1000Loc10Crew5Crane2\_1 & 416	& 3529 & 449	\\
-Act100Loc10Crew5Crane2\_1 &	50	&	356	&	50	\\	
-Act100Loc10Crew5Crane2\_2 &	66	&	364	&	67	\\	
-Act100Loc10Crew5Crane2\_3 &	55	&	352	&	56	\\	
-Act200Loc10Crew5Crane2\_1 &	92	&	711	&	104	\\	
-Act200Loc10Crew5Crane2\_2 &	124	&	742	&	124	\\	
-Act200Loc10Crew5Crane2\_3 &	66	&	704	&	89	\\	
-Act200Loc10Crew5Crane2\_4 &	71	&	734	&	109	\\	
-Act200Loc10Crew5Crane2\_5 &	88	&	698	&	93	\\	
-Act300Loc10Crew5Crane2\_1 &	144	&	1049	&	144	\\	
-Act300Loc10Crew5Crane2\_4 &	137	&	1071	&	148	\\	
-Act400Loc10Crew5Crane2\_1 &	177	&	1400	&	192	\\	
-Act400Loc10Crew5Crane2\_3 &	198	&	1369	&	198	\\	
-Act400Loc10Crew5Crane2\_4 &	168	&	1362	&	187	\\	
-Act400Loc10Crew5Crane2\_5 &	136	&	1361	&	190	\\	
-Act500Loc10Crew5Crane2\_2 &	234	&	1723	&	257	\\	
-Act500Loc10Crew5Crane2\_4 &	212	&	1798	&	243	\\	
-Act600Loc10Crew5Crane2\_2 &	282	&	2201	&	297	\\	
-Act500Loc25Crew5Crane2\_5 &	223	&	1708	&	223	\\	
-Act50Loc10Crew5Crane2\_1 & 28	&	177	&	34	\\	
-Act50Loc10Crew5Crane2\_4 & 21	&	172	&	22	\\	
-Act50Loc10Crew5Crane2\_5 & 22	&	177	&	27	\\	
-Act60Loc10Crew5Crane2\_1 & 29	&	211	&	35	\\	
-Act60Loc10Crew5Crane2\_2 & 31	&	215	&	39	\\	
-Act60Loc10Crew5Crane2\_3 & 31	&	209	&	38	\\	
-Act60Loc10Crew5Crane2\_4 & 27	&	203	&	27	\\	
-Act60Loc10Crew5Crane2\_5 & 27	&	205	&	46	\\	
-\hline								
-\end{tabular}								
-\caption{Løsninger uten tilleggsressurser og tidsgrense på 10 sekunder}								
-\label{tab:without10}								
-\end{table}								
+\begin{center}										
+\begin{longtable}{ | l | c | c | c | c | }									
+\hline										
+	&		&		&	Uten varme	&	Med varme	\\	
+Benchmark	&	Nedregrense	&	Øvregrense	&	Makespan	&	Makespan	\\	\hline
+Act50Loc10Crew5Crane2\_1	&	28	&	177	&	34	&	34	\\	
+Act50Loc10Crew5Crane2\_4	&	21	&	172	&	22	&	22	\\	
+Act50Loc10Crew5Crane2\_5	&	22	&	177	&	27	&	28	\\	
+Act60Loc10Crew5Crane2\_1	&	29	&	211	&	32	&	32	\\	
+Act60Loc10Crew5Crane2\_2	&	31	&	215	&	39	&	41	\\	
+Act60Loc10Crew5Crane2\_3	&	31	&	209	&	38	&	36	\\	
+Act60Loc10Crew5Crane2\_4	&	27	&	203	&	27	&	27	\\	
+Act60Loc10Crew5Crane2\_5	&	27	&	205	&	46	&	46	\\	
+Act100Loc10Crew5Crane2\_1	&	50	&	356	&	50	&	-	\\	
+Act100Loc10Crew5Crane2\_2	&	66	&	364	&	67	&	-	\\	
+Act100Loc10Crew5Crane2\_3	&	55	&	352	&	56	&	-	\\	
+Act200Loc10Crew5Crane2\_1	&	92	&	711	&	103	&	-	\\	
+Act200Loc10Crew5Crane2\_2	&	124	&	742	&	124	&	-	\\	
+Act200Loc10Crew5Crane2\_3	&	66	&	704	&	89	&	-	\\	
+Act200Loc10Crew5Crane2\_4	&	71	&	734	&	109	&	-	\\	
+Act200Loc10Crew5Crane2\_5	&	88	&	698	&	93	&	-	\\	
+Act300Loc10Crew5Crane2\_1	&	144	&	1049	&	144	&	-	\\	
+Act300Loc10Crew5Crane2\_4	&	137	&	1071	&	148	&	-	\\	
+Act400Loc10Crew5Crane2\_1	&	177	&	1400	&	192	&	-	\\	
+Act400Loc10Crew5Crane2\_2	&	137	&	1428	&	174	&	-	\\	
+Act400Loc10Crew5Crane2\_3	&	198	&	1369	&	198	&	-	\\	
+Act400Loc10Crew5Crane2\_4	&	168	&	1362	&	186	&	-	\\	
+Act400Loc10Crew5Crane2\_5	&	136	&	1361	&	190	&	-	\\	
+Act500Loc10Crew5Crane2\_2	&	234	&	1723	&	257	&	-	\\	
+Act500Loc10Crew5Crane2\_4	&	212	&	1798	&	243	&	-	\\	
+Act600Loc10Crew5Crane2\_2	&	282	&	2201	&	297	&	-	\\	
+Act600Loc10Crew5Crane2\_3	&	269	&	2102	&	304	&	-	\\	
+Act700Loc10Crew5Crane2\_1	&	291	&	2407	&	328	&	-	\\	
+Act1000Loc10Crew5Crane2\_1	&	416	&	3529	&	447	&	-	\\	
+Act1000Loc10Crew5Crane2\_2	&	416	&	3528	&	451	&	-	\\	
+Act500Loc25Crew5Crane2\_2	&	231	&	1759	&	232	&	-	\\	
+Act500Loc25Crew5Crane2\_5	&	223	&	1708	&	223	&	-	\\	
+\hline		
+\caption{Løsninger med løsningsstrategien XXX og tidsgrense på 100 sekunder}										
+\label{tab:solutionSSTFAARF100s}								
+\end{longtable}				
 \end{center}
 
-\begin{center}
-\begin{table}[h]
-\begin{tabular}{ | l | c | c | c | }
-\hline
-Benchmark &	Teoretisk nedregrense & Teoretisk øvregrense &	Makespan \\ \hline
-Act500Loc25Crew5Crane2\_5 & 223	& 1708 & 223	\\
-Act50Loc10Crew5Crane2\_1	& 28 &	177	& 34	\\
-Act50Loc10Crew5Crane2\_4	& 21 &	172	& 23	\\
-Act50Loc10Crew5Crane2\_5	& 22 &	177	& 29	\\
-Act60Loc10Crew5Crane2\_1	& 29 &	211	& 32	\\
-Act60Loc10Crew5Crane2\_2	& 31 &	215	& 41	\\
-Act60Loc10Crew5Crane2\_3	& 31 &	209	& 36	\\
-Act60Loc10Crew5Crane2\_4	& 27 &	203	& 27	\\
-Act60Loc10Crew5Crane2\_5	& 27 &	205	& 46	\\
-\hline
-\end{tabular}
-\caption{Løsninger med tilleggsressurser og tidsgrense på 10 sekunder}
-\label{tab:with10}
-\end{table}
-\end{center}
+\begin{center}										
+\begin{longtable}{ | l | c | c | c | c | }									
+\hline										
+	&		&		&	Uten varme	&	Med varme	\\	
+Benchmark	&	Nedregrense	&	Øvregrense	&	Makespan	&	Makespan	\\	\hline
+Act50Loc10Crew5Crane2\_1	&	28	&	177	&	41	&	41	\\	
+Act50Loc10Crew5Crane2\_2	&	25	&	180	&	28	&	31	\\	
+Act50Loc10Crew5Crane2\_3	&	38	&	184	&	38	&	38	\\	
+Act50Loc10Crew5Crane2\_4	&	21	&	172	&	29	&	30	\\	
+Act50Loc10Crew5Crane2\_5	&	22	&	177	&	40	&	40	\\	
+Act60Loc10Crew5Crane2\_1	&	29	&	211	&	51	&	53	\\	
+Act60Loc10Crew5Crane2\_2	&	31	&	215	&	64	&	69	\\	
+Act60Loc10Crew5Crane2\_3	&	31	&	209	&	54	&	56	\\	
+Act60Loc10Crew5Crane2\_4	&	27	&	203	&	27	&	27	\\	
+Act60Loc10Crew5Crane2\_5	&	27	&	205	&	72	&	73	\\	
+Act100Loc10Crew5Crane2\_1	&	50	&	356	&	70	&	-	\\	
+Act100Loc10Crew5Crane2\_2	&	66	&	364	&	67	&	-	\\	
+Act100Loc10Crew5Crane2\_3	&	55	&	352	&	81	&	-	\\	
+Act100Loc10Crew5Crane2\_4	&	50	&	312	&	90	&	-	\\	
+Act100Loc10Crew5Crane2\_5	&	55	&	337	&	80	&	-	\\	
+Act200Loc10Crew5Crane2\_1	&	92	&	711	&	174	&	-	\\	
+Act200Loc10Crew5Crane2\_2	&	124	&	742	&	175	&	-	\\	
+Act200Loc10Crew5Crane2\_3	&	66	&	704	&	148	&	-	\\	
+Act200Loc10Crew5Crane2\_4	&	71	&	734	&	191	&	-	\\	
+Act200Loc10Crew5Crane2\_5	&	88	&	698	&	137	&	-	\\	
+Act300Loc10Crew5Crane2\_1	&	144	&	1049	&	202	&	-	\\	
+Act300Loc10Crew5Crane2\_2	&	158	&	1087	&	271	&	-	\\	
+Act300Loc10Crew5Crane2\_3	&	138	&	1058	&	207	&	-	\\	
+Act300Loc10Crew5Crane2\_4	&	137	&	1071	&	229	&	-	\\	
+Act300Loc10Crew5Crane2\_5	&	162	&	1044	&	280	&	-	\\	
+Act400Loc10Crew5Crane2\_1	&	177	&	1400	&	323	&	-	\\	
+Act400Loc10Crew5Crane2\_2	&	137	&	1428	&	327	&	-	\\	
+Act400Loc10Crew5Crane2\_3	&	198	&	1369	&	305	&	-	\\	
+Act400Loc10Crew5Crane2\_4	&	168	&	1362	&	309	&	-	\\	
+Act400Loc10Crew5Crane2\_5	&	136	&	1361	&	337	&	-	\\		
+Act500Loc10Crew5Crane2\_1	&	219	&	1750	&	422	&	-	\\	
+Act500Loc10Crew5Crane2\_2	&	234	&	1723	&	456	&	-	\\	
+Act500Loc10Crew5Crane2\_3	&	234	&	1746	&	398	&	-	\\	
+Act500Loc10Crew5Crane2\_4	&	212	&	1798	&	416	&	-	\\	
+Act500Loc10Crew5Crane2\_5	&	254	&	1754	&	385	&	-	\\	
+Act600Loc10Crew5Crane2\_1	&	269	&	2097	&	555	&	-	\\	
+Act600Loc10Crew5Crane2\_2	&	282	&	2201	&	532	&	-	\\	
+Act600Loc10Crew5Crane2\_3	&	269	&	2102	&	526	&	-	\\	
+Act600Loc10Crew5Crane2\_4	&	272	&	2116	&	543	&	-	\\	
+Act600Loc10Crew5Crane2\_5	&	242	&	2065	&	455	&	-	\\	
+Act700Loc10Crew5Crane2\_1	&	291	&	2407	&	561	&	-	\\	
+Act700Loc10Crew5Crane2\_2	&	259	&	2492	&	551	&	-	\\	
+Act700Loc10Crew5Crane2\_3	&	277	&	2447	&	508	&	-	\\	
+Act700Loc10Crew5Crane2\_4	&	296	&	2428	&	679	&	-	\\	
+Act700Loc10Crew5Crane2\_5	&	262	&	2408	&	529	&	-	\\	
+Act800Loc10Crew5Crane2\_1	&	358	&	2811	&	636	&	-	\\	
+Act800Loc10Crew5Crane2\_2	&	347	&	2834	&	666	&	-	\\	
+Act800Loc10Crew5Crane2\_3	&	251	&	2856	&	628	&	-	\\	
+Act800Loc10Crew5Crane2\_4	&	323	&	2785	&	623	&	-	\\	
+Act800Loc10Crew5Crane2\_5	&	320	&	2779	&	647	&	-	\\	
+Act900Loc10Crew5Crane2\_1	&	456	&	3232	&	789	&	848	\\	
+Act900Loc10Crew5Crane2\_2	&	416	&	3144	&	775	&	-	\\	
+Act900Loc10Crew5Crane2\_3	&	464	&	3188	&	733	&	-	\\	
+Act900Loc10Crew5Crane2\_4	&	404	&	3143	&	721	&	-	\\	
+Act900Loc10Crew5Crane2\_5	&	443	&	3179	&	745	&	-	\\
+Act1000Loc10Crew5Crane2\_1	&	416	&	3529	&	800	&	-	\\	
+Act1000Loc10Crew5Crane2\_2	&	416	&	3528	&	774	&	-	\\	
+Act1000Loc10Crew5Crane2\_3	&	335	&	3533	&	901	&	-	\\	
+Act1000Loc10Crew5Crane2\_4	&	435	&	3547	&	773	&	-	\\	
+Act1000Loc10Crew5Crane2\_5	&	481	&	3462	&	928	&	-	\\
+Act5000Loc10Crew5Crane2\_1	&	2242	&	17522	&	4005	&	-	\\	
+Act5000Loc10Crew5Crane2\_2	&	2226	&	17532	&	4225	&	-	\\	
+Act5000Loc10Crew5Crane2\_3	&	2296	&	17219	&	4074	&	-	\\	
+Act5000Loc10Crew5Crane2\_4	&	2308	&	17513	&	4071	&	-	\\	
+Act5000Loc10Crew5Crane2\_5	&	2262	&	17455	&	4031	&	-	\\		
+Act500Loc25Crew5Crane2\_1	&	212	&	1714	&	389	&	389	\\	
+Act500Loc25Crew5Crane2\_2	&	231	&	1759	&	368	&	368	\\	
+Act500Loc25Crew5Crane2\_3	&	156	&	1707	&	355	&	355	\\	
+Act500Loc25Crew5Crane2\_4	&	220	&	1751	&	353	&	353	\\	
+Act500Loc25Crew5Crane2\_5	&	223	&	1708	&	360	&	360	\\	
+Act5000Loc25Crew20Crane5\_1	&	521	&	17370	&	3243	&	-	\\	
+\hline									
+\caption{Løsninger med løsningsstrategien XXX med tidsgrense 100 sekunder}										
+\label{tab:solutionAssignAltRFSTF100s}					
+\end{longtable}									
+\end{center}									

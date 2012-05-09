@@ -9,18 +9,24 @@
 \contentsline {subsubsection}{\numberline {1.4.2}Utfordringer med begrensningsprogrammering}{8}
 \contentsline {subsubsection}{\numberline {1.4.3}Begrensingsprogrammeringsverkt\IeC {\o }y idag}{8}
 \contentsline {subsection}{\numberline {1.5}Problembeskrivelse}{9}
-\contentsline {section}{\numberline {2}Metode}{10}
-\contentsline {subsection}{\numberline {2.1}Verkt\IeC {\o }y brukt i prosjektet}{10}
-\contentsline {subsection}{\numberline {2.2}Kort om IBM ILOG Concert Technology}{10}
-\contentsline {subsection}{\numberline {2.3}Kort om IBM ILOG Solver}{10}
-\contentsline {subsection}{\numberline {2.4}Kort om IBM ILOG Scheduler}{11}
-\contentsline {subsection}{\numberline {2.5}Forskningsmetoder}{11}
-\contentsline {subsubsection}{\numberline {2.5.1}Implementeringsprosessen}{12}
-\contentsline {subsubsection}{\numberline {2.5.2}Evaluering av prosessen}{12}
-\contentsline {subsection}{\numberline {2.6}Evalueringsstrategi}{12}
-\contentsline {section}{\numberline {3}Eksperimenter}{13}
-\contentsline {subsection}{\numberline {3.1}Uten tilleggsressurser}{13}
-\contentsline {subsection}{\numberline {3.2}Med tilleggsressurser}{13}
-\contentsline {section}{\numberline {4}Fremtidig arbeid}{14}
-\contentsline {section}{\numberline {5}Konklusjon}{15}
-\contentsline {section}{\numberline {6}Vedlegg}{16}
+\contentsline {subsubsection}{\numberline {1.5.1}Notasjoner og termonologi}{9}
+\contentsline {subsubsection}{\numberline {1.5.2}Ressurser}{10}
+\contentsline {subsubsection}{\numberline {1.5.3}Aktiviteter}{10}
+\contentsline {subsubsection}{\numberline {1.5.4}Begrensinger}{11}
+\contentsline {subsubsection}{\numberline {1.5.5}M\IeC {\r a}l}{12}
+\contentsline {subsubsection}{\numberline {1.5.6}Probleminstanser}{12}
+\contentsline {section}{\numberline {2}Metode}{14}
+\contentsline {subsection}{\numberline {2.1}Verkt\IeC {\o }y brukt i prosjektet}{14}
+\contentsline {subsection}{\numberline {2.2}Kort om IBM ILOG Concert Technology}{14}
+\contentsline {subsection}{\numberline {2.3}Kort om IBM ILOG Solver}{14}
+\contentsline {subsection}{\numberline {2.4}Kort om IBM ILOG Scheduler}{15}
+\contentsline {subsection}{\numberline {2.5}Forskningsmetoder}{15}
+\contentsline {subsubsection}{\numberline {2.5.1}Implementeringsprosessen}{16}
+\contentsline {subsubsection}{\numberline {2.5.2}Evaluering av prosessen}{16}
+\contentsline {subsection}{\numberline {2.6}Evalueringsstrategi}{16}
+\contentsline {section}{\numberline {3}Eksperimenter}{17}
+\contentsline {subsection}{\numberline {3.1}Uten tilleggsressurser}{17}
+\contentsline {subsection}{\numberline {3.2}Med tilleggsressurser}{17}
+\contentsline {section}{\numberline {4}Fremtidig arbeid}{18}
+\contentsline {section}{\numberline {5}Konklusjon}{19}
+\contentsline {section}{\numberline {6}Vedlegg}{20}
