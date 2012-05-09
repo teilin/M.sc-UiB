@@ -33,21 +33,52 @@ I tilegg til ressurskravene, en aktivitet kan avhenge på andre aktiviteter, det
 \colorbox{red}{Sjekk om dette stemmer også etter varme!}
 
 \subsubsection{Begrensinger}
-\textit{Avhengigheter} mellom aktiviteter er vanlig i industrien. En vedlikeholdsaktivitet kan for eksempel være avhengig av både levering av reservedeler og stillasbygging for å sikre tilgang til området hvor vedlikeholdet skal gjøres. Forholdet som viser at aktivitet $ Act_{i'} $ avhenger av aktivitet $ Act_{i} $ er uttrykt ved følgende begrensning: \[ w_{end}(Act_{i}) \leq v_{sta}(Act_{i'}) \]
+\textit{Avhengigheter} mellom aktiviteter er vanlig i industrien. En vedlikeholdsaktivitet kan for eksempel være avhengig av både levering av reservedeler og stillasbygging for å sikre tilgang til området hvor vedlikeholdet skal gjøres. Forholdet som viser at aktivitet $ Act_{i'} $ avhenger av aktivitet $ Act_{i} $ er uttrykt ved følgende begrensning: 
+\begin{equation}
+w_{end}(Act_{i}) \leq v_{sta}(Act_{i'})
+\end{equation}
 
-En \textit{kummulativ ressurs begrensing} påføres alle mannskaper for å være sikkert på at den totale ressursbruken ikke overstiger tilgjengelig kapasitet. Det er utrykt ved: \[ \forall t,j \# \{ Act_{i} | t \in [(v_{sta}(Act_{i}), w_{end}(Act_{i})) \wedge c_{crew}(Act_{i}) = Crew_{j}] \} \] \[ \leq c_{cap}(Crew_{j}) \] hvor $ c_cap{Crew_{j}} $ er kapasiteten av j's mannskap.
+En \textit{kummulativ ressurs begrensing} påføres alle mannskaper for å være sikkert på at den totale ressursbruken ikke overstiger tilgjengelig kapasitet. Det er utrykt ved: 
+\begin{equation}
+\forall t,j : \sharp \{ Act_{i} | t \in [(v_{sta}(Act_{i}), w_{end}(Act_{i})) \wedge c_{crew}(Act_{i}) = Crew_{j}] \} \leq c_{cap}(Crew_{j})
+\end{equation}
+hvor $ c_{cap}(Crew_{j}) $ er kapasiteten av j's mannskap.
 
-Kraner er unik induvidielle og er derfor modellert som et sett av monopolatorressursbegrensninger. Begrensingene tar for seg hvis to aktiviteter er tilegnet den samme kranen, så kan de ikke bli utført samtidig. Vi starter ved å definere de underliggende overlapping uttrykt som to aktiviteter overlapper i tid: \[ overlap(Act_{i},Act_{i'}) \equiv \exists t : v_{sta}(Act_{i}),v_{sta}(Act_{i'}) \leq t < w_{end}(Act_{i}),w_{end}(Act_{i'}) \] Den gjensidge uttelukkelsen opprettet av den monopolatoriskeressursbegrensningen blir da: \[ \forall i,i' \neq i : c_{crane}(Act_{i}) = v_{crane}(Act_{i'}) \rightarrow \neg overlap(Act_{i},Act_{i'}) \] for alle aktiviteter som krever kran.
+Kraner er unik induvidielle og er derfor modellert som et sett av monopolatorressursbegrensninger. Begrensingene tar for seg hvis to aktiviteter er tilegnet den samme kranen, så kan de ikke bli utført samtidig. Vi starter ved å definere de underliggende overlapping uttrykt som to aktiviteter overlapper i tid: 
+\begin{equation}
+overlap(Act_{i},Act_{i'}) \equiv \exists t : v_{sta}(Act_{i}),v_{sta}(Act_{i'}) \leq t < w_{end}(Act_{i}),w_{end}(Act_{i'})
+\end{equation}
+Den gjensidge uttelukkelsen opprettet av den monopolatoriskeressursbegrensningen blir da: 
+\begin{equation}
+\forall i,i' \neq i : c_{crane}(Act_{i}) = v_{crane}(Act_{i'}) \rightarrow \neg overlap(Act_{i},Act_{i'})
+\end{equation}
+for alle aktiviteter som krever kran.
 
 \textit{Sikkerhetsbegrensningene} er uttrykt i form av lokasjonen til aktiviten som krever kran og lokasjonen til den valgte kranen. Den første lokasjonen er kjent på forhånd, mens den andre avhenger av hvilken kran som blir brukt. Tilfellet at begrensingene i problemet endrer seg etter hvert som avgjørelser tas er interessangt på grunn av den tilagte kompleksiteten det medfører.
 
-Sikkerhetsbegrensningene utelukker bruken av lokasjonen hvor en aktivitet som krever kran befinner seg: \[ \forall i,i' \neq i : c_{crane}(Act_{i}) \wedge c_{loc}(Act_{i}) = c_{loc}(Act_{i'}) \wedge \neg overlap(Act_{i},Act_{i'}) \] når sikkerhetsbegrensingene utelukker bruken av lokasjonen til denne krannen er gitt ved: \[ \forall i,i' \neq i : v_{crane}(Act_{i}) = Crane_{j} \wedge c_{loc}(Act_{i'}) = c_{loc}(Crane_{j}) \rightarrow \neg overlap(Act_{i},Act_{i'}) \]
+Sikkerhetsbegrensningene utelukker bruken av lokasjonen hvor en aktivitet som krever kran befinner seg:
+\begin{equation}
+\forall i,i' \neq i : c_{crane}(Act_{i}) \wedge c_{loc}(Act_{i}) = c_{loc}(Act_{i'}) \wedge \neg overlap(Act_{i},Act_{i'})
+\end{equation}
+når sikkerhetsbegrensingene utelukker bruken av lokasjonen til denne krannen er gitt ved:
+\begin{equation}
+\forall i,i' \neq i : v_{crane}(Act_{i}) = Crane_{j} \wedge c_{loc}(Act_{i'}) = c_{loc}(Crane_{j}) \rightarrow \neg overlap(Act_{i},Act_{i'})
+\end{equation}
 
-Den siste begrensningen er varmebegrensningen. De er uttrykt som kummulativressursbegrensning og er påført lokasjon for å være sikkert på at total varme bruk ikke oversitiger varmekapasiteten tilgjengelig på hver lokasjon. Den er uttrykt ved: \[ \forall t,l: \sum\{c_{heat}(Crew_j) \mid t \in [ v_{sta}(Act_{i}), w_{end}(Act_{i})) \wedge c_{crew}(Act_{i}) = Crew_{j} \] \[ \wedge c_{loc}(Act_{i}) = Loc_{l} ] \} \le c_{heatcap}(Loc_{l}) \]
-\colorbox{red}{Skriv denne ferdig}
+Den siste begrensningen er varmebegrensningen. De er uttrykt som kummulativressursbegrensning og er påført lokasjon for å være sikkert på at total varme bruk ikke oversitiger varmekapasiteten tilgjengelig på hver lokasjon. Den er uttrykt ved:
+\begin{equation}
+\begin{split}
+\forall t,l: \sum\{c_{heat}(Crew_j) \mid t \in [ v_{sta}(Act_{i}), w_{end}(Act_{i})) \wedge c_{crew}(Act_{i}) = Crew_{j} \\
+\wedge c_{loc}(Act_{i}) = Loc_{l} ] \} \le c_{heatcap}(Loc_{l})
+\end{split}
+\end{equation}
 
 \subsubsection{Mål}
-Målet er å minimalisere makespan $ w_{ms}(P) $ eller varigheten av planleggingen er definert ved: \[ w_{ms}(P) = max_{i} \{ w_{end}(A_{i}) \} \in [0,c_{hor}(P)] \] som sier at makespanet er likt den siste slutten eller fullføringstiden i settet av aktiviteter.
+Målet er å minimalisere makespan $ w_{ms}(P) $ eller varigheten av planleggingen er definert ved:
+\begin{equation}
+w_{ms}(P) = max_{i} \{ w_{end}(A_{i}) \} \in [0,c_{hor}(P)]
+\end{equation}
+som sier at makespanet er likt den siste slutten eller fullføringstiden i settet av aktiviteter.
 
 \subsubsection{Probleminstanser}
 Problemene er beskrevet ved størrelsen fastsatt av det totale nummeret av aktiviteter, $ \#Acts \in \{ 50,60, 100, 200, 300, 400, 500, 600, 800, 900, 1000, 5000 \} $ og kraner, $ \#Cranes = [2,3] $. Det ble generert totalt 5 probleminstanser for hver av de 24 problem størrelsene, som summert opp blir 120 instanser.

@@ -35,11 +35,12 @@ IBM ILOG Scheduler hjelper med å utvikle problemløsnings-applikasjoner som kre
 Forskningsmetoden som er brukt i prosjektet er å eksperimentere med implementasjonen av ressursene og løsningsstrategien.
 
 \subsubsection{Implementeringsprosessen}
-Første delen av implementeringsprosessen er å utvide modellen for å inkludere de nye ressursene. For å gjøre det eksperimenterte jeg litt med Scheduler for prøve å finne den beste måten å implementere det på.
+Problemet med å finne ut om en RCPSP løsning i tillegg til sikkerhetsbegrensningene med makespan mindre enn en gitt frist finnes er NP-hard. Dette betyr at den utvidede problemet med varme ressursen også må være NP-hard og derfor en optimal løsning med til og med de enkleste formene av problemet er ikke garantert innen polynomisk tid. To forskjellige løsningsstrategier er testet. Begge løsningsstrategiene er implementert i IBM ILOG Solver og IBM ILOG Scheduler biblotekene. I begge løsningsstrategiene brukes standard søkemål i ILOG Solver.
 
-Den andre delen av implementeringsprosessen er å eksperimentere med forskjellige løsningstrategier gitt av i Solver. Her er det mange forskjellige kombinasjoner og rekkefølgen de forskjellige strategiene (i ILOG; Goals) kan ha en innvirkning på løsningen tilslutt.
+Den første løsningsstrategien bruker IloAssignAlternatives, som blir brukt til å tildele kraner til aktivitetene. Den neste søkemålet er IloRankForward... og tilslutt brukes søkemålet IloSetTimesForward ...
 
-Tilslutt så kommer det an på tidsgrensen som blir satt på hvor lenge ILOG skal søke etter bedre løsninger.
+Den andre
+%IloSetTimesForward & IloAssignAlternatived & IloRankForward
 
 \colorbox{red}{Denne delen skal utvides ytterligere.}
 
@@ -49,3 +50,23 @@ Prosessen med eksperimenteringen av implementasjonen blir evaluert ved å unders
 Forskningsmetoden vil bli evaluert ved å bruke genererte benchmarksett, som er generert av et eksternt program. Benchmarksettene som genereres kan bestemmes hvor mange av de forskjellige ressursene som skal være med i benchmarksettet. I dette prosjektet er det et sprang på 50 - 5000 aktiviteter som implementasjon blir evaluert på.
 
 \subsection{Evalueringsstrategi}
+For å evaluere kvaliteten på løsningene, er teoretisk- øvregrense og nedregrense for makespan blir kalkulert.
+
+\subsubsection{Teoretisk nedregrense}
+En teoretisk nedregrense er kalkulert basert på ressurstilgjengeligheten for den mest begrensede mannskapet. Resultatløsningen blir kanskje ikke gyldig for hele problemet, men er komprimert tett sammen for mannskapet og utnytte hver eneste mannskapstime.
+\begin{equation}
+c_{load}(Crew_{j}) = \sum_{c_{crew}(Act_{i}) = Crew_{j}} c_{dur}(Act_{i})
+\end{equation}
+\begin{equation}
+c_{reload}(Crew_{j}) = \frac{c_{load}(Crew_{j})}{c_{cap}(Crew_{j})}
+\end{equation}
+\begin{equation}
+c_{lb,ms}(P) = max_{j}\{ c_{reload}(Crew_{j}) \}
+\end{equation}
+
+\subsubsection{Teoretisk øvregrense}
+Teoretisk øvregrense for makespan er
+\begin{equation}
+c_{ub,ms}(P) = c_{hor}(P) = \sum_{i} c_{dur}(Act_{i})
+\end{equation}
+som indikerer at i det verste tilfelle blir alle aktivitetene utført etter hverandre, en om gangen.

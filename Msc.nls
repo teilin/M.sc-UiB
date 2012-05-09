@@ -8,15 +8,15 @@
 		\nompageref{9}
   \item [{Avledningsvariable}]\begingroup Derived variable\nomeqref {0}
 		\nompageref{9}
-  \item [{Concert}]\begingroup IBM ILOG Concert Technology\nomeqref {0}
+  \item [{Concert}]\begingroup IBM ILOG Concert Technology\nomeqref {8}
 		\nompageref{14}
   \item [{CP}]\begingroup Begrensningsprogrammering (engelsk: Constraint programming)\nomeqref {0}
 		\nompageref{6}
   \item [{Monooperatorressurs}]\begingroup På engelsk: Unary resource\nomeqref {0}
 		\nompageref{10}
-  \item [{Scheduler}]\begingroup IBM ILOG Scheduler\nomeqref {0}
+  \item [{Scheduler}]\begingroup IBM ILOG Scheduler\nomeqref {8}
 		\nompageref{15}
-  \item [{Solver}]\begingroup IBM ILOG Solver\nomeqref {0}
+  \item [{Solver}]\begingroup IBM ILOG Solver\nomeqref {8}
 		\nompageref{14}
 
 \end{thenomenclature}
