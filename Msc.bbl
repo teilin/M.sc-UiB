@@ -4,6 +4,11 @@
 Wikipedia.
 \newblock \url{http://en.wikipedia.org/wiki/Constraint_programming}.
 
+\bibitem{RcpspPaperSchutt}
+Peter J.~Stuckey Andreas~Schutt, Thibaut~Feydy and Mark~G. Wallace.
+\newblock Solving the resource constrained project scheduling problem with
+  generalized precedences by lazy clause generation.
+
 \bibitem{cpschedulerilog}
 IBM.
 \newblock {\em IBM ILOG Scheduler V6.8}.

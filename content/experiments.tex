@@ -2,20 +2,25 @@ Eksperimenteringen er utført på en Mackbook Air med 1.8 GHz Intel Core i7 pros
 
 \begin{table}[h]
 \begin{center}
-\begin{tabular}{ | c | c | c | c | c | c | c | c | c | c | c | c |}
+\begin{tabular}{ | c | c | c | c | c | c | c | c | c | c | c | }
 \hline
-\textbf{Modell} & \multicolumn{6}{|c|}{\textbf{2 kraner}} & \multicolumn{6}{|c|}{\textbf{3 kraner}} & \multicolumn{2}{|c|}{\textbf{Alle}} \\ \hline
-$\sharp Act(\sharp P)$ & \multicolumn{2}{|c|}{$< 100 (10)$} & \multicolumn{2}{|c|}{$> 100 \text{ og } < 1000 (45)$} & \multicolumn{2}{|c|}{$> 1000 (10)$} & \multicolumn{2}{|c|}{$< 100 (10)$} & \multicolumn{2}{|c|}{$> 100 \text{ og } < 1000 (45)$} & \multicolumn{2}{|c|}{$> 1000 (10)$} & \multicolumn{2}{|c|}{(65)} \\ 
+\textbf{Modell} & \multicolumn{4}{|c|}{\textbf{2 kraner}} & \multicolumn{4}{|c|}{\textbf{3 kraner}} & \multicolumn{2}{|c|}{\textbf{Alle}} \\ \hline
+$\sharp Act(\sharp P)$ & \multicolumn{2}{|c|}{$< 100 (25)$} & \multicolumn{2}{|c|}{$> 100 (55)$} & \multicolumn{2}{|c|}{$< 100 (25)$} & \multicolumn{2}{|c|}{$> 100 (55)$} & \multicolumn{2}{|c|}{(160)} \\ 
 \hline
-Modell & $w_{rq}$ & $\%^{(1)}$& $w_{rq}$ & $\%^{(1)}$ & $w_{rq}$ & $\%^{(1)}$ & $w_{rq}$ & $\%^{(1)}$  & $w_{rq}$ & $\%^{(1)}$ & $w_{rq}$ & $\%^{(1)}$ & $w_{rq}$ & $\%^{(1)}$ \\ \hline
-LS1 Uten varme & 1.223 & 80 & 1.153 & 44 & 1.100 & 20 & 0 & 0 & 0 & 0.031 & 49 \\
+Modell & $w_{rq}$ & $\%^{(1)}$ & $w_{rq}$ & $\%^{(1)}$  & $w_{rq}$ & $\%^{(1)}$ & $w_{rq}$ & $\%^{(1)}$ & $w_{rq}$ & $\%^{(1)}$ \\ \hline
+$LS1 \sharp 1^{(2)}$ & 1.164 & 80 & 1.115 & 44 & 1.105 & 64 & 1.027 & 20 & 1.113 & 44 \\
+$LS1 \sharp 2^{(3)}$ & 1.228 & 32 & - & - & - & - & - & - & 1.183 & 5 \\
+$LS2 \sharp 1^{(2)}$ & 1.691 & 100 & 1.855 & 100 & 1.545 & 100 & 1.693 & 100 & 1.725 & 100 \\
+$LS2 \sharp 2^{(3)}$ & 1.651 & 40 & 1.860 & 1.8 & - & - & - & - & 1.670 & 6.8 \\
 \hline
 \end{tabular}
 \end{center}
-\caption{Relativ optimalitets index $w_{rq}$ for de forskjellige modeller}
+\caption{Relativ optimalitets indeks $w_{rq}$ for de forskjellige modellene}
 \label{tab:resultaterSum}
 \end{table}
 $^{(1)}$ prosentandel løste probleminstanser
+$^{(2)}$ $\sharp 1$ er løsninger med varmeressurs
+$^{(3)}$ $\sharp 3$ er løsninger uten varmeressurs
 
 En måling av relativ kvalitet er brukt for å evaluere resultatene fra forskjellige strategier. Den avledede variabelen $w_{rq}$ er gitt ved (\ref{eq:relativkvalitet}).
 \begin{equation}
@@ -24,7 +29,7 @@ w_{rq} = \frac{1}{| P_{sol} |} \sum_{P \in P_{sol}} \frac{w_{ms}(P)}{c_{lb,ms}(P
 \end{equation}
 $P_{sol}$ er det settet med probleminstanser som er løst ved hver enkelt løsningsstrategi. Verdiene av $P_{sol}$ varierer fra løsningsstrategi til løsningsstrategi og disse gjennomsnittene er derfor ikke helt sammenlignbare, men de vil gi en indikasjon på kvaliteten på løsningen. $w_{rq}$ skiller ikke på strategier som feiler med å finne løsninger, men hvor robust løsningen er vil antallet løste probleminstanser indikere. Resultatene er summert opp i tabell \ref{tab:resultaterSum}.
 
-\subsection{Uten tilleggsressurser}
+\subsection{Uten varmeressurs}
 
 
-\subsection{Med tilleggsressurser}
+\subsection{Med varmeressurs}

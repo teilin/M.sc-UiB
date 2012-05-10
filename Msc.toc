@@ -15,20 +15,20 @@
 \contentsline {subsubsection}{\numberline {1.5.4}Begrensinger}{11}
 \contentsline {subsubsection}{\numberline {1.5.5}M\IeC {\r a}l}{12}
 \contentsline {subsubsection}{\numberline {1.5.6}Probleminstanser}{12}
-\contentsline {section}{\numberline {2}Metode}{14}
-\contentsline {subsection}{\numberline {2.1}Verkt\IeC {\o }y brukt i prosjektet}{14}
-\contentsline {subsection}{\numberline {2.2}Kort om IBM ILOG Concert Technology}{14}
+\contentsline {section}{\numberline {2}Metode}{13}
+\contentsline {subsection}{\numberline {2.1}Verkt\IeC {\o }y brukt i prosjektet}{13}
+\contentsline {subsection}{\numberline {2.2}Kort om IBM ILOG Concert Technology}{13}
 \contentsline {subsection}{\numberline {2.3}Kort om IBM ILOG Solver}{14}
 \contentsline {subsection}{\numberline {2.4}Kort om IBM ILOG Scheduler}{15}
 \contentsline {subsection}{\numberline {2.5}Forskningsmetoder}{15}
-\contentsline {subsubsection}{\numberline {2.5.1}Implementeringsprosessen}{16}
-\contentsline {subsubsection}{\numberline {2.5.2}Evaluering av prosessen}{16}
+\contentsline {subsubsection}{\numberline {2.5.1}Implementeringsprosessen}{15}
+\contentsline {subsubsection}{\numberline {2.5.2}Evaluering av prosessen}{15}
 \contentsline {subsection}{\numberline {2.6}Evalueringsstrategi}{16}
 \contentsline {subsubsection}{\numberline {2.6.1}Teoretisk nedregrense}{16}
-\contentsline {subsubsection}{\numberline {2.6.2}Teoretisk \IeC {\o }vregrense}{17}
-\contentsline {section}{\numberline {3}Eksperimenter}{18}
-\contentsline {subsection}{\numberline {3.1}Uten tilleggsressurser}{18}
-\contentsline {subsection}{\numberline {3.2}Med tilleggsressurser}{18}
-\contentsline {section}{\numberline {4}Fremtidig arbeid}{19}
-\contentsline {section}{\numberline {5}Konklusjon}{20}
-\contentsline {section}{\numberline {6}Vedlegg}{21}
+\contentsline {subsubsection}{\numberline {2.6.2}Teoretisk \IeC {\o }vregrense}{16}
+\contentsline {section}{\numberline {3}Eksperimenter}{16}
+\contentsline {subsection}{\numberline {3.1}Uten varmeressurs}{17}
+\contentsline {subsection}{\numberline {3.2}Med varmeressurs}{17}
+\contentsline {section}{\numberline {4}Fremtidig arbeid}{17}
+\contentsline {section}{\numberline {5}Konklusjon}{17}
+\contentsline {section}{\numberline {6}Vedlegg}{18}

@@ -1,7 +1,7 @@
 \subsection{Problembeskrivelse}
 Problemstillingen tar utgangspunkt i den opprinnelige problemstillingen til \bht. Problemet er på en innbilt oljeplattform inndelt i et sett av lokasjoner. Utstyr som er krevd for vedlikehold er tilfeldig plassert rundt på plattformen, og ulike aktiviteter skal bli planlagt. Aktivitetene blir opprettet med et gitt sett av ressurskrav og muligens avhengigheter til andre aktiviteter. Alle aktiviteter krever et mannskap til å utføre dem og en lokasjon til å bli utført på. I tillegg krever noen aktiviteter kranressurser, fordi tung løfting er involvert. Mannskap- og kranressurser er knappe, som betyr at de er begrenset tilførsel.
 
-Så langt er problemet klassifisert som et "Resource-Constrained Project Scheduling Problem", som kjennetegnes ved:
+Så langt er problemet klassifisert som et "Resource-Constrained Project Scheduling Problem (RCPSP)"\cite{RcpspPaperSchutt}, som kjennetegnes ved:
 \begin{itemize}
 \item Et sett av ressurser med en gitt kapasitet
 \item Et sett av ikke-forstyrrede aktiviteter som er gitt en prosseseringstid
@@ -17,7 +17,7 @@ En probleminstans $ P $ inneholder aktiviteter som skal gjennomføres, ressurser
 \subsubsection{Ressurser}
 En \textit{lokasjon} $ Loc_{l} \in Locs = \{ Loc_{1},\dots,Loc_{n} \} $ er stedet hvor aktiviter blir utført. Selvom lokasjoner blir vist som ressurser, så er det ikke noen begrensinger på hvor mange aktiviter som kan bli utført samtidig på en lokasjon. Det er begrensinger når farlig arbeid som tung løfting blir utført, da er lokasjonen utilgjengelig for alle andre aktiviteter. Når en lokasjon er stengt på grunn av kranbruk sier vi at en sikkerhetsone har blitt opprettet.
 
-\textit{Mannskaper} er ansvarlige for utførelsene av aktivitetene. Et mannskap er betegnet $ Crew_{j} \in Crews = \{ Crew_{1},\dots,Crew_{n} \} $. \colorbox{red}{Utfylling her}
+\textit{Mannskaper} er ansvarlige for utførelsene av aktivitetene. Et mannskap er betegnet $ Crew_{j} \in Crews = \{ Crew_{1},\dots,Crew_{n} \} $.
 
 En \textit{kran} $ Crane_{k} \in Cranes = \{ Crane_{1},\dots,Crane_{n} \} $ er en potensiell ressurs for aktiviteter. Noen aktiviteter trenger kran og alle probleminstanser har et mindre antall av aktiviteter som krever kranbruk. Kraner er monooperatorressurser \nomenclature{Monooperatorressurs}{På engelsk: Unary resource} som betyr at de kun kan utføre en aktivitet av gangen. En aktivitet som krever kran, spesifiserer ikke en spesifikk kran, men kun sier den trenger kran. En gyldig løsning må derfor tildele en kran til alle aktiviteter som krever kran fra et sett av kraner tilgjengelig, gitt av $ v_{crane}(Act_{i}) \in Cranes $. Dette gjør settet av kraner til en alternativ ressurs.
 
@@ -28,9 +28,7 @@ En \textit{aktivitet} $ Act_{i} \in Acts = \{ Act_{i},\dots,Act_{n} \} $ kommer 
 
 En aktivitet $ Act_{i} $ krever et mannskap $ c_{crew}(Act_{i}) \in Crews $ for å utføre den og en lokasjon $ c_{loc}(Act_{i}) \in Locs $ til å bli utført på. En aktivitet avhenger av et enkelt medlem av et mannskap og det er ikke mulig å samle ressurser for å redusere varigheten. Kraner er den siste ressursen som er tilgjengelig, men er ikke nødvenndig for alle aktivitetene.
 
-I tilegg til ressurskravene, en aktivitet kan avhenge på andre aktiviteter, det betyr at en aktivitet ikke kan starte før en annen aktivitet er ferdig utført.
-
-\colorbox{red}{Sjekk om dette stemmer også etter varme!}
+I tilegg til ressurskravene, kan en aktivitet være avhengig av andre aktiviteter, det betyr at en aktivitet ikke kan starte før en annen aktivitet er ferdig utført.
 
 \subsubsection{Begrensinger}
 \textit{Avhengigheter} mellom aktiviteter er vanlig i industrien. En vedlikeholdsaktivitet kan for eksempel være avhengig av både levering av reservedeler og stillasbygging for å sikre tilgang til området hvor vedlikeholdet skal gjøres. Forholdet som viser at aktivitet $ Act_{i'} $ avhenger av aktivitet $ Act_{i} $ er uttrykt ved følgende begrensning: 
@@ -65,7 +63,7 @@ når sikkerhetsbegrensingene utelukker bruken av lokasjonen til denne krannen er
 \forall i,i' \neq i : v_{crane}(Act_{i}) = Crane_{j} \wedge c_{loc}(Act_{i'}) = c_{loc}(Crane_{j}) \rightarrow \neg overlap(Act_{i},Act_{i'})
 \end{equation}
 
-Den siste begrensningen er varmebegrensningen. De er uttrykt som kummulativressursbegrensning og er påført lokasjon for å være sikkert på at total varme bruk ikke oversitiger varmekapasiteten tilgjengelig på hver lokasjon. Den er uttrykt ved:
+Den siste begrensningen er varmebegrensningen. Med varme, så menes ikke varme i tradisjonell forstand, men som en måte å kunne sette en verdi på et mannskap og en kapasitet på en lokasjon. Det kan være lokasjoner som av forskjellige årsaker ikke kan ha ubegrenset med mannskap til å jobbe der samtidig. Forskjellige mannskaper kan også ha forskjellig årsaker ut ifra hva slags arbeid de utfører hvor mye av denne kapasiteten de bruker. Mannskaper som driver arbeid som sveising kan for eksempel ha en høyere varmeverdi enn et mannskap med elektrikkere. De er uttrykt som kummulativressursbegrensning og er påført lokasjon for å være sikkert på at total varme bruk ikke oversitiger varmekapasiteten tilgjengelig på hver lokasjon. Den er uttrykt ved:
 \begin{equation}
 \begin{split}
 \forall t,l: \sum\{c_{heat}(Crew_j) \mid t \in [ v_{sta}(Act_{i}), w_{end}(Act_{i})) \wedge c_{crew}(Act_{i}) = Crew_{j} \\
@@ -85,5 +83,4 @@ Problemene er beskrevet ved størrelsen fastsatt av det totale nummeret av aktiv
 
 Probleminstansene ble tilfeldig generert, ved å tilegne mannskaper til aktiviteter, lokasjoner til aktiviteter, lokasjoner til kraner, avhengigheter mellom aktiviteter og aktiviteter som trenger kran. Når instansene ble generert, er det spesifisert at det ikke skal forekomme sirkulasjoner på aktivitetsavhengigheter og at det ikke skal være mer enn en kran på en lokasjon. Så alle 120 instansene er gyldige.
 
-Alle probleme har 10 lokasjoner, som er redusert fra 25 i de opprinnelige probleminstansene til \bht, for at det skal kunne være flere aktiviteter på lokasjonen enn om det var 25 lokasjoner, og 4 forskjellige mannskaper med kapasitet $ c_{cap}(Crew_{j}) \in [2,3] $ tatt fra en uniform fordeling. Domenet for aktivitenes startvariabel er generelt $ v_{sta}(Act_{i}) = [0,c_{hor}(P)] $ og de konstante varighetene $ c_{dur}(Act_{i}) $ er tilfeldig tatt fra en uniform fordeling i området $ [1,6] $ tidssteg. Omtrent 20\% av aktivitetene er tilfeldig valgt til å bruke kran og omtrent 10\% av aktivitetene er begrenset ved avhengighet til en annen aktivitet.
-\colorbox{red}{Skriv denne ferdig. Sjekk antall kraner i problemene}
+Alle probleme har 10 lokasjoner, som er redusert fra 25 i de opprinnelige probleminstansene til \bht, for at det skal kunne være flere aktiviteter på lokasjonen enn om det var 25 lokasjoner, og 4 forskjellige mannskaper med kapasitet $ c_{cap}(Crew_{j}) \in [2,3] $ tatt fra en uniform fordeling. Domenet for aktivitenes startvariabel er generelt $ v_{sta}(Act_{i}) = [0,c_{hor}(P)] $ og de konstante varighetene $ c_{dur}(Act_{i}) $ er tilfeldig tatt fra en uniform fordeling i området $ [1,6] $ tidssteg. Omtrent 20\% av aktivitetene er tilfeldig valgt til å bruke kran og omtrent 10\% av aktivitetene er begrenset ved avhengighet til en annen aktivitet. Mannskapers varme er tilfeldig generert i området: $c_{heat}(Crew_{j}) \in [5,15]$, mens lokasjoners varmekapasitet er tilfeldig generert i området: $c_{heatcap}(Loc_{l}) \in [5,20]$.
