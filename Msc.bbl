@@ -1,8 +1,20 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
+
+\bibitem{nphardwikipedia}
+Wikipedia.
+\newblock \url{http://en.wikipedia.org/wiki/NP-hard}.
 
 \bibitem{cpwikipedia}
 Wikipedia.
 \newblock \url{http://en.wikipedia.org/wiki/Constraint_programming}.
+
+\bibitem{compcomplextheory}
+Wikipedia: Computational complexity theory.
+\newblock \url{http://en.wikipedia.org/wiki/Computational_complexity_theory}.
+
+\bibitem{optimizationproblemwiki}
+Wikipedia: Optimization problem.
+\newblock \url{http://en.wikipedia.org/wiki/Optimization_problem}.
 
 \bibitem{RcpspPaperSchutt}
 Peter J.~Stuckey Andreas~Schutt, Thibaut~Feydy and Mark~G. Wallace.
@@ -24,10 +36,43 @@ ILOG.
 \newblock {\em ILOG Concert Technology 2.0 Reference Manual}.
 \newblock ILOG.
 
+\bibitem{Laborie:2009:IIC:1560579.1560593}
+Philippe Laborie.
+\newblock Ibm ilog cp optimizer for detailed scheduling illustrated on three
+  problems.
+\newblock In {\em Proceedings of the 6th International Conference on
+  Integration of AI and OR Techniques in Constraint Programming for
+  Combinatorial Optimization Problems}, CPAIOR '09, pages 148--162, Berlin,
+  Heidelberg, 2009. Springer-Verlag.
+
+\bibitem{Nuijten:1998:CJS:594934.594971}
+Wim Nuijten and Claude Le~Pape.
+\newblock Constraint-based job shop scheduling with {\sc ilog\ scheduler}.
+\newblock {\em Journal of Heuristics}, 3(4):271--286, March 1998.
+
+\bibitem{tvedtbezem}
+B{\aa}rd Henning~Tvedt og~Marc~Bezem.
+\newblock Modeling safety constraints in oil and gas maintenance scheduling.
+\newblock {\em Universitetet i Bergen}, 2011.
+
 \bibitem{Pape94implementationof}
 Claude~Le Pape.
 \newblock Implementation of resource constraints in ilog schedule: A library
   for the development of constraint-based scheduling systems.
 \newblock {\em Intelligent Systems Engineering}, 3:55--66, 1994.
+
+\bibitem{Taillard1993278}
+E.~Taillard.
+\newblock Benchmarks for basic scheduling problems.
+\newblock {\em European Journal of Operational Research}, 64(2):278 -- 285,
+  1993.
+\newblock <ce:title>Project Management anf Scheduling</ce:title>.
+
+\bibitem{Wallace:2004:BCL:956860.956861}
+Mark Wallace, Joachim Schimpf, Kish Shen, and Warwick Harvey.
+\newblock On benchmarking constraint logic programming platforms. response to
+  fernandez and hill's “a comparative study of eight constraint programming
+  languages over the boolean and finite domains”.
+\newblock {\em Constraints}, 9(1):5--34, January 2004.
 
 \end{thebibliography}

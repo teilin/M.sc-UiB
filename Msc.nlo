@@ -1,8 +1,11 @@
+\nomenclatureentry{aAPO@[{APO}]\begingroup Automatisk Planlegging i Oljeindustrien\nomeqref {0}|nompageref}{6}
 \nomenclatureentry{aCP@[{CP}]\begingroup Begrensningsprogrammering (engelsk: Constraint programming)\nomeqref {0}|nompageref}{6}
 \nomenclatureentry{aAI@[{AI}]\begingroup Kunstig intelligens (engelsk: artificial inteligence)\nomeqref {0}|nompageref}{6}
-\nomenclatureentry{aAvgjøringsvariable@[{Avgjøringsvariable}]\begingroup På engelsk: decision variable\nomeqref {0}|nompageref}{10}
-\nomenclatureentry{aAvledningsvariable@[{Avledningsvariable}]\begingroup Derived variable\nomeqref {0}|nompageref}{10}
-\nomenclatureentry{aMonooperatorressurs@[{Monooperatorressurs}]\begingroup På engelsk: Unary resource\nomeqref {0}|nompageref}{10}
-\nomenclatureentry{aConcert@[{Concert}]\begingroup IBM ILOG Concert Technology\nomeqref {8}|nompageref}{13}
-\nomenclatureentry{aSolver@[{Solver}]\begingroup IBM ILOG Solver\nomeqref {8}|nompageref}{14}
-\nomenclatureentry{aScheduler@[{Scheduler}]\begingroup IBM ILOG Scheduler\nomeqref {8}|nompageref}{15}
+\nomenclatureentry{aNP-hard@[{NP-hard}]\begingroup Ikke-deterministisk polynomtid hard (engelsk: non-deterministic polynomial-time hard)\nomeqref {0}|nompageref}{6}
+\nomenclatureentry{aJSSP@[{JSSP}]\begingroup Job Shop Scheduling Problem\nomeqref {0}|nompageref}{6}
+\nomenclatureentry{aAvgjøringsvariable@[{Avgjøringsvariable}]\begingroup På engelsk: decision variable\nomeqref {0}|nompageref}{11}
+\nomenclatureentry{aAvledningsvariable@[{Avledningsvariable}]\begingroup Derived variable\nomeqref {0}|nompageref}{11}
+\nomenclatureentry{aMonooperatorressurs@[{Monooperatorressurs}]\begingroup På engelsk: Unary resource\nomeqref {0}|nompageref}{11}
+\nomenclatureentry{aConcert@[{Concert}]\begingroup IBM ILOG Concert Technology\nomeqref {8}|nompageref}{15}
+\nomenclatureentry{aSolver@[{Solver}]\begingroup IBM ILOG Solver\nomeqref {8}|nompageref}{15}
+\nomenclatureentry{aScheduler@[{Scheduler}]\begingroup IBM ILOG Scheduler\nomeqref {8}|nompageref}{16}

@@ -1,12 +1,42 @@
 \subsection{Bakgrunn}
+\colorbox{red}{Bakgrunn på utvides yterligere!}
 I dette prosjektet, verktøyene som er brukt for å utføre eksperimenter på emnet er ILOG Scheduler som er endel av IBM sitt ILOG CP\nomenclature{CP}{Begrensningsprogrammering (engelsk: Constraint programming)}. ILOG Scheduler er et C++ bibliotek som gjør det mulig å definere planleggingsbegrensninger i form av ressurser og aktiviteter. Planlegging er en prosess ved å tildele ressurser til aktiviteter og tildele en tid til aktiviteter så det ikke er noen konflikt med begrensingene.\cite{Pape94implementationof} Automatisk planlegging er endel av det som kalles kunstig intelligens (AI) \nomenclature{AI}{Kunstig intelligens (engelsk: artificial inteligence)}.
 
-I prosjektet vil også utvikleren evaluere løsningene og sammenligne løsningene med og uten varmebegrensing. Med varmebegrensing, så er det ikke varme i sin tradisjonelle forstand.
-
-Det overordnede målet med denne avhandlingen er å utvide ILOG Scheduler løsningen til \bht med flere resursser for å sjekke om det å legge til flere ressurser vil gi bedre og flere løsninger enn de opprinnelige løsningene.
+Problemer i kategorien \textit{beregningsvitenskap kompleksitets teori}\cite{compcomplextheory} og som også er minst like vanskelige som de vanskeligste probleme i NP-kategorien, kalles \textit{ikke-deterministisk polynomtid problemer vansklige} (NP-hard) \nomenclature{NP-hard}{Ikke-deterministisk polynomtid hard (engelsk: non-deterministic polynomial-time hard)}. Det er forskjellige kategorier av NP-harde problemer, avgjøreksesproblemer, søkeproblemer og optimaliseringsproblemer. \cite{nphardwikipedia} Problemet i dette prosjektet er i kategorien optimaliseringsproblem. Fra wikipedia \cite{optimizationproblemwiki} er et optimaliseringsproblem: "Et optimaliseringsproblem er et problem med å finne den beste løsningen ut ifra alle gyldige løsninger".
 
 \subsubsection{Relatert arbeid}
 \colorbox{red}{Skrive om tidligere gjort forskning på området.}
+Nuijten og Pape har brukt ILOG Scheduler til å løse "Job Shop Scheduling" problemet \nomenclature{JSSP}{Job Shop Scheduling Problem} og det er et problem som er NP-hard. Når problemer blir løst med Scheduler blir alle starttidene til aktivitetene, i en mulig løsning, som ikke er bevist om er en gyldig løsning tatt vare på i søkefasen. Begrensingsbasert planlegging blir ofte brukt for å redusere beregningstiden som trengs. Begrensingene reduserer domenet av variable. I industrien er ofte planleggingsproblemmer uført i dynamiske miljøer, som vil øke behovet for reaktive planleggingsalgoritmer. En mulighet for å bruke begrensningsprogrammering på en reaktiv måte er å overføre handlinger og deler av planleggingen som den er nå til begrensinger og domener. \cite{Nuijten:1998:CJS:594934.594971}
+\begin{itemize}
+\item (Taillard) Benchmark for basic scheduling problems \cite{Taillard1993278}
+\begin{itemize}
+\item Vanskelige problemer; beste makespan langt unna nedre grense
+\item Går på hvordan oppretter gode og vanskelige benchmarksett for 3 kjente CP problemer.
+\end{itemize}
+\item (Wallace) On bencgmarking CLP Platforms \cite{Wallace:2004:BCL:956860.956861}
+\begin{itemize}
+\item Tar for seg positive og negative aspekter ved benchmarking CLP problemer.
+\item Benchmarking oppgave 2 oppgaver; 1 - dekke et representativt problem og bredt programmerings begrep
+\item 2 måter; application benchmarking og unit tests
+\item Utfordring opprette et klar målsetting med ytelsen.
+\item Teoretisk idelle måten å velge beste CLP systemet for en applikasjon er å implementere en løsning for applikajsonen for hvert system og velge den beste. Praktisk: kan bare benchmarke systemer med predefinerte problemer og håpe at resultatet kan bli overført til applikasjonen som krever det.
+\item Sammenlignet CLP problemer SICStus og IF/Prolog med andre CLP systemer (clp(FD), CHR, ILOG, Oz og B-prolog)
+\item Tidsmekanismer vanskelig spesielt i høynivåspråk, hvor det ofte måles CPU tid.
+\item Sammenligne CLP systemer gir flere tilfeller som ikke har oppstått ved sammenliggning av mer tradisjonelle systemer. Utførelsestiden for 2 CLP språk løser samme problem ofte avhenger mindre på språkimplementasjon enn presis algoritme utførelse av programmet.
+\item For å benchmarke forskjellige CLP språk støtter samme funskjonalitet er det nødt å skrive program i forskjellig språk med samme algoritme.
+\end{itemize}
+
+\item (Laborie) IBM ILOG CP Optimizer for Detailed Scheduling Illustrated in Three problems \cite{Laborie:2009:IIC:1560579.1560593}
+\begin{itemize}
+\item ...
+\end{itemize}
+
+\item (Biskup) Enslig-maskin planlegging med læringsbetraktninger %\cite{Biskup1999173}
+\begin{itemize}
+\item \dots
+\end{itemize}
+
+\end{itemize}
 
 \subsection{Målet med prosjektet}
 Målet med prosjektet er todelt, og består i å vurdere den modifiserte problemstillingen mot den opprinnelige i forhold til:
@@ -22,6 +52,3 @@ I den opprinnelige problemstillingen vil noen aktiviteter være relativt lite be
 \item Vil flere begrensninger gjøre det lettere å finne en løsning?
 \item Er det noe spesielt med akkurat disse instansene eller er det implementasjon i \ilog som er årsaken?
 \end{itemize}
-
-\subsection{Beskrivelse av kommende kapitler}
-I kapittelet om metode, vil fremgangsmåten for prosjektet bli lagt frem og hvordan løsningene har blitt evaluert. I kapittelet om eksperimenteringen vil det legges frem løsninger ved forskjellige strategier og med og uten ressursene. Her vil også løsningene bli evaluert og tilslutt vil det bli sammenfattet en konklusjon over det arbeidet som er gjort.

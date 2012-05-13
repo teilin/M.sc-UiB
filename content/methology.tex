@@ -45,14 +45,24 @@ Den andre
 \colorbox{red}{Denne delen skal utvides ytterligere.}
 
 \subsubsection{Evaluering av prosessen}
-Prosessen med eksperimenteringen av implementasjonen blir evaluert ved å undersøke makespan opp mot teoretisk øvregrense og teoretisk nedregrense i både løsningene uten tilleggsressurser og med tilleggsressurser. Løsningene fra prosessen med og uten tilleggsresursene vil også bli evaluert opp mot hverandre. Dette innebærer bruk av kvantitative metoder.
+Prosessen med eksperimenteringen av implementasjonen blir evaluert ved å undersøke makespan opp mot teoretisk øvregrense (se \ref{sec:teoretiskovre}) og teoretisk nedregrense (se \ref{sec:teoretisknedre}) i både løsningene uten tilleggsressurser og med tilleggsressurser. Løsningene fra prosessen med og uten tilleggsresursene vil også bli evaluert opp mot hverandre. Dette innebærer bruk av kvantitative metoder.
 
 Forskningsmetoden vil bli evaluert ved å bruke genererte benchmarksett, som er generert av et eksternt program. Benchmarksettene som genereres kan bestemmes hvor mange av de forskjellige ressursene som skal være med i benchmarksettet. I dette prosjektet er det et sprang på 50 - 5000 aktiviteter som implementasjon blir evaluert på.
 
 \subsection{Evalueringsstrategi}
+\label{sec:strategy}
 For å evaluere kvaliteten på løsningene, er teoretisk- øvregrense og nedregrense for makespan blir kalkulert.
 
+\subsubsection{Teoretisk øvregrense}
+\label{sec:teoretiskovre}
+Teoretisk øvregrense for makespan er
+\begin{equation}
+c_{ub,ms}(P) = c_{hor}(P) = \sum_{i} c_{dur}(Act_{i})
+\end{equation}
+som indikerer at i det verste tilfelle blir alle aktivitetene utført etter hverandre, en om gangen.
+
 \subsubsection{Teoretisk nedregrense}
+\label{sec:teoretisknedre}
 En teoretisk nedregrense er kalkulert basert på ressurstilgjengeligheten for den mest begrensede mannskapet. Resultatløsningen blir kanskje ikke gyldig for hele problemet, men er komprimert tett sammen for mannskapet og utnytte hver eneste mannskapstime.
 \begin{equation}
 c_{load}(Crew_{j}) = \sum_{c_{crew}(Act_{i}) = Crew_{j}} c_{dur}(Act_{i})
@@ -63,10 +73,3 @@ c_{reload}(Crew_{j}) = \frac{c_{load}(Crew_{j})}{c_{cap}(Crew_{j})}
 \begin{equation}
 c_{lb,ms}(P) = max_{j}\{ c_{reload}(Crew_{j}) \}
 \end{equation}
-
-\subsubsection{Teoretisk øvregrense}
-Teoretisk øvregrense for makespan er
-\begin{equation}
-c_{ub,ms}(P) = c_{hor}(P) = \sum_{i} c_{dur}(Act_{i})
-\end{equation}
-som indikerer at i det verste tilfelle blir alle aktivitetene utført etter hverandre, en om gangen.

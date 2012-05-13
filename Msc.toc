@@ -1,34 +1,37 @@
 \select@language {norsk}
 \contentsline {section}{\numberline {1}Introduksjon}{6}
-\contentsline {subsection}{\numberline {1.1}Bakgrunn}{6}
-\contentsline {subsubsection}{\numberline {1.1.1}Relatert arbeid}{6}
-\contentsline {subsection}{\numberline {1.2}M\IeC {\r a}let med prosjektet}{6}
-\contentsline {subsection}{\numberline {1.3}Beskrivelse av kommende kapitler}{7}
-\contentsline {subsection}{\numberline {1.4}Motivasjon}{7}
-\contentsline {subsubsection}{\numberline {1.4.1}Kort om begrensningsprogrammering}{8}
-\contentsline {subsubsection}{\numberline {1.4.2}Utfordringer med begrensningsprogrammering}{8}
-\contentsline {subsubsection}{\numberline {1.4.3}Begrensingsprogrammeringsverkt\IeC {\o }y idag}{8}
-\contentsline {subsection}{\numberline {1.5}Problembeskrivelse}{9}
-\contentsline {subsubsection}{\numberline {1.5.1}Notasjoner og termonologi}{9}
-\contentsline {subsubsection}{\numberline {1.5.2}Ressurser}{10}
-\contentsline {subsubsection}{\numberline {1.5.3}Aktiviteter}{10}
-\contentsline {subsubsection}{\numberline {1.5.4}Begrensinger}{11}
-\contentsline {subsubsection}{\numberline {1.5.5}M\IeC {\r a}l}{12}
-\contentsline {subsubsection}{\numberline {1.5.6}Probleminstanser}{12}
-\contentsline {section}{\numberline {2}Metode}{13}
-\contentsline {subsection}{\numberline {2.1}Verkt\IeC {\o }y brukt i prosjektet}{13}
-\contentsline {subsection}{\numberline {2.2}Kort om IBM ILOG Concert Technology}{13}
-\contentsline {subsection}{\numberline {2.3}Kort om IBM ILOG Solver}{14}
-\contentsline {subsection}{\numberline {2.4}Kort om IBM ILOG Scheduler}{15}
-\contentsline {subsection}{\numberline {2.5}Forskningsmetoder}{15}
-\contentsline {subsubsection}{\numberline {2.5.1}Implementeringsprosessen}{15}
-\contentsline {subsubsection}{\numberline {2.5.2}Evaluering av prosessen}{15}
-\contentsline {subsection}{\numberline {2.6}Evalueringsstrategi}{16}
-\contentsline {subsubsection}{\numberline {2.6.1}Teoretisk nedregrense}{16}
-\contentsline {subsubsection}{\numberline {2.6.2}Teoretisk \IeC {\o }vregrense}{16}
-\contentsline {section}{\numberline {3}Eksperimenter}{16}
-\contentsline {subsection}{\numberline {3.1}Uten varmeressurs}{17}
-\contentsline {subsection}{\numberline {3.2}Med varmeressurs}{17}
-\contentsline {section}{\numberline {4}Fremtidig arbeid}{17}
-\contentsline {section}{\numberline {5}Konklusjon}{17}
-\contentsline {section}{\numberline {6}Vedlegg}{18}
+\contentsline {subsection}{\numberline {1.1}Beskrivelse av kommende kapitler}{6}
+\contentsline {subsection}{\numberline {1.2}Bakgrunn}{6}
+\contentsline {subsubsection}{\numberline {1.2.1}Relatert arbeid}{6}
+\contentsline {subsection}{\numberline {1.3}M\IeC {\r a}let med prosjektet}{8}
+\contentsline {subsection}{\numberline {1.4}Motivasjon}{8}
+\contentsline {subsubsection}{\numberline {1.4.1}Kort om begrensningsprogrammering}{9}
+\contentsline {subsubsection}{\numberline {1.4.2}Utfordringer med begrensningsprogrammering}{9}
+\contentsline {subsubsection}{\numberline {1.4.3}Begrensingsprogrammeringsverkt\IeC {\o }y idag}{9}
+\contentsline {subsubsection}{\numberline {1.4.4}Forbedringerspotensiale i verkt\IeC {\o }yene}{10}
+\contentsline {subsubsection}{\numberline {1.4.5}Relevans for forskingen}{10}
+\contentsline {subsection}{\numberline {1.5}Problembeskrivelse}{10}
+\contentsline {subsubsection}{\numberline {1.5.1}Notasjoner og termonologi}{11}
+\contentsline {subsubsection}{\numberline {1.5.2}Ressurser}{11}
+\contentsline {subsubsection}{\numberline {1.5.3}Aktiviteter}{12}
+\contentsline {subsubsection}{\numberline {1.5.4}Begrensinger}{12}
+\contentsline {subsubsection}{\numberline {1.5.5}M\IeC {\r a}l}{14}
+\contentsline {subsubsection}{\numberline {1.5.6}Probleminstanser}{14}
+\contentsline {section}{\numberline {2}Metode}{14}
+\contentsline {subsection}{\numberline {2.1}Verkt\IeC {\o }y brukt i prosjektet}{15}
+\contentsline {subsection}{\numberline {2.2}Kort om IBM ILOG Concert Technology}{15}
+\contentsline {subsection}{\numberline {2.3}Kort om IBM ILOG Solver}{15}
+\contentsline {subsection}{\numberline {2.4}Kort om IBM ILOG Scheduler}{16}
+\contentsline {subsection}{\numberline {2.5}Forskningsmetoder}{16}
+\contentsline {subsubsection}{\numberline {2.5.1}Implementeringsprosessen}{16}
+\contentsline {subsubsection}{\numberline {2.5.2}Evaluering av prosessen}{17}
+\contentsline {subsection}{\numberline {2.6}Evalueringsstrategi}{17}
+\contentsline {subsubsection}{\numberline {2.6.1}Teoretisk \IeC {\o }vregrense}{17}
+\contentsline {subsubsection}{\numberline {2.6.2}Teoretisk nedregrense}{18}
+\contentsline {section}{\numberline {3}Eksperimenter}{18}
+\contentsline {subsection}{\numberline {3.1}Uten varmeressurs}{19}
+\contentsline {subsection}{\numberline {3.2}Med varmeressurs}{19}
+\contentsline {section}{\numberline {4}Evaluering}{19}
+\contentsline {section}{\numberline {5}Fremtidig arbeid}{19}
+\contentsline {section}{\numberline {6}Konklusjon}{19}
+\contentsline {section}{\numberline {7}Vedlegg}{20}

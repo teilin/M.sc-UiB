@@ -3,48 +3,56 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: Msc.aux
 The style file: plain.bst
 Database file #1: ref.bib
+I was expecting a `,' or a `}'---line 34 of file ref.bib
+ :  
+ :  Date-Modified = {2012-04-05 19:43:55 +0000},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Warning--to sort, need author or key in compcomplextheory
+Warning--to sort, need author or key in nphardwikipedia
+Warning--to sort, need author or key in optimizationproblemwiki
 Warning--to sort, need author or key in cpwikipedia
 Warning--empty journal in RcpspPaperSchutt
 Warning--empty year in RcpspPaperSchutt
-You've used 6 entries,
+You've used 14 entries,
             2118 wiz_defined-function locations,
-            519 strings with 4630 characters,
-and the built_in function-call counts, 1273 in all, are:
-= -- 122
-> -- 42
-< -- 0
-+ -- 18
-- -- 12
-* -- 60
-:= -- 220
-add.period$ -- 16
-call.type$ -- 6
-change.case$ -- 21
+            568 strings with 6183 characters,
+and the built_in function-call counts, 3407 in all, are:
+= -- 342
+> -- 102
+< -- 1
++ -- 44
+- -- 30
+* -- 191
+:= -- 543
+add.period$ -- 39
+call.type$ -- 14
+change.case$ -- 54
 chr.to.int$ -- 0
-cite$ -- 9
-duplicate$ -- 55
-empty$ -- 119
-format.name$ -- 12
-if$ -- 262
+cite$ -- 20
+duplicate$ -- 142
+empty$ -- 324
+format.name$ -- 30
+if$ -- 734
 int.to.chr$ -- 0
-int.to.str$ -- 6
-missing$ -- 2
-newline$ -- 31
-num.names$ -- 10
-pop$ -- 40
+int.to.str$ -- 14
+missing$ -- 7
+newline$ -- 69
+num.names$ -- 20
+pop$ -- 81
 preamble$ -- 1
-purify$ -- 18
+purify$ -- 43
 quote$ -- 0
-skip$ -- 34
+skip$ -- 105
 stack$ -- 0
-substring$ -- 49
-swap$ -- 8
-text.length$ -- 0
+substring$ -- 189
+swap$ -- 25
+text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 24
-warning$ -- 3
-while$ -- 12
-width$ -- 7
-write$ -- 54
-(There were 3 warnings)
+type$ -- 56
+warning$ -- 6
+while$ -- 30
+width$ -- 16
+write$ -- 134
+(There was 1 error message)
