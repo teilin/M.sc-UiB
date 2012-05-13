@@ -1,16 +1,33 @@
 \begin{thebibliography}{10}
 
-\bibitem{nphardwikipedia}
-Wikipedia.
-\newblock \url{http://en.wikipedia.org/wiki/NP-hard}.
+\bibitem{challengesManuel}
+
+
+\bibitem{begrensingermsproject}
+Definition of microsoft project constraints.
+\newblock \url{http://support.microsoft.com/kb/74978}.
+
+\bibitem{msproject2010blog}
+Manual vs. autoscheduled tasks in microsoft project 2010.
+\newblock
+  \url{http://www.techrepublic.com/blog/tech-manager/manual-vs-autoscheduled-tasks-in-microsoft-project-2010/5591}.
 
 \bibitem{cpwikipedia}
 Wikipedia.
 \newblock \url{http://en.wikipedia.org/wiki/Constraint_programming}.
 
+\bibitem{projectmanagmenttoolswiki}
+Wikipedia: Comparison of project-management software.
+\newblock
+  \url{http://en.wikipedia.org/wiki/List_of_project_management_software}.
+
 \bibitem{compcomplextheory}
 Wikipedia: Computational complexity theory.
 \newblock \url{http://en.wikipedia.org/wiki/Computational_complexity_theory}.
+
+\bibitem{nphardwikipedia}
+Wikipedia: Np-hard.
+\newblock \url{http://en.wikipedia.org/wiki/NP-hard}.
 
 \bibitem{optimizationproblemwiki}
 Wikipedia: Optimization problem.

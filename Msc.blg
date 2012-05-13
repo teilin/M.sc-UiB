@@ -3,7 +3,7 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: Msc.aux
 The style file: plain.bst
 Database file #1: ref.bib
-I was expecting a `,' or a `}'---line 34 of file ref.bib
+I was expecting a `,' or a `}'---line 49 of file ref.bib
  :  
  :  Date-Modified = {2012-04-05 19:43:55 +0000},
 (Error may have been on previous line)
@@ -12,47 +12,51 @@ Warning--to sort, need author or key in compcomplextheory
 Warning--to sort, need author or key in nphardwikipedia
 Warning--to sort, need author or key in optimizationproblemwiki
 Warning--to sort, need author or key in cpwikipedia
+Warning--to sort, need author or key in challengesManuel
+Warning--to sort, need author or key in projectmanagmenttoolswiki
+Warning--to sort, need author or key in msproject2010blog
+Warning--to sort, need author or key in begrensingermsproject
 Warning--empty journal in RcpspPaperSchutt
 Warning--empty year in RcpspPaperSchutt
-You've used 14 entries,
+You've used 18 entries,
             2118 wiz_defined-function locations,
-            568 strings with 6183 characters,
-and the built_in function-call counts, 3407 in all, are:
-= -- 342
-> -- 102
+            580 strings with 6672 characters,
+and the built_in function-call counts, 4021 in all, are:
+= -- 395
+> -- 106
 < -- 1
-+ -- 44
++ -- 48
 - -- 30
-* -- 191
-:= -- 543
-add.period$ -- 39
-call.type$ -- 14
-change.case$ -- 54
+* -- 211
+:= -- 605
+add.period$ -- 46
+call.type$ -- 18
+change.case$ -- 65
 chr.to.int$ -- 0
-cite$ -- 20
-duplicate$ -- 142
-empty$ -- 324
+cite$ -- 28
+duplicate$ -- 170
+empty$ -- 416
 format.name$ -- 30
-if$ -- 734
+if$ -- 887
 int.to.chr$ -- 0
-int.to.str$ -- 14
+int.to.str$ -- 18
 missing$ -- 7
-newline$ -- 69
+newline$ -- 84
 num.names$ -- 20
-pop$ -- 81
+pop$ -- 113
 preamble$ -- 1
-purify$ -- 43
+purify$ -- 51
 quote$ -- 0
-skip$ -- 105
+skip$ -- 141
 stack$ -- 0
-substring$ -- 189
-swap$ -- 25
+substring$ -- 209
+swap$ -- 29
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 56
-warning$ -- 6
+type$ -- 72
+warning$ -- 10
 while$ -- 30
-width$ -- 16
-write$ -- 134
+width$ -- 20
+write$ -- 159
 (There was 1 error message)

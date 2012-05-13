@@ -37,9 +37,9 @@ Forskningsmetoden som er brukt i prosjektet er å eksperimentere med implementas
 \subsubsection{Implementeringsprosessen}
 Problemet med å finne ut om en RCPSP løsning i tillegg til sikkerhetsbegrensningene med makespan mindre enn en gitt frist finnes er NP-hard. Dette betyr at den utvidede problemet med varme ressursen også må være NP-hard og derfor en optimal løsning med til og med de enkleste formene av problemet er ikke garantert innen polynomisk tid. To forskjellige løsningsstrategier er testet. Begge løsningsstrategiene er implementert i IBM ILOG Solver og IBM ILOG Scheduler biblotekene. I begge løsningsstrategiene brukes standard søkemål i ILOG Solver.
 
-Den første løsningsstrategien bruker IloAssignAlternatives, som blir brukt til å tildele kraner til aktivitetene. Den neste søkemålet er IloRankForward... og tilslutt brukes søkemålet IloSetTimesForward ...
+Den første løsningsstrategien (LS1)\nomenclature{LS1}{Løsningsstrategi 1} bruker IloAssignAlternatives, som blir brukt til å tildele kraner til aktivitetene. Den neste søkemålet er IloRankForward... og tilslutt brukes søkemålet IloSetTimesForward ...
 
-Den andre
+Den andre løsningsstrategien (LS2)\nomenclature{LS2}{Løsningsstategi 2}
 %IloSetTimesForward & IloAssignAlternatived & IloRankForward
 
 \colorbox{red}{Denne delen skal utvides ytterligere.}

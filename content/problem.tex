@@ -63,7 +63,7 @@ når sikkerhetsbegrensingene utelukker bruken av lokasjonen til denne krannen er
 \forall i,i' \neq i : v_{crane}(Act_{i}) = Crane_{j} \wedge c_{loc}(Act_{i'}) = c_{loc}(Crane_{j}) \rightarrow \neg overlap(Act_{i},Act_{i'})
 \end{equation}
 
-Inntil nå har jeg oversatt \cite{tvedtbezem}. Nå kommer en ny type begrensning kalt \textit{varmebegrensning}. Med varme, så menes ikke varme i tradisjonell forstand, men som en måte å kunne sette en verdi på et mannskap og en kapasitet på en lokasjon. Det kan være lokasjoner som av forskjellige årsaker ikke kan ha ubegrenset med mannskap til å jobbe der samtidig. Forskjellige mannskaper kan også ha forskjellig årsaker ut ifra hva slags arbeid de utfører hvor mye av denne kapasiteten de bruker. Mannskaper som driver arbeid som sveising kan for eksempel ha en høyere varmeverdi enn et mannskap med elektrikkere. De er uttrykt som kummulativressursbegrensning og er påført lokasjon for å være sikkert på at total varme bruk ikke oversitiger varmekapasiteten tilgjengelig på hver lokasjon. Den er uttrykt ved:
+Inntil nå har jeg oversatt \cite{tvedtbezem}. Nå kommer en ny type begrensning kalt \textit{varmebegrensning}. Med varme, så menes ikke varme i tradisjonell forstand, men som en måte å kunne sette en verdi på et mannskap og en kapasitet på en lokasjon. Det kan være lokasjoner som av forskjellige årsaker ikke kan ha ubegrenset med mannskap til å jobbe der samtidig. Forskjellige mannskaper kan også ha forskjellig årsaker ut ifra hva slags arbeid de utfører hvor mye av denne kapasiteten de bruker. Mannskaper som driver arbeid som sveising kan for eksempel ha en høyere varmeverdi enn et mannskap med elektrikkere. De er uttrykt som kummulativressursbegrensning og er påført lokasjon for å være sikkert på at total varme bruk ikke oversitiger varmekapasiteten tilgjengelig på hver lokasjon. Varmebegrensingen skal også etterhvert kunne erstatte sikkerhetsbegrensningene på foreksempel kranbruk, ved at lokasjoner med kran får en varmekapasitet og aktiviter som bruker kran bruker opp denne varmekapasiten på lokasjonen. Den er uttrykt ved:
 \begin{equation}
 \begin{split}
 \forall t,l: \sum\{c_{heat}(Crew_j) \mid t \in [ v_{sta}(Act_{i}), w_{end}(Act_{i})) \wedge c_{crew}(Act_{i}) = Crew_{j} \\
@@ -71,7 +71,7 @@ Inntil nå har jeg oversatt \cite{tvedtbezem}. Nå kommer en ny type begrensning
 \end{split}
 \end{equation}
 
-\subsubsection{Mål}
+\subsubsection{Målfunksjon}
 Målet er å minimalisere makespan $ w_{ms}(P) $ eller varigheten av planleggingen er definert ved:
 \begin{equation}
 w_{ms}(P) = max_{i} \{ w_{end}(A_{i}) \} \in [0,c_{hor}(P)]
@@ -81,6 +81,6 @@ som sier at makespanet er likt den siste slutten eller fullføringstiden i sette
 \subsubsection{Probleminstanser}
 Problemene er beskrevet ved størrelsen fastsatt av det totale nummeret av aktiviteter, $ \#Acts \in \{ 50,60, 70, 80, 90, 100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 5000 \} $ og kraner, $ \#Cranes = [2,3] $. Det ble generert totalt 5 probleminstanser for hver av de 32 problem størrelsene, som summert opp blir 160 instanser.
 
-Probleminstansene ble tilfeldig generert, ved å tilegne mannskaper til aktiviteter, lokasjoner til aktiviteter, lokasjoner til kraner, avhengigheter mellom aktiviteter og aktiviteter som trenger kran. Når instansene ble generert, er det spesifisert at det ikke skal forekomme sirkulasjoner på aktivitetsavhengigheter og at det ikke skal være mer enn en kran på en lokasjon. Så alle 160 instansene er gyldige.
+Probleminstansene ble tilfeldig generert, ved å tildele mannskaper til aktiviteter, lokasjoner til aktiviteter, lokasjoner til kraner, avhengigheter mellom aktiviteter og aktiviteter som trenger kran. Når instansene ble generert, er det spesifisert at det ikke skal forekomme sirkulasjoner på aktivitetsavhengigheter og at det ikke skal være mer enn en kran på en lokasjon. Så alle 160 instansene er gyldige.
 
 Alle probleme har 10 lokasjoner, som er redusert fra 25 i de opprinnelige probleminstansene til \bht, for at det skal kunne være flere aktiviteter på lokasjonen enn om det var 25 lokasjoner, og 4 forskjellige mannskaper med kapasitet $ c_{cap}(Crew_{j}) \in [2,3] $ tatt fra en uniform fordeling. Domenet for aktivitenes startvariabel er generelt $ v_{sta}(Act_{i}) = [0,c_{hor}(P)] $ og de konstante varighetene $ c_{dur}(Act_{i}) $ er tilfeldig tatt fra en uniform fordeling i området $ [1,6] $ tidssteg. Omtrent 20\% av aktivitetene er tilfeldig valgt til å bruke kran og omtrent 10\% av aktivitetene er begrenset ved avhengighet til en annen aktivitet. Mannskapers varme er tilfeldig generert i området: $c_{heat}(Crew_{j}) \in [5,15]$, mens lokasjoners varmekapasitet er tilfeldig generert i området: $c_{heatcap}(Loc_{l}) \in [5,20]$.

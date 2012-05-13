@@ -7,22 +7,30 @@
   \item [{APO}]\begingroup Automatisk Planlegging i Oljeindustrien\nomeqref {0}
 		\nompageref{6}
   \item [{Avgjøringsvariable}]\begingroup På engelsk: decision variable\nomeqref {0}
-		\nompageref{11}
+		\nompageref{12}
   \item [{Avledningsvariable}]\begingroup Derived variable\nomeqref {0}
-		\nompageref{11}
+		\nompageref{12}
   \item [{Concert}]\begingroup IBM ILOG Concert Technology\nomeqref {8}
 		\nompageref{15}
   \item [{CP}]\begingroup Begrensningsprogrammering (engelsk: Constraint programming)\nomeqref {0}
 		\nompageref{6}
   \item [{JSSP}]\begingroup Job Shop Scheduling Problem\nomeqref {0}
 		\nompageref{6}
+  \item [{LS1}]\begingroup Løsningsstrategi 1\nomeqref {8}
+		\nompageref{17}
+  \item [{LS2}]\begingroup Løsningsstategi 2\nomeqref {8}
+		\nompageref{17}
   \item [{Monooperatorressurs}]\begingroup På engelsk: Unary resource\nomeqref {0}
-		\nompageref{11}
+		\nompageref{12}
+  \item [{MSProject}]\begingroup Microsoft Project 2010\nomeqref {0}
+		\nompageref{10}
   \item [{NP-hard}]\begingroup Ikke-deterministisk polynomtid hard (engelsk: non-deterministic polynomial-time hard)\nomeqref {0}
 		\nompageref{6}
+  \item [{Påstander}]\begingroup Engelsk: Assertions\nomeqref {0}
+		\nompageref{9}
   \item [{Scheduler}]\begingroup IBM ILOG Scheduler\nomeqref {8}
-		\nompageref{16}
+		\nompageref{17}
   \item [{Solver}]\begingroup IBM ILOG Solver\nomeqref {8}
-		\nompageref{15}
+		\nompageref{16}
 
 \end{thenomenclature}

@@ -7,31 +7,31 @@
 \contentsline {subsection}{\numberline {1.4}Motivasjon}{8}
 \contentsline {subsubsection}{\numberline {1.4.1}Kort om begrensningsprogrammering}{9}
 \contentsline {subsubsection}{\numberline {1.4.2}Utfordringer med begrensningsprogrammering}{9}
-\contentsline {subsubsection}{\numberline {1.4.3}Begrensingsprogrammeringsverkt\IeC {\o }y idag}{9}
-\contentsline {subsubsection}{\numberline {1.4.4}Forbedringerspotensiale i verkt\IeC {\o }yene}{10}
-\contentsline {subsubsection}{\numberline {1.4.5}Relevans for forskingen}{10}
-\contentsline {subsection}{\numberline {1.5}Problembeskrivelse}{10}
+\contentsline {subsubsection}{\numberline {1.4.3}Begrensingsprogrammeringsverkt\IeC {\o }y idag}{10}
+\contentsline {subsubsection}{\numberline {1.4.4}Forbedringerspotensiale i verkt\IeC {\o }yene}{11}
+\contentsline {subsubsection}{\numberline {1.4.5}Relevans for forskingen}{11}
+\contentsline {subsection}{\numberline {1.5}Problembeskrivelse}{11}
 \contentsline {subsubsection}{\numberline {1.5.1}Notasjoner og termonologi}{11}
-\contentsline {subsubsection}{\numberline {1.5.2}Ressurser}{11}
+\contentsline {subsubsection}{\numberline {1.5.2}Ressurser}{12}
 \contentsline {subsubsection}{\numberline {1.5.3}Aktiviteter}{12}
-\contentsline {subsubsection}{\numberline {1.5.4}Begrensinger}{12}
-\contentsline {subsubsection}{\numberline {1.5.5}M\IeC {\r a}l}{14}
+\contentsline {subsubsection}{\numberline {1.5.4}Begrensinger}{13}
+\contentsline {subsubsection}{\numberline {1.5.5}M\IeC {\r a}lfunksjon}{14}
 \contentsline {subsubsection}{\numberline {1.5.6}Probleminstanser}{14}
-\contentsline {section}{\numberline {2}Metode}{14}
+\contentsline {section}{\numberline {2}Metode}{15}
 \contentsline {subsection}{\numberline {2.1}Verkt\IeC {\o }y brukt i prosjektet}{15}
 \contentsline {subsection}{\numberline {2.2}Kort om IBM ILOG Concert Technology}{15}
-\contentsline {subsection}{\numberline {2.3}Kort om IBM ILOG Solver}{15}
-\contentsline {subsection}{\numberline {2.4}Kort om IBM ILOG Scheduler}{16}
-\contentsline {subsection}{\numberline {2.5}Forskningsmetoder}{16}
-\contentsline {subsubsection}{\numberline {2.5.1}Implementeringsprosessen}{16}
+\contentsline {subsection}{\numberline {2.3}Kort om IBM ILOG Solver}{16}
+\contentsline {subsection}{\numberline {2.4}Kort om IBM ILOG Scheduler}{17}
+\contentsline {subsection}{\numberline {2.5}Forskningsmetoder}{17}
+\contentsline {subsubsection}{\numberline {2.5.1}Implementeringsprosessen}{17}
 \contentsline {subsubsection}{\numberline {2.5.2}Evaluering av prosessen}{17}
-\contentsline {subsection}{\numberline {2.6}Evalueringsstrategi}{17}
-\contentsline {subsubsection}{\numberline {2.6.1}Teoretisk \IeC {\o }vregrense}{17}
+\contentsline {subsection}{\numberline {2.6}Evalueringsstrategi}{18}
+\contentsline {subsubsection}{\numberline {2.6.1}Teoretisk \IeC {\o }vregrense}{18}
 \contentsline {subsubsection}{\numberline {2.6.2}Teoretisk nedregrense}{18}
-\contentsline {section}{\numberline {3}Eksperimenter}{18}
-\contentsline {subsection}{\numberline {3.1}Uten varmeressurs}{19}
-\contentsline {subsection}{\numberline {3.2}Med varmeressurs}{19}
-\contentsline {section}{\numberline {4}Evaluering}{19}
-\contentsline {section}{\numberline {5}Fremtidig arbeid}{19}
-\contentsline {section}{\numberline {6}Konklusjon}{19}
-\contentsline {section}{\numberline {7}Vedlegg}{20}
+\contentsline {section}{\numberline {3}Eksperimenter}{19}
+\contentsline {subsection}{\numberline {3.1}Uten varmeressurs}{20}
+\contentsline {subsection}{\numberline {3.2}Med varmeressurs}{20}
+\contentsline {section}{\numberline {4}Evaluering}{20}
+\contentsline {section}{\numberline {5}Fremtidig arbeid}{20}
+\contentsline {section}{\numberline {6}Konklusjon}{20}
+\contentsline {section}{\numberline {7}Vedlegg}{21}
