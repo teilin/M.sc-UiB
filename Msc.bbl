@@ -3,6 +3,9 @@
 \bibitem{challengesManuel}
 
 
+\bibitem{exact}
+\url{http://www.softwareadvice.com/manufacturing/exact-jobboss-profile/}.
+
 \bibitem{begrensingermsproject}
 Definition of microsoft project constraints.
 \newblock \url{http://support.microsoft.com/kb/74978}.
@@ -52,15 +55,6 @@ IBM.
 ILOG.
 \newblock {\em ILOG Concert Technology 2.0 Reference Manual}.
 \newblock ILOG.
-
-\bibitem{Laborie:2009:IIC:1560579.1560593}
-Philippe Laborie.
-\newblock Ibm ilog cp optimizer for detailed scheduling illustrated on three
-  problems.
-\newblock In {\em Proceedings of the 6th International Conference on
-  Integration of AI and OR Techniques in Constraint Programming for
-  Combinatorial Optimization Problems}, CPAIOR '09, pages 148--162, Berlin,
-  Heidelberg, 2009. Springer-Verlag.
 
 \bibitem{Nuijten:1998:CJS:594934.594971}
 Wim Nuijten and Claude Le~Pape.

@@ -1,37 +1,42 @@
 \select@language {norsk}
-\contentsline {section}{\numberline {1}Introduksjon}{6}
-\contentsline {subsection}{\numberline {1.1}Beskrivelse av kommende kapitler}{6}
-\contentsline {subsection}{\numberline {1.2}Bakgrunn}{6}
-\contentsline {subsubsection}{\numberline {1.2.1}Relatert arbeid}{6}
+\contentsline {section}{\numberline {1}Introduksjon}{7}
+\contentsline {subsection}{\numberline {1.1}Beskrivelse av kommende kapitler}{7}
+\contentsline {subsection}{\numberline {1.2}Bakgrunn}{7}
+\contentsline {subsubsection}{\numberline {1.2.1}Relatert arbeid}{8}
 \contentsline {subsection}{\numberline {1.3}M\IeC {\r a}let med prosjektet}{8}
-\contentsline {subsection}{\numberline {1.4}Motivasjon}{8}
-\contentsline {subsubsection}{\numberline {1.4.1}Kort om begrensningsprogrammering}{9}
-\contentsline {subsubsection}{\numberline {1.4.2}Utfordringer med begrensningsprogrammering}{9}
+\contentsline {subsection}{\numberline {1.4}Motivasjon}{9}
+\contentsline {subsubsection}{\numberline {1.4.1}Kort om begrensningsprogrammering}{10}
+\contentsline {subsubsection}{\numberline {1.4.2}Utfordringer med begrensningsprogrammering}{10}
 \contentsline {subsubsection}{\numberline {1.4.3}Begrensingsprogrammeringsverkt\IeC {\o }y idag}{10}
 \contentsline {subsubsection}{\numberline {1.4.4}Forbedringerspotensiale i verkt\IeC {\o }yene}{11}
 \contentsline {subsubsection}{\numberline {1.4.5}Relevans for forskingen}{11}
 \contentsline {subsection}{\numberline {1.5}Problembeskrivelse}{11}
-\contentsline {subsubsection}{\numberline {1.5.1}Notasjoner og termonologi}{11}
-\contentsline {subsubsection}{\numberline {1.5.2}Ressurser}{12}
-\contentsline {subsubsection}{\numberline {1.5.3}Aktiviteter}{12}
-\contentsline {subsubsection}{\numberline {1.5.4}Begrensinger}{13}
-\contentsline {subsubsection}{\numberline {1.5.5}M\IeC {\r a}lfunksjon}{14}
-\contentsline {subsubsection}{\numberline {1.5.6}Probleminstanser}{14}
-\contentsline {section}{\numberline {2}Metode}{15}
-\contentsline {subsection}{\numberline {2.1}Verkt\IeC {\o }y brukt i prosjektet}{15}
-\contentsline {subsection}{\numberline {2.2}Kort om IBM ILOG Concert Technology}{15}
-\contentsline {subsection}{\numberline {2.3}Kort om IBM ILOG Solver}{16}
-\contentsline {subsection}{\numberline {2.4}Kort om IBM ILOG Scheduler}{17}
-\contentsline {subsection}{\numberline {2.5}Forskningsmetoder}{17}
-\contentsline {subsubsection}{\numberline {2.5.1}Implementeringsprosessen}{17}
-\contentsline {subsubsection}{\numberline {2.5.2}Evaluering av prosessen}{17}
-\contentsline {subsection}{\numberline {2.6}Evalueringsstrategi}{18}
-\contentsline {subsubsection}{\numberline {2.6.1}Teoretisk \IeC {\o }vregrense}{18}
-\contentsline {subsubsection}{\numberline {2.6.2}Teoretisk nedregrense}{18}
-\contentsline {section}{\numberline {3}Eksperimenter}{19}
+\contentsline {subsubsection}{\numberline {1.5.1}Notasjoner og termonologi}{12}
+\contentsline {subsubsection}{\numberline {1.5.2}Ressurser}{13}
+\contentsline {subsubsection}{\numberline {1.5.3}Aktiviteter}{13}
+\contentsline {subsubsection}{\numberline {1.5.4}Begrensinger}{14}
+\contentsline {subsubsection}{\numberline {1.5.5}M\IeC {\r a}lfunksjon}{15}
+\contentsline {subsubsection}{\numberline {1.5.6}Probleminstanser}{15}
+\contentsline {section}{\numberline {2}Metode}{16}
+\contentsline {subsection}{\numberline {2.1}Verkt\IeC {\o }y brukt i prosjektet}{16}
+\contentsline {subsubsection}{\numberline {2.1.1}Kort om IBM ILOG Concert Technology}{16}
+\contentsline {subsubsection}{\numberline {2.1.2}Kort om IBM ILOG Solver}{17}
+\contentsline {subsubsection}{\numberline {2.1.3}Kort om IBM ILOG Scheduler}{17}
+\contentsline {subsection}{\numberline {2.2}Forskningsmetoder}{18}
+\contentsline {subsubsection}{\numberline {2.2.1}Implementeringsprosessen}{18}
+\contentsline {subsubsection}{\numberline {2.2.2}Evaluering av prosessen}{18}
+\contentsline {subsection}{\numberline {2.3}Evalueringsstrategi}{19}
+\contentsline {subsubsection}{\numberline {2.3.1}Teoretisk \IeC {\o }vregrense}{19}
+\contentsline {subsubsection}{\numberline {2.3.2}Teoretisk nedregrense}{19}
+\contentsline {section}{\numberline {3}Eksperimenter}{20}
 \contentsline {subsection}{\numberline {3.1}Uten varmeressurs}{20}
-\contentsline {subsection}{\numberline {3.2}Med varmeressurs}{20}
-\contentsline {section}{\numberline {4}Evaluering}{20}
-\contentsline {section}{\numberline {5}Fremtidig arbeid}{20}
-\contentsline {section}{\numberline {6}Konklusjon}{20}
-\contentsline {section}{\numberline {7}Vedlegg}{21}
+\contentsline {subsection}{\numberline {3.2}Med varmeressurs}{21}
+\contentsline {section}{\numberline {4}Evaluering}{21}
+\contentsline {subsection}{\numberline {4.1}Probleminstanser}{21}
+\contentsline {subsection}{\numberline {4.2}L\IeC {\o }sningsstrategier}{22}
+\contentsline {subsection}{\numberline {4.3}Resultater}{22}
+\contentsline {subsubsection}{\numberline {4.3.1}Med 10 lokasjoner}{22}
+\contentsline {subsubsection}{\numberline {4.3.2}10 lokasjoner mot 25 lokasjoner}{22}
+\contentsline {section}{\numberline {5}Fremtidig arbeid}{22}
+\contentsline {section}{\numberline {6}Konklusjon}{22}
+\contentsline {section}{\numberline {7}Vedlegg}{23}

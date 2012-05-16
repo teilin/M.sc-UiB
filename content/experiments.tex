@@ -1,4 +1,4 @@
-Eksperimenteringen er utført på en Mackbook Air med 1.8 GHz Intel Core i7 prosessor og 4 GB 1333 MHz DDR3 minne. Det er totalt sett 65 benchmarksett som implementasjonene er evaluert på, hvor mange det ble funnet en løsning varierte med eller uten tilleggsressursene og tidsgrensen som var satt.
+Eksperimenteringen er utført på en Mackbook Air med 1.8 GHz Intel Core i7 prosessor og 4 GB 1333 MHz DDR3 minne. Det er totalt sett 160 benchmarksett som implementasjonene er evaluert på. Hvor mange det ble funnet en løsning på, varierte avhengig av om tilleggsressursene var med eller ikke og tidsgrensen som var satt.
 
 \begin{table}[h]
 \begin{center}
@@ -30,6 +30,12 @@ w_{rq} = \frac{1}{| P_{sol} |} \sum_{P \in P_{sol}} \frac{w_{ms}(P)}{c_{lb,ms}(P
 $P_{sol}$ er det settet med probleminstanser som er løst ved hver enkelt løsningsstrategi. Verdiene av $P_{sol}$ varierer fra løsningsstrategi til løsningsstrategi og disse gjennomsnittene er derfor ikke helt sammenlignbare, men de vil gi en indikasjon på kvaliteten på løsningen. $w_{rq}$ skiller ikke på strategier som feiler med å finne løsninger, men hvor robust løsningen er vil antallet løste probleminstanser indikere. Resultatene er summert opp i tabell \ref{tab:resultaterSum}.
 
 \subsection{Uten varmeressurs}
-
+Resultatene når benchmarksettene er kjørt gjennom løsningen uten varmebegrensning er markert med $\sharp 1$, viser det er løsning i tilfellene med både 2 og 3 kraner. Der hvor den første løsningsstrategi (LS1) er benyttet varierer antallet løste benchmarksett fra 44\% og opp til 80\%, mens for den andre løsningsstrategien (LS2) er det løsninger på alle benchmarksettene.
 
 \subsection{Med varmeressurs}
+Resultatene som er kjørt med varmebegrensing, finner ikke i nærheten av like mange løsninger på banchmarksettene. Med den første løsningsstrategien (LS1) finner den ikke løsninger for mer enn banchmarksettene med under 100 aktiviteter og 2 kraner. Der finner den heller ikke løsning på mer enn 32\% av benchmarksettene.
+\begin{figure}[h]
+\includegraphics[width=15cm]{content/gfx/Act50.eps}
+\label{fig:50actgant}
+\caption{Gant skjema over en av løsningene med 50 aktiviteter og 2 kraner}
+\end{figure}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=latex 2011.7.3)  13 MAY 2012 17:15
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=latex 2011.7.3)  16 MAY 2012 15:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -404,6 +404,12 @@ Package: longtable 2004/02/01 v4.11 Multi-page Table package (DPC)
 \c@LT@chunks=\count104
 \LT@p@ftn=\toks22
 )
+(/usr/local/texlive/2011/texmf-dist/tex/latex/tools/verbatim.sty
+Package: verbatim 2003/08/22 v1.5q LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks23
+\verbatim@line=\toks24
+\verbatim@in@stream=\read1
+)
 \@nomenclaturefile=\write3
 \openout3 = `Msc.nlo'.
 
@@ -412,65 +418,62 @@ Writing nomenclature file Msc.nlo
 (./Msc.aux)
 \openout1 = `Msc.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
 File: uibugle.eps Graphic file (type eps)
  <uibugle.eps>
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <142.26378> not available
-(Font)              size <24.88> substituted on input line 63.
+(Font)              size <24.88> substituted on input line 65.
 
 [1
 
-] [2] (./Msc.toc)
+] [2] (./Msc.toc [3])
 \tf@toc=\write4
 \openout4 = `Msc.toc'.
 
- [3] [4] (./Msc.nls) [5] (./content/introduction.tex)
+ [4] [5] (./Msc.nls) [6] (./content/introduction.tex)
 (./content/background.tex
-Overfull \hbox (3.48201pt too wide) in paragraph at lines 8--10
-[][][][][][] \OT1/cmr/m/n/12 Nui-j-ten og Pa-pe har brukt ILOG
+Overfull \hbox (6.45424pt too wide) in paragraph at lines 7--8
+\OT1/cmr/m/n/12 Nuijten og Pa-pe har brukt ILOG Sche-du-ler til ^^Wa l^^\se []J
+ob Shop Sche-du-ling^^?problemet
  []
 
-[6]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 11.
- (/usr/local/texlive/2011/texmf-dist/tex/latex/base/omscmr.fd
+
+Underfull \vbox (badness 2772) has occurred while \output is active []
+
+ [7]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 28.
+
+(/usr/local/texlive/2011/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 11.
-
-Overfull \hbox (40.49132pt too wide) in paragraph at lines 25--26
-\OT1/cmr/m/n/12 CLP spr^^Wak l^^\ser sam-me pro-blem ofte av-hen-ger mind-re p^
-^Wa spr^^Wakimplementasjon
- []
-
-[7]
-Overfull \hbox (4.00452pt too wide) in paragraph at lines 41--42
-[][][][][][][] 
- []
-
-) (./content/motivation.tex [8]
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 28.
+ [8])
+(./content/motivation.tex [9]
 Overfull \hbox (1.36111pt too wide) in paragraph at lines 14--15
 \OT1/cmr/m/n/12 Begrensningsprogrammering er en pro-gram-me-rings-pa-ra-dig-me 
 hvor re-la-sjo-ner mel-
  []
 
-[9]) (./content/problem.tex
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [10]
-[11] [12] [13]
+Overfull \hbox (4.46385pt too wide) in paragraph at lines 17--18
+\OT1/cmr/m/n/12 Systemer for begrensings-logikk pro-gram-me-rings-sys-te-mer so
+m sam-men-ligg-nes med
+ []
+
+[10]) (./content/problem.tex [11] [12] [13]
 Overfull \hbox (14.04625pt too wide) detected at line 64
 \OMS/cmsy/m/n/12 8\OML/cmm/m/it/12 i; i[] \OMS/cmsy/m/n/12 6\OT1/cmr/m/n/12 = \
 OML/cmm/m/it/12 i \OT1/cmr/m/n/12 : \OML/cmm/m/it/12 v[]\OT1/cmr/m/n/12 (\OML/c
@@ -481,7 +484,7 @@ mm/m/it/12 Act[]\OT1/cmr/m/n/12 ) = \OML/cmm/m/it/12 Crane[] \OMS/cmsy/m/n/12 ^
 Act[]; Act[]\OT1/cmr/m/n/12 )
  []
 
-
+[14]
 Overfull \hbox (21.52061pt too wide) in paragraph at lines 82--83
 \OT1/cmr/m/n/12 te-ter, $#\OML/cmm/m/it/12 Acts \OMS/cmsy/m/n/12 2 f\OT1/cmr/m/
 n/12 50\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 60\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 
@@ -494,13 +497,19 @@ t/12 ; \OT1/cmr/m/n/12 700\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 800\OML/cmm/m/it/1
 ; \OT1/cmr/m/n/12 5000\OMS/cmsy/m/n/12 g$
  []
 
-[14]) (./content/methology.tex
+) [15] (./content/methology.tex
 Overfull \hbox (12.9063pt too wide) in paragraph at lines 9--10
 []\OT1/cmr/m/n/12 De enk-les-te klas-se-ne (eks. Ilo-Num-Var og IloCon-straint)
  i Con-cert har ogs^^Wa tilh^^\rende
  []
 
-[15] [16] [17]) (./content/experiments.tex [18]
+
+Overfull \hbox (9.18912pt too wide) in paragraph at lines 9--10
+\OT1/cmr/m/n/12 pel p^^Wa det er IloCon-stra-int-Ar-ray som er in-stan-ser av k
+las-sen IloConstraint.[[]] 
+ []
+
+[16] [17] [18]) (./content/experiments.tex [19]
 Overfull \hbox (5.23465pt too wide) in paragraph at lines 5--17
  [] 
  []
@@ -511,11 +520,14 @@ $\OML/cmm/m/it/12 P[]$ \OT1/cmr/m/n/12 er det set-tet med pro-ble-minstan-ser s
 om er l^^\st ved hver en-kelt l^^\sningsstrategi.
  []
 
-) (./content/evaluering.tex)
-Underfull \vbox (badness 10000) has occurred while \output is active []
+File: content/gfx/Act50.eps Graphic file (type eps)
+<content/gfx/Act50.eps>
+Overfull \hbox (14.85257pt too wide) in paragraph at lines 38--40
+[][]
+ []
 
- [19]
-[20] (./appendix.tex
+) [20] (./content/evaluering.tex [21]) (./content/fwork.tex)
+(./content/conclusion.tex) [22] (./appendix.tex
 Overfull \hbox (37.04832pt too wide) in alignment at lines 2--24
  [] [] [] [] [] 
  []
@@ -539,7 +551,7 @@ Overfull \hbox (37.04832pt too wide) in alignment at lines 65--82
  [] [] [] [] [] 
  []
 
-[21]
+[23]
 Overfull \hbox (37.04832pt too wide) in alignment at lines 86--108
  [] [] [] [] [] 
  []
@@ -553,7 +565,7 @@ Overfull \hbox (37.04832pt too wide) in alignment at lines 108--128
  [] [] [] [] [] 
  []
 
-[22]
+[24]
 Overfull \hbox (37.04832pt too wide) in alignment at lines 128--148
  [] [] [] [] [] 
  []
@@ -563,7 +575,7 @@ Overfull \hbox (37.04832pt too wide) in alignment at lines 148--168
  [] [] [] [] [] 
  []
 
-[23]
+[25]
 Overfull \hbox (37.04832pt too wide) in alignment at lines 168--189
  [] [] [] [] [] 
  []
@@ -573,7 +585,7 @@ Overfull \hbox (37.04832pt too wide) in alignment at lines 189--209
  [] [] [] [] [] 
  []
 
-[24]
+[26]
 Overfull \hbox (37.04832pt too wide) in alignment at lines 209--229
  [] [] [] [] [] 
  []
@@ -583,41 +595,46 @@ Overfull \hbox (37.04832pt too wide) in alignment at lines 229--249
  [] [] [] [] [] 
  []
 
-[25]
+[27]
 Overfull \hbox (37.04832pt too wide) in alignment at lines 249--262
  [] [] [] [] [] 
  []
 
-) [26] (./Msc.bbl
-Underfull \hbox (badness 10000) in paragraph at lines 11--14
+) [28] (./Msc.bbl
+Underfull \hbox (badness 10000) in paragraph at lines 7--8
+[]$\OT1/cmtt/m/n/12 http : / / www . softwareadvice . com / manufacturing /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 14--17
 []\OT1/cmr/m/n/12 Manual vs. auto-sche-du-led tasks in micro-soft pro-ject
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 11--14
+Underfull \hbox (badness 10000) in paragraph at lines 14--17
 \OT1/cmr/m/n/12 2010.  $\OT1/cmtt/m/n/12 http : / / www . techrepublic . com / 
 blog / tech-[]manager /
  []
 
 
-Underfull \hbox (badness 2096) in paragraph at lines 33--35
+Underfull \hbox (badness 2096) in paragraph at lines 36--38
 []\OT1/cmr/m/n/12 Wikipedia: Op-ti-miza-tion pro-blem.  $\OT1/cmtt/m/n/12 http 
 : / / en . wikipedia . org / wiki /
  []
 
-[27]) [28] (./Msc.aux)
+[29]) [30] (./Msc.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 117.38377pt have occurred.
 
  ) 
 Here is how much of TeX's memory you used:
- 2344 strings out of 493634
- 29283 string characters out of 3143401
- 105994 words of memory out of 3000000
- 5576 multiletter control sequences out of 15000+200000
+ 2382 strings out of 493634
+ 29878 string characters out of 3143401
+ 106748 words of memory out of 3000000
+ 5604 multiletter control sequences out of 15000+200000
  12767 words of font info for 45 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
- 32i,15n,28p,1191b,282s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 32i,15n,28p,1557b,282s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on Msc.dvi (28 pages, 116032 bytes).
+Output written on Msc.dvi (30 pages, 122640 bytes).
