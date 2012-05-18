@@ -1,4 +1,3 @@
-\subsection{Motivasjon}
 Forskningen er motivert av praktisk erfaring fra planleggingsprosesser i bedrifter og samfunnet forøvrig. Det å finne optimale løsninger på planleggingsoppgaver er viktig og ressurs besparende. Det er ikke bare i oljeindustrien som det fokuseres på i denne oppgaven på hvor planleggingsløsninger er aktuelt, men generelt bemannings- og ressursplanlegging som hele næringslivet i større eller mindre grad er berørt av. I menneskers personlige hverdagen er det også mange planleggingsproblemer, alt fra buss- og togtabeller til personlige gjøremål som skal inn i en stram tidsplan.
 
 Planlegging i oljeindustrien er viktig for på en mest mulig effektiv måte benytte seg av de ressursene som er tilgjengelige til enhver tid, samtidig som visse begrensinger blir fastsatt med tanke på blandt annet sikkerheten. Det er mye penger involvert i olje- og gassindustrien og det å utføre aktiviteter på en ineffektiv måte kan det for selskapene både bli svært kostbart og også medføre risiko hvis sikkerheten ikke er godt nok ivaretatt. Det er derfor viktig å ha gode løsninger for å ta seg av planleggingen av aktivitetene og ressursene. Operatører innen olje- og gassektorens mål er å minimere antallet farlige situasjoner, minimere miljømessige skade og maksimere produksjon og dermed økonomisk resultat. På veien for å nå disse kompliserte og utfordrende målene, kan det i enkelte situasjoner oppstå konflikter (overfylte lokasjoner, manglende utstyrskrav, feil i rekkefølgen aktiviteter utføres, etc.).
@@ -10,22 +9,27 @@ Spesifikke planleggingssituasjoner i oljeindustrien har forskjellige forutsetnin
 \item dynamikk - avhengigheter som vær, logistikk og utstyr som feiler kan avbryte planleggingen.
 \end{itemize}
 
-\subsubsection{Kort om begrensningsprogrammering}
-Begrensningsprogrammering er en programmeringsparadigme hvor relasjoner mellom variable blir satt i form av begrensninger. Begrensninger er en form for deklarativ programmering, som skiller seg fra den mer vanlige imperativ programmeringsspråk\footnote{Imperativ programmeringsspråk har sekvenser med som blir utført.} ved at løsningen blir til ved å tilfredsstille begrensningene. Det er forskjellige områder i begrensningsprogrammering som \"Constraint Satisfaction problems\" og planleggingsproblemer. Det mest kjente planleggingsproblemet er \"Job Shop Scheduling\".\cite{cpwikipedia}
+\subsection{Målet med prosjektet}
+Målet med prosjektet er å utvide den eksisterende \ilog løsningen med en varmeressurs og evaluere løsningene med og uten varmeressurs. Prosjektets mål er da følgende punkter:
+\begin{itemize}
+\item minimere \textit{makespan}
+\item øke antall begrensninger
+\item implementere i \ilog
+\end{itemize}
 
-\subsubsection{Utfordringer med begrensningsprogrammering}
-Systemer for begrensings-logikk programmeringssystemer som sammenliggnes med begrensningsløsningssystemer, er ofte ytelsen bedre i begrensings-logikk programmeringssystemer. Ytelsen er likevel ikke like god som mer tradisjonelle imperative programmeringsspråk, og spesielt gjelder det innen tallmessige utregninger. For å løse dette, er det mulig å utvikle en avansert kompilator som sjekker de tilfellene hvor det ikke er behov for begrensingsløning, og da kompilerer disse på mest mulig effektive måte \cite{challengesManuel}
+I den opprinnelige problemstillingen vil noen aktiviteter være relativt lite begrenset. Dette gjør at løsningsrommet er stort, og traverseringen opp og ned i søketreet tar lang tid. På tross av et antatt stort løsningsrom så sliter den \ilog implementerte løsningsstrategien med å finne løsninger i mange av probleminstansene. Dette prosjektet vil søke å finne ut:
 
-Begrensningsprogrammeringssystemer har ofte en svakhet når det kommer til feilsøking (engelsk: debugging). Uten tilstrekkelige måter å kunne være sikkert på riktigheten og muligheter å sjekke ytelse i programmer. En måte å løse utfordringene med manglende feilsøkingsmuligheter er å bruke påstander \nomenclature{Påstander}{Engelsk: Assertions}. Ved bruk av påstander kan det opprettes post- og preforhold. Påstander kan bli sjekket ved kompilering eller når programmet kjører. Det er også mulig å genere påstander av kompilatoren, som utvikleren kan sjekke om det eksisterer høynivåfeil\cite{challengesManuel}.
+\begin{itemize}
+\item Vil flere begrensninger gjøre det lettere å finne en løsning?
+\item Er det noe spesielt med akkurat disse instansene eller er det implementasjon i \ilog som er årsaken til at \ilog implementerte løsningenstrategien sliter med å finne løsninger i mange av probleminstansene?
+\end{itemize}
 
-\subsubsection{Begrensingsprogrammeringsverktøy idag}
+\subsection{Begrensingsprogrammeringsverktøy idag}
 Det finnes idag flere forskjellige verktøy for begrensningsprogrammering, både i form av egne programmeringsspråk som er skreddersydd for begrensningsprogrammering og biblioteker til godt kjente programmeringsspråk som Java og C++. I begge disse kategoriene så finnes det løsninger som er kommersielle og med åpen kildekode. Noen eksempler på egne programmeringsspråk for begrensningsprogrammering er Prolog og Comet. Sistnevnte er et programmeringspråk for begrensningsprogrammering med lokalt søk og er en kommersiell løsning. Eksempler på begrensningsprogrammeringsbiblotek så er det IBM ILOG CP.
 
 Planlegging er ofte tett knyttet opp mot prosjektstyring og prosjektstyringsverktøy finnes det veldig mange av etterhvert \cite{projectmanagmenttoolswiki}. Både programmer du har lokalt på maskinen og også webbaserte tjenester. Fellesnevneren for veldig mange av disse tjeneste, enten de er lokalt eller webbaserte er at de skal hjelpe til med alt fra prosjektplanlegging, dokumentdeling, oversikt over oppgaver, oversikt over frister, møteplanlegging og mye mer. Denne typen programvare er ofte gjort ganske enkle å bruke. I samme kategori er det også noen programmer som gjør det mulig å definere aktiviteter (eller oppgaver) og knytte ressurser til aktivitetene. Et eksempel på et slikt program er Microsoft Project. Dette programmet har et grafisk grensesnitt som andre programmer i Office-pakken til Microsoft og er et enkelt program å bruke. Microsoft Project 2010\nomenclature{MSProject}{Microsoft Project 2010} gir muligheter til manuell og automatisk planlegging\cite{msproject2010blog}. I MSProject er det mulig å legge til begrensninger, men er begrenset til aktiviteters starttidspunkt. Aktiviteter kan tillegges begrensinger ut ifra om aktiviteten skal planlegges tidlig eller sent i prosessen eller på et gitt tidspunkt \cite{begrensingermsproject}. Dette prosjektet har flere ressurser (lokasjoner, mannskaper, kraner, osv.), begrensinger og sikkerhetsbegrensinger. Når problemet blir såpass komplekst, vil ikke et enkelt program som MSProject fungere til formålet.
 
 Til noen av de mest kjente og brukte begrensingsprogrammeringsprobleme (for eksempel \"Job Shop Scheduling Problem\") finnes det noen systemer som løser de. \"Exact JobBOSS Software\" er et eksempel på et slikt system, hvor det er mulig å utføre planleggings og produksjons gjennomføring. Dette systemet har funksjonalitet å opprette aktiviteter, planlegge aktiviteter, materialkravplanlegging osv \cite{exact}.
 
-\subsubsection{Forbedringerspotensiale i verktøyene}
-
-\subsubsection{Relevans for forskingen}
+\subsection{Relevans for forskingen}
 Denne forskningen er er ment for å undersøke om resultatene blir bedre når et eksistrende problem får lagt til en ekstra ressurs, kalt varmebegrensning. Ved å evaluere løsningene med og uten varmebegrensing vil det si noe om løsningene når søketreet er stort i forhold til når søketreet er litt mindre etter å ha lagt til den ekstra ressursen.

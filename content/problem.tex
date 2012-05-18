@@ -1,4 +1,3 @@
-\subsection{Problembeskrivelse}
 Problemstillingen til denne oppgaven tar utgangspunkt i den opprinnelige problemstillingen til \bht. Beskrivelsen følger i første omgang \cite{tvedtbezem}, som jeg har oversatt norsk. Problemet er på en innbilt oljeplattform inndelt i et sett av lokasjoner. Utstyr som er krevd for vedlikehold er tilfeldig plassert rundt på plattformen, og ulike aktiviteter skal planlegges. Aktivitetene blir opprettet med et gitt sett av ressurskrav og muligens avhengigheter til andre aktiviteter. Alle aktiviteter krever et mannskap til å utføre dem og en lokasjon til å bli utført på. I tillegg krever noen aktiviteter kranressurser, fordi tung løfting er involvert. Mannskap- og kranressurser er knappe, som betyr at de er begrenset tilførsel.
 
 Så langt er problemet klassifisert som et "Resource-Constrained Project Scheduling Problem (RCPSP)"\cite{RcpspPaperSchutt}, som kjennetegnes ved:
@@ -11,10 +10,10 @@ Så langt er problemet klassifisert som et "Resource-Constrained Project Schedul
 
 Det er en mengde planleggingsproblemer som ikke kan klassifiseres under beskrivelsen av RCPSP, selvom det også er et bredt antall planleggingsproblemer som gjør det. Det er mange tilleggsbegrensinger, typisk i oljeindustrien og andre store industrier, som ikke passer inn i denne klassifiseringen. Siden målet er å generere probleminstanser med begrensinger som finnes i industrien, så må det legges til andre mer komplekse begrensinger. Et eksempel  er sikkerhetsbegrensing rundt farlig arbeid, for eksempel kranbruk. I planleggingsløsninger i dag blir informasjon som sikkerhetsbegrensninger lagt til manuelt av de som planlegger aktivitetene på platformen. Ved å definere forutsetninger som aktiverer sikkerhetsbegrensninger, blir resultatet en veldefinert problembeskrivelse. En løsning til et problem $ S(P_{i}) $ er en planlegging hvor aktiviteter er tilegnet en starttid og begrensningene er gjeldende.
 
-\subsubsection{Notasjoner og termonologi}
+\subsection{Notasjoner og termonologi}
 En probleminstans $ P $ inneholder aktiviteter som skal gjennomføres, ressurser som er påkrevd for å gjennomføre aktivitene og begrensninger som blandt annet er begrensinger mellom aktiviteter og ressursbruk. Det blir skillt mellom forskjellige typer variable som \textit{avgjørelsesvariable}\nomenclature{Avgjøringsvariable}{På engelsk: decision variable}, \textit{konstanter} og \textit{avledetvariable}\nomenclature{Avledningsvariable}{Derived variable}. Et eksempel på en avgjøringsvariabel er starttiden til en aktivitet $ Act_{i} $ betegnet som $ v_{sta}(Act_{i}) $. En aktivitets varighet blir betegnet som fast og er derfor en konstant, betegnet som $ c_{dur}(Act_{i}) $. Tilslutt så er det avledetvariable som for eksempel er en aktivitets sluttid, som er summen av starttiden og varigheten, som er betegnet $ w_{end}(Act_{i}) $. Objekter som aktiviteter og ressurser er skrevet med en stor bokstav.
 
-\subsubsection{Ressurser}
+\subsection{Ressurser}
 En \textit{lokasjon} $ Loc_{l} \in Locs = \{ Loc_{1},\dots,Loc_{n} \} $ er stedet hvor aktiviteter blir utført. Selv om lokasjoner blir vist som ressurser, så er det ikke noen begrensinger på hvor mange aktiviter som kan bli utført samtidig på en lokasjon. Det er begrensinger når farlig arbeid som tung løfting blir utført, da er lokasjonen utilgjengelig for alle andre aktiviteter. Når en lokasjon er stengt på grunn av kranbruk sier vi at en sikkerhetsone har blitt opprettet.
 
 \textit{Mannskaper} er ansvarlige for utførelsene av aktivitetene. Et mannskap er betegnet $ Crew_{j} \in Crews = \{ Crew_{1},\dots,Crew_{n} \} $.
@@ -23,14 +22,14 @@ En \textit{kran} $ Crane_{k} \in Cranes = \{ Crane_{1},\dots,Crane_{n} \} $ er e
 
 Kraner har en lokasjon $ c_{loc}(Crane_{k}) \in Locs $, og hver lokasjon kan bare ha en kran. På grunn av at tung løfting er et farlig arbeid, er kranbruk omgitt med sikkerhetssoner. Disse sikkerhetssonene er satt til både loksjonen hvor aktiviteten som krever kranbruk er utført og kranens egen lokasjon. Sikkerhetssonen som blir satt vil derfor variere ut ifra hvilken kran som er tilegnet til aktiviteten.
 
-\subsubsection{Aktiviteter}
+\subsection{Aktiviteter}
 En \textit{aktivitet} $ Act_{i} \in Acts = \{ Act_{i},\dots,Act_{n} \} $ kommer med en startvariabel, en konstant varighet og ressurskrav. Initielt er domenet til startvariabelen er $ v_{sta}(Act_{i}) \in [ 0, c_{hor}(P)) $, hvor horisonten, indikerer planleggingens maksimale fullføringstid, som er gitt ved $ c_{hor}(P) = \sum_{i} c_{dur}(Act_{i}) $.
 
 En aktivitet $ Act_{i} $ krever et mannskap $ c_{crew}(Act_{i}) \in Crews $ for å utføre aktiviteten og en lokasjon $ c_{loc}(Act_{i}) \in Locs $ til å bli utført på. En aktivitet avhenger av et enkelt medlem av et mannskap og det er ikke mulig å samle ressurser for å redusere varigheten. Kraner er den siste ressursen som er tilgjengelig, men er ikke nødvendig for alle aktivitetene.
 
 I tilegg til ressurskravene, kan en aktivitet være avhengig av andre aktiviteter, det betyr at en aktivitet ikke kan starte før en annen aktivitet er ferdig utført.
 
-\subsubsection{Begrensinger}
+\subsection{Begrensinger}
 \textit{Avhengigheter} mellom aktiviteter er vanlig i industrien. En vedlikeholdsaktivitet kan for eksempel være avhengig av både levering av reservedeler og stillasbygging for å sikre tilgang til området hvor vedlikeholdet skal gjøres. Forholdet som viser at aktivitet $ Act_{i'} $ avhenger av aktivitet $ Act_{i} $ er uttrykt ved følgende begrensning: 
 \begin{equation}
 w_{end}(Act_{i}) \leq v_{sta}(Act_{i'})
@@ -71,14 +70,14 @@ Så langt er formler og tekst hentet fra \cite{tvedtbezem}. I det neste tillegge
 \end{split}
 \end{equation}
 
-\subsubsection{Målfunksjon}
+\subsection{Målfunksjon}
 Målet er å minimalisere makespan $ w_{ms}(P) $ eller varigheten av planleggingen, som er definert ved:
 \begin{equation}
 w_{ms}(P) = max_{i} \{ w_{end}(A_{i}) \} \in [0,c_{hor}(P)]
 \end{equation}
 Dette uttrykker at makespanet er likt den siste slutten eller fullføringstiden i settet av aktiviteter.
 
-\subsubsection{Probleminstanser}
+\subsection{Probleminstanser}
 Problemene er beskrevet ved størrelsen fastsatt av det totale nummeret av aktiviteter, $ \#Acts \in \{ 50,60, 70, 80, 90, 100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 5000 \} $ og kraner, $ \#Cranes = [2,3] $. Det ble generert totalt 5 probleminstanser for hver av de 32 problem størrelsene, som summert opp blir 160 instanser.
 
 Probleminstansene ble tilfeldig generert, ved å tildele mannskaper til aktiviteter, lokasjoner til aktiviteter, lokasjoner til kraner, avhengigheter mellom aktiviteter og aktiviteter som trenger kran. Når instansene ble generert, er det spesifisert at det ikke skal forekomme sirkulasjoner på aktivitetsavhengigheter og at det ikke skal være mer enn en kran på en lokasjon. Så alle 160 instansene er gyldige.
