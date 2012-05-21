@@ -3,34 +3,32 @@
  \nomgroup{A}
 
   \item [{AI}]\begingroup Kunstig intelligens (engelsk: artificial inteligence)\nomeqref {0}
-		\nompageref{7}
+		\nompageref{8}
   \item [{APO}]\begingroup Automatisk Planlegging i Oljeindustrien\nomeqref {0}
-		\nompageref{7}
+		\nompageref{8}
   \item [{Avgjøringsvariable}]\begingroup På engelsk: decision variable\nomeqref {0}
 		\nompageref{12}
   \item [{Avledningsvariable}]\begingroup Derived variable\nomeqref {0}
 		\nompageref{12}
   \item [{Concert}]\begingroup IBM ILOG Concert Technology\nomeqref {8}
-		\nompageref{16}
+		\nompageref{19}
   \item [{CP}]\begingroup Begrensningsprogrammering (engelsk: Constraint programming)\nomeqref {0}
-		\nompageref{7}
+		\nompageref{8}
   \item [{Eneressurs}]\begingroup På engelsk: Unary resource\nomeqref {0}
 		\nompageref{13}
-  \item [{JSSP}]\begingroup Job Shop Scheduling Problem\nomeqref {0}
-		\nompageref{8}
+  \item [{JSSP}]\begingroup Job Shop Scheduling Problem\nomeqref {14}
+		\nompageref{30}
   \item [{LS1}]\begingroup Løsningsstrategi 1\nomeqref {8}
-		\nompageref{18}
+		\nompageref{21}
   \item [{LS2}]\begingroup Løsningsstategi 2\nomeqref {8}
+		\nompageref{22}
+  \item [{MSProject}]\begingroup Microsoft Project 2010\nomeqref {8}
+		\nompageref{19}
+  \item [{Påstander}]\begingroup Engelsk: Assertions\nomeqref {8}
 		\nompageref{18}
-  \item [{MSProject}]\begingroup Microsoft Project 2010\nomeqref {0}
-		\nompageref{11}
-  \item [{NP-hard}]\begingroup Ikke-deterministisk polynomtid hard (engelsk: non-deterministic polynomial-time hard)\nomeqref {0}
-		\nompageref{7}
-  \item [{Påstander}]\begingroup Engelsk: Assertions\nomeqref {0}
-		\nompageref{10}
   \item [{Scheduler}]\begingroup IBM ILOG Scheduler\nomeqref {8}
-		\nompageref{17}
+		\nompageref{20}
   \item [{Solver}]\begingroup IBM ILOG Solver\nomeqref {8}
-		\nompageref{17}
+		\nompageref{20}
 
 \end{thenomenclature}

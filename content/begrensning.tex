@@ -1,32 +1,36 @@
+I denne delen blir det gitt en innføring om begrensningsprogrammering og utfordringer som kommer med begrensningsprogrammering. Det vil også bli sett litt på verktøy som eksisterer idag for å bruke begrensningsprogrammering samt noen enkle verktøy for enkel planlegging av aktiviteter og ressurser. Tilslutt i denne delen er det en kort beskrivelse av verktøyene som er brukt i dette prosjektet.
+
 \subsection{Kort om begrensningsprogrammering}
-Begrensningsprogrammering er en programmeringsparadigme hvor relasjoner mellom variable blir satt i form av begrensninger. Begrensninger er en form for deklarativ programmering, som skiller seg fra den mer vanlige imperativ programmeringsspråk\footnote{Imperativ programmeringsspråk har sekvenser med som blir utført.} ved at løsningen blir til ved å tilfredsstille begrensningene. Det er forskjellige områder i begrensningsprogrammering som \"Constraint Satisfaction problems\" og planleggingsproblemer. Det mest kjente planleggingsproblemet er \"Job Shop Scheduling\".\cite{cpwikipedia}
+Begrensningsprogrammering er en programmeringsparadigme hvor relasjoner mellom variable blir satt i form av begrensninger. Begrensninger er en form for deklarativ programmering, som skiller seg fra den mer vanlige imperativ programmeringsspråk\footnote{Imperativ programmeringsspråk har sekvenser med instanser som blir utført.} ved at løsningen blir til ved å tilfredsstille begrensningene. Det er forskjellige områder i begrensningsprogrammering som \"Constraint Satisfaction problems\" og planleggingsproblemer. Det mest kjente planleggingsproblemet er ''Job Shop Scheduling" \cite{cpwikipedia}.
 
 \subsection{Utfordringer med begrensningsprogrammering}
 Systemer for begrensings-logikk programmeringssystemer som sammenliggnes med begrensningsløsningssystemer, er ofte ytelsen bedre i begrensings-logikk programmeringssystemer. Ytelsen er likevel ikke like god som mer tradisjonelle imperative programmeringsspråk, og spesielt gjelder det innen tallmessige utregninger. For å løse dette, er det mulig å utvikle en avansert kompilator som sjekker de tilfellene hvor det ikke er behov for begrensingsløning, og da kompilerer disse på mest mulig effektive måte \cite{challengesManuel}
 
-Begrensningsprogrammeringssystemer har ofte en svakhet når det kommer til feilsøking (engelsk: debugging). Uten tilstrekkelige måter å kunne være sikkert på riktigheten og muligheter å sjekke ytelse i programmer. En måte å løse utfordringene med manglende feilsøkingsmuligheter er å bruke påstander \nomenclature{Påstander}{Engelsk: Assertions}. Ved bruk av påstander kan det opprettes post- og preforhold. Påstander kan bli sjekket ved kompilering eller når programmet kjører. Det er også mulig å genere påstander av kompilatoren, som utvikleren kan sjekke om det eksisterer høynivåfeil\cite{challengesManuel}.
+Begrensningsprogrammeringssystemer har ofte en svakhet når det kommer til feilsøking (engelsk: debugging). Uten tilstrekkelige måter å kunne være sikkert på riktigheten og muligheter å sjekke ytelse i programmer. En måte å løse utfordringene med manglende feilsøkingsmuligheter er å bruke påstander \nomenclature{Påstander}{Engelsk: Assertions}. Ved bruk av påstander kan det opprettes pre- og postforhold. Preforhold skal resultere i en boolsk verdi (sann eller falsk) og metoden blir ikke utført hvis ikke preforholdet er sant. Postforhold til en metode beskriver hva som skal være oppnåd med metoden. Postforold er også en boolsk verdi. Både pre- og postforhold blir skrevet for å ''evaluere" en metode, enten før metoden blir utført eller hva metoden har oppnåd. Påstander kan bli sjekket ved kompilering eller når programmet kjører. Det er også mulig å genere påstander av kompilatoren, som utvikleren kan sjekke om det eksisterer høynivåfeil \cite{challengesManuel}.
+
+\subsection{Begrensingsprogrammeringsverktøy idag}
+Det finnes idag flere forskjellige verktøy for begrensningsprogrammering, både i form av egne programmeringsspråk som er skreddersydd for begrensningsprogrammering og biblioteker til godt kjente programmeringsspråk som Java og C++. I begge disse kategoriene så finnes det løsninger som er kommersielle og med åpen kildekode. Noen eksempler på egne programmeringsspråk for begrensningsprogrammering er Prolog og Comet. Sistnevnte er et programmeringspråk for begrensningsprogrammering med lokalt søk og er en kommersiell løsning. Eksempler på begrensningsprogrammeringsbiblotek så er det IBM ILOG CP.
+
+Planlegging er ofte tett knyttet opp mot prosjektstyring og prosjektstyringsverktøy finnes det veldig mange av etterhvert \cite{projectmanagmenttoolswiki}. Både programmer du har lokalt på maskinen og også webbaserte tjenester. Fellesnevneren for veldig mange av disse tjeneste, enten de er lokalt eller webbaserte er at de skal hjelpe til med alt fra prosjektplanlegging, dokumentdeling, oversikt over oppgaver, oversikt over frister, møteplanlegging og mye mer. Denne typen programvare er ofte gjort ganske enkle å bruke. I samme kategori er det også noen programmer som gjør det mulig å definere aktiviteter (ofte kalt oppgaver) og knytte ressurser til aktivitetene.
+
+Et eksempel på et slikt program er Microsoft Project. Dette programmet har et grafisk grensesnitt som andre programmer i Office-pakken til Microsoft og er et enkelt program å bruke. Microsoft Project 2010\nomenclature{MSProject}{Microsoft Project 2010} gir muligheter til manuell og automatisk planlegging\cite{msproject2010blog}. I MSProject er det mulig å legge til begrensninger, men er begrenset til aktiviteters starttidspunkt. Aktiviteter kan tillegges begrensinger ut ifra om aktiviteten skal planlegges tidlig eller sent i prosessen eller på et gitt tidspunkt \cite{begrensingermsproject}. Dette prosjektet har flere ressurser (lokasjoner, mannskaper, kraner, osv.), begrensinger og sikkerhetsbegrensinger. Når problemet blir såpass komplekst, vil ikke et enkelt program som MSProject fungere til formålet.
+
+Til noen av de mest kjente og brukte begrensingsprogrammeringsprobleme (for eksempel ''Job Shop Scheduling Problem") finnes det noen systemer som løser de. ''Exact JobBOSS Software" er et eksempel på et slikt system, hvor det er mulig å utføre planleggings og produksjons gjennomføring. Dette systemet har funksjonalitet å opprette aktiviteter, planlegge aktiviteter, materialkravplanlegging osv \cite{exact}.
 
 \subsection{Verktøy brukt i prosjektet}
 De følgende verktøyene og teknologiene utviklet av IBM var brukt for å gjennomføre formålet med prosjektet.
 
-\subsubsection{Kort om IBM ILOG Concert Technology}\nomenclature{Concert}{IBM ILOG Concert Technology}
+\subsubsection{Kort om Concert}\nomenclature{Concert}{IBM ILOG Concert Technology}
 Concert er et C++ bibliotek med funksjoner som gir mulighet til å designe modeller av problemer innen matematisk programmering og innen begrensningsprogrammering. Det er ikke noe eget programmeringsspråk, gir muligheter til å bruke datastrukturer og kontrollstrukturer som allerede finnes i C++. Igjen så gir det gode muligheter til å integrere Concert i allerede eksisterende løsninger og systemer. Alle navn på typer, klasser og funksjoner har prefiksen Ilo.
 
-De enkleste klassene (eks. IloNumVar og IloConstraint) i Concert har også tilhørende en klasse med matriser hvor matrisen er instanser av den enkle klassen. Et eksempel på det er IloConstraintArray som er instanser av klassen IloConstraint.\cite{cpconcertilog}
+De enkleste klassene (eks. IloNumVar og IloConstraint) i Concert har også tilhørende en klasse med matriser hvor matrisen er instanser av den enkle klassen. Et eksempel på det er IloConstraintArray som er instanser av klassen IloConstraint \cite{cpconcertilog}.
 
-Concert gjør det mulig å lage en modell av optimaliseringsproblemer uavhengig av algoritmene som er brukt for å løse det. Det tilbyr en utvidelse modelerings lag tatt fra flere forskjellige algoritmer som er klare til å brukes ut av boksen. Dette modeleringslaget gjør det mulig å endre modellen uten å skrive om applikasjonen.\cite{cpsolverilog}
+Concert gjør det mulig å lage en modell av optimaliseringsproblemer uavhengig av algoritmene som er brukt for å løse det. Det tilbyr en utvidelse modelerings lag tatt fra flere forskjellige algoritmer som er klare til å brukes ut av boksen. Dette modeleringslaget gjør det mulig å endre modellen uten å skrive om applikasjonen \cite{cpsolverilog}.
 
-\subsubsection{Kort om IBM ILOG Solver}\nomenclature{Solver}{IBM ILOG Solver}
+\subsubsection{Kort om Solver}\nomenclature{Solver}{IBM ILOG Solver}
 IBM ILOG Solver er et C++ bibliotek utviklet for å løse komplekse kombinatoriske problemer innen forskjellige områder. Eksempler på anvendelsesområder kan være produksjonsplanlegging, ressurstildeling, timeplanplanlegging, personellplanlegging, osv. Solver er basert på Concert. Som i Concert, så er heller ikke Solver noe eget programmeringsspråk, som gir mulighetene til å bruke egenskapene til C++.
 
-Det å gjøre det enkelst mulig å omgjøre applikasjoner fra plattform til plattform, Solver og Concert utelukkes karaktertrekk som skiller seg fra forskjellige systemer. Av den grunn, anbefales det å bytte ut de enkle typene i C++ med ILOG sine egne:
-\begin{itemize}
-\item IloInt som er signed long integers
-\item IloAny som er pekere
-\item IloNum som er double presisjon floating-point verdier
-\item IloBool som er boolean verdier: IloTrue og IloFalse
-\end{itemize}
-Solver bruker begrensningsprogrammering for å finne løsninger til optimaliseringsproblemer. Det å finne løsninger med Solver er basert på tre steg: beskrive, modell og løse. De tre stegene nærmere forklart følger:
+Solver bruker begrensningsprogrammering for å finne løsninger til optimaliseringsproblemer. Det å finne løsninger med Solver er basert på tre steg: beskrive, modellere og løse. De tre stegene nærmere forklart følger:
 
 Først må problemet beskrives i programmeringsspråket som brukes.
 
@@ -34,5 +38,7 @@ Det andre steget er å bruke Concertklassene for å opprette en modell av proble
 
 Det siste steget er å bruke Solver for å løse problemet. Det inneholder å finne verdier for alle besluttingsvariablene samt ikke bryte noen av de definerte begrensningene og dermed enten maksimere eller minimere målet, hvis det er et mål inkludert i modellen. Solver ser etter løsninger i et søkeområdet. Søkeområdet er alle mulige kombinasjoners av verdier.\cite{cpsolverilog}
 
-\subsubsection{Kort om IBM ILOG Scheduler}\nomenclature{Scheduler}{IBM ILOG Scheduler}
-IBM ILOG Scheduler hjelper med å utvikle problemløsnings-applikasjoner som krever behandling av ressurser fordelt på tid. Scheduler er et C++ bibliotek som baserer seg på Solver, og som Solver, så gir det alle mulighetene med objektorientering og begrensningsprogrammering. Scheduler har spesifisert funksjonalitet på å løse problemer innen planlegging og ressurstildeling.\cite{cpschedulerilog}
+\subsubsection{Kort om Scheduler}\nomenclature{Scheduler}{IBM ILOG Scheduler}\cite{cpschedulerilog}
+IBM ILOG Scheduler hjelper med å utvikle problemløsnings-applikasjoner som krever behandling av ressurser fordelt på tid. Scheduler er et C++ bibliotek som baserer seg på Solver, og som Solver, så gir det alle mulighetene med objektorientering og begrensningsprogrammering. Scheduler har spesifisert funksjonalitet på å løse problemer innen planlegging og ressurstildeling.
+
+I Scheduler er det blandt annet kummulative ressurser, eneressurser, aktiviteter og alternative ressurser.

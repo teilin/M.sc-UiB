@@ -13,6 +13,11 @@
 \usepackage{graphicx}
 \usepackage{verbatim}
 
+% --- START 1.5 LINJEAVSTAND
+\usepackage{setspace}
+\onehalfspacing
+% --- END
+
 \renewcommand{\nomname}{Forkortelser}
 \makenomenclature
 
@@ -63,12 +68,9 @@
 \end{center}
 % START OF DOCUMENT
 \newpage
-\vspace*{\fill}
-%Abstract
-\begin{abstract}
-TEST
-\end{abstract}
-\vspace*{\fill}
+%Preface
+\section*{Forord}
+\input{forord}
 \newpage
 
 %Defining commands
@@ -80,13 +82,15 @@ TEST
 \tableofcontents
 \newpage
 
-%Preface
-\section*{Forord}
-%\input{forord}
+%Liste med figurer og tabeller
+\listoftables
 \newpage
+\listoffigures
+\newpage
+% Liste over figurer og tabeller done
 
 \begin{center}
-\printnomenclature[2.5 cm]
+\printnomenclature[3.5 cm]
 \end{center}
 \newpage
 
@@ -96,7 +100,7 @@ TEST
 \input{content/background}
 
 %Motivasjon
-\section{Motivasjon}
+\section{Motivasjon og målsetting}
 \input{content/motivation}
 
 %Problemstilling
@@ -104,7 +108,7 @@ TEST
 \input{content/problem}
 
 %Begrensning
-\section{Begrensning}
+\section{Begrensningsprogrammering}
 \input{content/begrensning}
 
 %New methods - find a title that describe the method
@@ -113,12 +117,16 @@ TEST
 %\newpage
 
 %Experiments
-\section{Eksperimenter / Resultater}
+\section{Resultater}
 \input{content/experiments}
 %\newpage
 
 \section{Evaluering}
 \input{content/evaluering}
+
+%Relatert arebdis
+\section{Relatert arbeid}
+\input{content/relatert}
 
 %Future work
 \section{Fremtidig arbeid}

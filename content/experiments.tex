@@ -1,6 +1,7 @@
-Eksperimenteringen er utført på en Mackbook Air med 1.8 GHz Intel Core i7 prosessor og 4 GB 1333 MHz DDR3 minne. Det er totalt sett 160 benchmarksett som implementasjonene er evaluert på. Hvor mange det ble funnet en løsning på, varierte avhengig av om tilleggsressursene var med eller ikke og tidsgrensen som var satt.
+Eksperimenteringen er utført på en Macbook Air med 1.8 GHz Intel Core i7 prosessor og 4 GB 1333 MHz DDR3 minne. Det er totalt sett 160 benchmarksett som implementasjonene er evaluert på. Hvor mange det ble funnet en løsning på, varierte avhengig av om tilleggsressursene var med eller ikke og tidsgrensen som var satt.
 
 \begin{table}[h]
+\caption{Relativ optimalitets indeks $w_{rq}$ for de forskjellige modellene}
 \begin{center}
 \begin{tabular}{ | c | c | c | c | c | c | c | c | c | c | c | }
 \hline
@@ -8,19 +9,18 @@ Eksperimenteringen er utført på en Mackbook Air med 1.8 GHz Intel Core i7 pros
 $\sharp Act(\sharp P)$ & \multicolumn{2}{|c|}{$< 100 (25)$} & \multicolumn{2}{|c|}{$> 100 (55)$} & \multicolumn{2}{|c|}{$< 100 (25)$} & \multicolumn{2}{|c|}{$> 100 (55)$} & \multicolumn{2}{|c|}{(160)} \\ 
 \hline
 Modell & $w_{rq}$ & $\%^{(1)}$ & $w_{rq}$ & $\%^{(1)}$  & $w_{rq}$ & $\%^{(1)}$ & $w_{rq}$ & $\%^{(1)}$ & $w_{rq}$ & $\%^{(1)}$ \\ \hline
-$LS1 \sharp 1^{(2)}$ & 1.164 & 80 & 1.115 & 44 & 1.105 & 64 & 1.027 & 20 & 1.113 & 44 \\
-$LS1 \sharp 2^{(3)}$ & 1.228 & 32 & - & - & - & - & - & - & 1.183 & 5 \\
-$LS2 \sharp 1^{(2)}$ & 1.691 & 100 & 1.855 & 100 & 1.545 & 100 & 1.693 & 100 & 1.725 & 100 \\
-$LS2 \sharp 2^{(3)}$ & 1.651 & 40 & 1.860 & 1.8 & - & - & - & - & 1.670 & 6.8 \\
+$LS1 \sharp 1^{(2)}$ & 1.578 & 100 & 1.905 & 100 & 1.593 & 100 & 1.731 & 100 & 1.745 & 100 \\
+$LS1 \sharp 2^{(3)}$ & 1.672 & 100 & 1.961 & 100 & 1.711 & 100 & 1.766 & 100 & 1.810 & 100 \\
+$LS2 \sharp 1^{(2)}$ & 1.144 & 84 & 1.160 & 27.3 & 1.60 & 68 & 1.042 & 10.91 & 1.142 & 36.88 \\
+$LS2 \sharp 2^{(3)}$ & 1.256 & 76 & 1.313 & 30.91 & 1.243 & 72 & 1.041 & 18.18 & 1.232 & 40 \\
 \hline
+\multicolumn{11}{l}{\begin{minipage}{6in}$^{(1)}$ prosentandel løste probleminstanser
+$^{(2)}$ $\sharp 1$ er løsninger uten varmebegrensning
+$^{(3)}$ $\sharp 2$ er løsninger med varmebegrensning \end{minipage}}
 \end{tabular}
 \end{center}
-\caption{Relativ optimalitets indeks $w_{rq}$ for de forskjellige modellene}
 \label{tab:resultaterSum}
 \end{table}
-$^{(1)}$ prosentandel løste probleminstanser
-$^{(2)}$ $\sharp 1$ er løsninger uten varmeressurs
-$^{(3)}$ $\sharp 2$ er løsninger med varmeressurs
 
 En måling av relativ kvalitet er brukt for å evaluere resultatene fra forskjellige strategier. Den avledede variabelen $w_{rq}$ er gitt ved (\ref{eq:relativkvalitet}).
 \begin{equation}
@@ -29,13 +29,16 @@ w_{rq} = \frac{1}{| P_{sol} |} \sum_{P \in P_{sol}} \frac{w_{ms}(P)}{c_{lb,ms}(P
 \end{equation}
 $P_{sol}$ er det settet med probleminstanser som er løst ved hver enkelt løsningsstrategi. Verdiene av $P_{sol}$ varierer fra løsningsstrategi til løsningsstrategi og disse gjennomsnittene er derfor ikke helt sammenlignbare, men de vil gi en indikasjon på kvaliteten på løsningen. $w_{rq}$ skiller ikke på strategier som feiler med å finne løsninger, men hvor robust løsningen er vil antallet løste probleminstanser indikere. Resultatene er summert opp i tabell \ref{tab:resultaterSum}.
 
-\subsection{Uten varmeressurs}
-Resultatene når benchmarksettene er kjørt gjennom løsningen uten varmebegrensning er markert med $\sharp 1$, viser det er løsning i tilfellene med både 2 og 3 kraner. Der hvor den første løsningsstrategi (LS1) er benyttet varierer antallet løste benchmarksett fra 44\% og opp til 80\%, mens for den andre løsningsstrategien (LS2) er det løsninger på alle benchmarksettene.
+Teoretisk nedregrense er basert på mannskaper som er den mest begrensende ressursen. Det er ikke sikkert det finnes gyldige løsninger er ikke sikkert finnes, men i og med den er beregnet ut fra den mest begrensede ressursen er det fornufig benchmark å sammenligne løsningene med denne.
 
-\subsection{Med varmeressurs}
-Resultatene som er kjørt med varmebegrensing, finner ikke i nærheten av like mange løsninger på banchmarksettene. Med den første løsningsstrategien (LS1) finner den ikke løsninger for mer enn banchmarksettene med under 100 aktiviteter og 2 kraner. Der finner den heller ikke løsning på mer enn 32\% av benchmarksettene.
-\begin{figure}[h]
-\includegraphics[width=15cm]{content/gfx/Act50.eps}
-\label{fig:50actgant}
-\caption{Gant skjema over en av løsningene med 50 aktiviteter og 2 kraner}
-\end{figure}
+\subsection{Uten varmebegrensning}
+Løsningene som er kommentert her er fra det andre genererte benchmarksettet, den første løsningsstrategien uten varmebegrensing finner løsninger på alle 160 benchmarksettene. Makespan på er nærmest teoretisk nedregrense med to kraner og under 100 aktiviteter, hvor det i gjennomsnitt er 57.8\% over teoretisk nedregrense. Lengst unna teoretisk nedregrense er banchmarksettene med 2 kraner og over 100 aktiviteter, hvor makespan ligger i gjennomsnitt 90.5\% over teoretisk nedregrense. Alle benchmarksettene med den første løsningsstrategien er i gjennomsnittet 74.5\% over teoretisk nedregrense.
+
+De beste løsningene uten varmebegrensning er med den andre løsningsstrategien, hvor det i gjennomsnitt er 4.2\% over teoretisk nedregrense med 3 kraner og over 100 aktiviteter. Da finner den kun løsning på 10.91\% av probleminstansene. Med 3 kraner og under 100 aktiviteter er de dårligste løsningene med den andre løsningsstrategien, hvor det i gjennomsnitt er 60\% over teoretisk nedregrense. Den finner løsninger på 68\% av probleminstansene. Totalt sett med den andre løsningstrategien, er makespan 14.2\% over teoretisk nedregrense og den finner løsninger på 36.88\% av probleminstansene.
+
+\subsection{Med varmebegrensning}
+I den første probleminstansen var det kun noen løsninger under 100 aktiviteter. Probleminstansene over 100 aktiviteter hadde ingen løsninger, annet enn et av probleminstansene på 900 aktiviteter.
+
+Med det andre genererte probleminstansene ble det flere løsninger, med den første løsningsstrategien med varmebegrensning gir løsninger på alle probleminstansene, men makespan er ganske langt unna teoretisk nedregrense. Med denne løsningstratteien, er det probleminstansene med to kraner og under 100 aktiviteter, hvor gjennomsnittsverdien er nærmest den teoretiske nedregrensen med 67.2\% over. Probleminstansene med to kraner og over 100 aktiviteter er i gjennomsnitt 96.1\% over teoretisk nedregrense. Totalt sett for den første løsningstrategien er gjennomsnittsverdien 81.0\% over teoretisk nedregrense.
+
+Med den andre løsningsstrategien finner den bedre løsninger, men generelt sett færre av probleminstansene blir løst. Den beste løsningen her har gjenomsnittet 4.1\% over teoretisk nedregrense. Den dårligste løsningen ligger på 31.3\% over teoretisk nedregrense. Der har 18.18\% og 30.91\% av probleminstansene blitt løst. Totalt sett med den andre løsningstrategien ligger det 23.2\% over teoretisk nedregrense og 40\% av probleminstansene er løst med denne løsningsstrategien.

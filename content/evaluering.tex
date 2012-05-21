@@ -1,17 +1,71 @@
-\colorbox{red}{Evaluering intro}
+I denne delen blir probleminstanser, løsningsstrategier og løsninger evaluert. Denne delen blir avsluttet med å evaluere løsningene funnet i dette prosjektet opp mot løsningene funnet i artikkelen til \bht.
 
 \subsection{Probleminstanser}
-\colorbox{red}{Evaluere probleminstansene}
+Probleminstansene har fra 50-5000 aktiviteter, mens antall lokasjoner og mannskaper i de generert probleminstansene er henholdsvis 10 og 5. Det ble eksperimentert litt med mannskapets varme og lokasjoners varmekapsitet og i det første settet med probleminstanser var det overlapp mellom mannskapers varme og en lokasjons varmekapasitet. Dette førte til veldig få løsninger når varmekapasiteten ble tatt med. Det ble funnet løsninger på noen av probleminstansene under 100 aktiviteter, mens over 100 aktiviteter var det en løsning. Det er grunn til å tro dette var tilfeldig, ut ifra at varme og varmekapasitet blir tilfeldig plassert innenfor et gitt område. Probleminstansene hvor varme og varmekapasitet ikke er overlappende har mange flere løsninger og med den første løsningsstrateien er det også løsning på alle probleminstansene, uavhengig om de er kjørt med eller uten varmebegrensing. I løsningene er det probleminstansene med under 100 aktiviteter som har makespan nærmest teoretisk nedregrense, uanhengig av løsningsstrategi. Ut ifra det Taillard \cite{Taillard1993278} kom frem til er da probleminstansene over 100 aktiviteter vanskeligere å løse i og med at makespan er lenger unna teoretisk nedregrense.
 
 \subsection{Løsningsstrategier}
-\colorbox{red}{Evaluering av løsningsstrategiene}
+Ut ifra tabell \ref{tab:resultaterSum} er det et ganske klart bilde av de sterke og svake sidene til de to løsningsstrategiene som er brukt. Den ene løsningsstrategien finner flest løsninger, mens den andre løsningsstrategien finner løsninger som er nærmest teoretisk nedregrense.
+
+Den første løsningsstrategien (LS1) finner løsninger på alle de 160 benchmarksettene, men løsningene er i gjennomsnitt 74.5\% og 81.0\% over teoretisk nedregrense. Det er løsninger uten varmebegrensningen som er nærmest den teoretisk nedregrensen, både med 2 og 3 kraner.
+
+Den andre løsningsstrategien (LS2) finner endel færre løsninger, henholdsvis 36.88\% og 40\%. Løsningene er vesentlig nærmere den teoretiske nedregrensen, hvor 4.1\% over teoretisk nedregrense på det nærmeste og 60\%.
 
 \subsection{Resultater}
-\colorbox{red}{Resultater intro}
 I dette prosjektet er en eksisterende løsning utvidet med en ressurs kalt varmeressurs. For å evaluere resultatene fra den utvidete løsningen, kommer det en evaluering av den eksisterende løsningen med 25 lokasjoner sett opp mot den utvidede løsningen med 10 lokasjoner. Evalueringen av resultatene baserer seg på gjennomsnittsverdiene i tabell \ref{tab:resultaterSum}. En tilsvarende oppsummering av løsningene eksisterer også for 25 lokasjoner \cite{tvedtbezem}.
 
-\subsubsection{Med 10 lokasjoner}
-\colorbox{red}{Evaluaring av resultatene med 10 loc mot hverandre}
+\subsubsection{10 lokasjoner}
+Løsningene er i ganske god overomstemmelse med forventningene i seksjon \ref{sec:implprocess}. Med løsningsstrategi 1 hvor kranfordelingen ble valgt først var gjennomsnittlig makespan dårligere enn med løsningsstrategi 2.
+
+\begin{figure}[!h]
+\centering
+\includegraphics[scale=0.3]{content/gfx/Act50Crane2AssignHeatResourceCrane}
+\caption{Ressursoversikt på Act50Loc10Crew5Crane2 med varmebegrensning}
+\label{fig:RessursWithAct50Loc10Crew5Crane2}
+\end{figure}
+\begin{figure}[!h]
+\centering
+\includegraphics[scale=0.3]{content/gfx/Act50Crane2WithoutResourceCrane}
+\caption{Ressursoversikt på Act50Loc10Crew5Crane2 uten varmebegrensning}
+\label{fig:RessursWithoutAct50Loc10Crew5Crane2}
+\end{figure}
+I figur \ref{fig:RessursWithAct50Loc10Crew5Crane2} er en av probleminstansene med to kraner kjørt med varmebegrensing. Ut ifra denne grafiske fremstilling er det kran som er den mest begrensende ressursen. På figur \ref{fig:RessursWithoutAct50Loc10Crew5Crane2} er det også kran som er den mest begrensende ressursen.
+\begin{figure}[!h]
+\centering
+\includegraphics[scale=0.3]{content/gfx/Act50Crane3AssignHeatResourceCrew}
+\caption{Ressursoversikt på Act50Loc10Crew5Crane3 med varmebegrensning}
+\label{fig:RessursWithAct50Loc10Crew5Crane3}
+\end{figure}
+Når ser på figur \ref{fig:RessursWithAct50Loc10Crew5Crane3} hvor det er tre kraner, så er det ikke lengere kran som er den mest begrensende ressursen. Her er det mannskap som over tid bruker hele kapasiteten.
+
+\begin{equation}
+c_{load}(Crane_{k}) = \sum_{c_{Crane}(Act_{i})=Crane_{k}} c_{dur}(Act_{i})
+\label{eq:kranstyrke}
+\end{equation}
+Ved å sammenligne om verdier fra (\ref{eq:kranstyrke}) er mindre eller større enn (\ref{eq:mannskapsstyrke}), gir det et uttryk for hvor sterk eller svak kranressursen er. Hvis (\ref{eq:kranstyrke}) er mindre vil det si at kranressursen er svak. Ut ifra dette er det en signifikant forskjell på to og tre kraner. Ved to kraner er kranressursen veldig sterke, mens kranressursen ikke er fullt så sterke med tre kraner.
 
 \subsubsection{10 lokasjoner mot 25 lokasjoner}
-\colorbox{red}{Evaluere løsninger med 10 loc mot \bht 25 lokasjoner}
+For å sammenligne løsningene i dette prosjektet med 10 lokasjoner, med løsningene til \bht med 25 lokasjoner, tabell (\ref{tab:resultaterSumTvedt}) hentet fra \cite{tvedtbezem}.
+\begin{table}[!h]
+\caption{Relativ optimalitets indeks $w_{rq}$ for de forskjellige modellene}
+\begin{center}
+\begin{tabular}{ | c | c | c | c | c | c | c | c | c | c | c | }
+\hline
+\textbf{Modell} & \multicolumn{4}{|c|}{\textbf{2 kraner}} & \multicolumn{4}{|c|}{\textbf{3 kraner}} & \multicolumn{2}{|c|}{\textbf{Alle}} \\ \hline
+$\sharp Act(\sharp P)$ & \multicolumn{2}{|c|}{$< 100 (25)$} & \multicolumn{2}{|c|}{$> 100 (23)$} & \multicolumn{2}{|c|}{$< 100 (28)$} & \multicolumn{2}{|c|}{$> 100 (23)$} & \multicolumn{2}{|c|}{(99)} \\ 
+\hline
+Modell & $w_{rq}$ & $\%^{(2)}$ & $w_{rq}$ & $\%^{(2)}$  & $w_{rq}$ & $\%^{(2)}$ & $w_{rq}$ & $\%^{(2)}$ & $w_{rq}$ & $\%^{(2)}$ \\ \hline
+Greedy & 1.311 & 100 & 1.524 & 100 & 1.276 & 100 & 1.393 & 100 & 1.370 & 100 \\
+Inferred & 1.068 & 100 & 1.063 & 35 & 1.017 & 32 & 1.000 & 4 & 1.055 & 43 \\
+Under$^{(1)}$ & 1.032 & 100 & 1.014 & 100 & 1.015 & 100 & 1.002 & 96 & 1.016 & 99 \\
+Over$\sharp 1$ & 1.143 & 100 & 1.076 & 100 & 1.176 & 100 & 1.037 & 91 & 1.114 & 98 \\
+Over$\sharp 2$ & 1.104 & 100 & 1.047 & 96 & 1.068 & 96 & 1.005 & 65 & 1.063 & 90 \\
+\hline
+\multicolumn{11}{l}{\begin{minipage}{6in}$^{(1)}$ Denne modellen garanterer ikke gyldige løsninger.
+$^{(2)}$ prosentandel løste instanser \end{minipage}}
+\end{tabular}
+\end{center}
+\label{tab:resultaterSumTvedt}
+\end{table}
+Begge løsningene inneholder modeller som klarer å løse alle probleminstansene. I Greedy modellen løses alle probleminstansene, men løsningene har en gjennomsnittlig makespan godt over teoretisk nedregrense. Det samme gjelder løsningene i dette prosjektet, hvor det er løsninger på alle probleminstansene når kranfordelingen blir valgt først (LS1). Her er også det løsninger hvor gjennomsnittlig makespan ligger over teoretisk nedregrense. Med Greedy ligger det totalt 37\% over teoretisk nedregrense, mens med løsningsstrategi 1 i dette prosjektet ligger det henholdsvis 74.5\% og 81.0\% over teoretisk nedregrense.
+
+I løsningene til \bht er det den underbegrensede modellen som gir de beste løsningene med en gjennomsnittlig makespan 1.6\% over teoretisk nedregrense. Denne modellen kan sees i sammenheng med løsningene i dette prosjektet som er løst uten varmebegrensing. Løsningene uten varmebegrensing i dette prosjektet gir bedre løsninger med begge løsningsstrategiene. Med løsningsstrategi 1 er den gjennomsnittlige makespanen 74.5\% over teoretisk nedregrense, mens for løsningstrategi 2 er den 14.2\% over teoretisk nedregrense.
