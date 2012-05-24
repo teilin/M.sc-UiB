@@ -43,6 +43,12 @@ c_{load}(Crane_{k}) = \sum_{c_{Crane}(Act_{i})=Crane_{k}} c_{dur}(Act_{i})
 \end{equation}
 Ved å sammenligne om verdier fra (\ref{eq:kranstyrke}) er mindre eller større enn (\ref{eq:mannskapsstyrke}), gir det et uttryk for hvor sterk eller svak kranressursen er. Hvis (\ref{eq:kranstyrke}) er mindre vil det si at kranressursen er svak. Ut ifra dette er det en signifikant forskjell på to og tre kraner. Ved to kraner er kranressursen veldig sterke, mens kranressursen ikke er fullt så sterke med tre kraner.
 
+Når sammenligner LS1 løses alle probleminstanser både med og uten varme. Den gjennomsnittlige makespanen er litt bedre uten varmebegrensning enn med varmebegrensing, men forskjellen er ikke så stor. Totalt sett er den 74.5\% over teoretisk nedregrense uten varme, mens den 81.0\% over teoretisk nedregrense med varme. Tiden det tar og løse probleminstansene er også veldig lik uten noe spesielt mønster både med og uten varmebegrensning. Det er derfor litt bedre løsninger uten varmebegrensning.
+
+Sammenliggnes LS2 så løser verken programmet med eller uten varme alle probleminstansene. Her løser programmet uten varme flest probleminstanser når antall aktiviteter er under 100, men forskjellen er ikke stor. Totalt sett løser programmet med varmebegrensning 40\% av probleminstansene, mens uten varmebegrensing løser 36.88\% av probleminstansne. Selve løsningene i forhold til teoretisk nedregrense så er den gjennomsnittlige makespanen bedre uten varmebegrensing, hvor den ligger 14.2\% over og med varmebegrensing ligger den 23.2\% over.
+
+Det var forventet at LS1 skulle ha dårligere makespan enn LS2. I LS1 tildeles kraner først i søket i Solver, mens i LS2 settes starttiden til aktivitetene først.
+
 \subsubsection{10 lokasjoner mot 25 lokasjoner}
 For å sammenligne løsningene i dette prosjektet med 10 lokasjoner, med løsningene til \bht med 25 lokasjoner, tabell (\ref{tab:resultaterSumTvedt}) hentet fra \cite{tvedtbezem}.
 \begin{table}[!h]

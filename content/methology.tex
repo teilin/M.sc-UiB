@@ -1,13 +1,42 @@
 I denne delen, blir verktøy og teknologier som er brukt i prosjektet beskrevet. I tilegg vil forskingsmetoder som er brukt bli beskrevet og beskrivelse av strategiene for evaluering av løsningene.
 
 \subsection{Forskningsmetoder}
-Forskningsmetoden som er brukt i prosjektet er å eksperimentere med implementasjonen av ressursene og løsningsstrategien.
+Forskningsmetoden som er brukt i prosjektet er å eksperimentere med implementasjonen av ressursene og løsningsstrategien. Samt å gjøre en kvalitativ vurdering av løsningene og vurdere makespan mot teoretisk- øvre og nedregrense som blir forklart under. Det blir i denne delen gått gjennom implementeringsprosessen og evalueringsprosessen som er brukt i prosjektet.
 
 \subsubsection{Implementeringsprosessen}
 \label{sec:implprocess}
-Måten kraner blir tildelt til aktiviteter som krever kran er endret fra løsningen til \bht. Kraner er modellert som alternative ressurser og for ...
+\begin{lstlisting}[caption=Opprinnelig kranfordeling, label=codeCrane1]
+IloRandom rnd = IloRandom(env, (IloInt)time(NULL));
+int nbActivities = dModel.getActNames()->size();
+for (int i = 0; i < nbActivities; i++)
+{
+	if (dModel.getRequireCrane()->at(i))
+	{
+		IloInt cIndex = rnd.getInt(nbCranes);
+		model.add(altConstraint.select(cranes[cIndex]));
+		altConstraint.setSelected(cranes[cIndex]);
+		index=index+1;
+	}
+}
+\end{lstlisting}
+Måten kraner blir tildelt til aktiviteter som krever kran er endret fra løsningen til \bht. Kraner er fortsatt modellert som eneressurser, men tildelingen av kraner i den opprinnelige løsningen til \bht tildelte kraner tilfeldig ved å bruke IloRandom (listing \ref{codeCrane1}). Denne metoden plukket en tildeldig kran fra tilgjengelige kraner i problemstillingen og tildelte den til ressursen. Da varierte løsningene på hvor god den tilfeldig tildelingen av kran var.
+\begin{lstlisting}[caption=Endret kranfordeling, label=codeCrane2]
+int nbActivities = dModel.getActNames()->size();
 
-Problemet med å finne ut om en RCPSP løsning i tillegg til sikkerhetsbegrensningene med makespan mindre enn en gitt frist er NP-hard. Dette betyr at det utvidede problemet med varme ressursen også må være NP-hard og derfor en optimal løsning med til og med de enkleste formene av problemet er ikke garantert innen polynomisk tid. To forskjellige løsningsstrategier er testet. Begge løsningsstrategiene er implementert i IBM ILOG Solver og IBM ILOG Scheduler biblotekene. I begge løsningsstrategiene brukes standard søkemål i Solver.
+for (int i = 0; i < nbActivities; i++)
+{
+	if (dModel.getRequireCrane()->at(i))
+	{
+		IloAltResConstraint altConstraint 
+			= activities[i].requires(altCranes);
+		model.add(altConstraint);
+		model.add(activities[i].requires(cumulativeCrane));
+	}
+}
+\end{lstlisting}
+I dette prosjektet er kranbegrensningen modellert med alternative ressurser (listing \ref{codeCrane2}). Ved å modellere kranbegrensningen med alternative ressurser kan krantildelingen endre underveis i søkestrategien, ved å bruke søkemålet IloAssignAlternatives.
+
+Problemet med å finne ut om en RCPSP løsning i tillegg til sikkerhetsbegrensningene med makespan mindre enn en gitt frist er NP-hard. Dette betyr at det utvidede problemet med varmeressursen også må være NP-hard og derfor en optimal løsning med til og med de enkleste formene av problemet er ikke garantert innen polynomisk tid. To forskjellige løsningsstrategier er testet. Begge løsningsstrategiene er implementert i Solver og Scheduler biblotekene. I begge løsningsstrategiene brukes standard søkemål i Solver.
 
 Den første løsningsstrategien (LS1)\nomenclature{LS1}{Løsningsstrategi 1} bruker IloAssignAlternatives, som blir brukt til å tildele kraner til aktivitetene ved å tilegne en mulig ressurs til en alternativ ressurs, her kran. Det å rangering er mulig for alle ressursbegrensingene. Når begrensninger blir rankert, blir aktiviteten ressursen tilhører flyttet først av alle aktivitetene som ikke har blitt rangert. Søkemålet som kommer nå er da IloRankForward, som rangerer alle ressursenebegrensningene av typen eneressurs i modellen. Tilslutt blir IloSetTimesForward brukt, denne tillegner starttid til aktiviteter i planleggingen. Ved å velge en kranfordeling først, så løses resten av problemet rundt kranfordelingen. Da blir søketreet for stort til at valget av kranfordeling kan gjøres på nytt på en god måte. Det fører til en forventning at disse løsningene vil være noe dårligere når det gjelder makespan.
 
@@ -16,9 +45,9 @@ Den andre løsningsstrategien (LS2)\nomenclature{LS2}{Løsningsstategi 2} tilleg
 \subsubsection{Evaluering av prosessen}
 Prosessen med eksperimenteringen av implementasjonen blir evaluert ved å undersøke makespan opp mot teoretisk øvregrense (se \ref{sec:teoretiskovre}) og teoretisk nedregrense (se \ref{sec:teoretisknedre}) i både løsningene uten varmebegrensning og med varmebegrensning. Løsningene fra prosessen med og uten varmebegrensningen vil også bli evaluert opp mot hverandre. Dette innebærer bruk av kvantitative metoder. Løsningene med med 10 lokasjoner vil også bli evaluert opp mot løsningene med 25 lokasjoner, men da vil gjennomsnitsverdien \ref{eq:relativkvalitet} bli brukt.
 
-Forskningsmetoden vil bli evaluert ved å bruke genererte probleminstanser, som er generert av et eksternt program. Probleminstansene som genereres kan bestemmes hvor mange av de forskjellige ressursene som skal være med i probleminstansene. I dette prosjektet er det et sprang på 50 - 5000 aktiviteter som implementasjon blir evaluert på.
+Forskningsmetoden vil bli evaluert ved å bruke genererte probleminstanser, som er generert av et eksternt program. Probleminstansene som genereres kan bestemmes hvor mange av de forskjellige ressursene som skal være med i probleminstansene. I dette prosjektet er det et sprang på 50 - 5000 aktiviteter som implementasjon blir evaluert på. I dette prosjektet er det generert forhåndsdefinerte problemer (her: probleminstanser) og håper resultatet kan blir overført til applikasjoner som krever denne forskningen.
 
-Som nevnt evalueres løsningene på probleminstansene med et eksternt program. Det programmet er utviklet i \textit{Java} og leser inn en løsning og tilhørende probleminstans. Det blir opprettet en vektor med objekter som aktiviteter, kraner og mannskaper. På den måten er all informasjon om de forskjellige objektene samlet, som gjør det enkelt å sjekke begrensninger som avhangigheter og varme.
+Løsningene blir evaluert av et eksternt program, som sjekker begrensningene som avhengigheter, varme og sikkerhetsbegrensninger. Det programmet er utviklet i \textit{Java} og leser inn en løsning og tilhørende probleminstans. Det blir opprettet en vektor med objekter som aktiviteter, kraner og mannskaper. På den måten er all informasjon om de forskjellige objektene samlet, som gjør det enkelt å sjekke begrensninger som avhangigheter, varme og sikkerhetsbegrensning. Løsningene har i tillegg varifisert løsningene for alle begrensninger unntatt varmebegrensningen med et eget program.
 
 \subsection{Evalueringsstrategi}
 \label{sec:strategy}
