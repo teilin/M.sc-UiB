@@ -34,6 +34,8 @@ Teoretisk nedregrense er basert på mannskaper som er den mest begrensende ressu
 \subsection{Uten varmebegrensning}
 Løsningene som er kommentert her er fra det andre genererte benchmarksettet, den første løsningsstrategien uten varmebegrensing finner løsninger på alle 160 benchmarksettene. Makespan på er nærmest teoretisk nedregrense med to kraner og under 100 aktiviteter, hvor det i gjennomsnitt er 57.8\% over teoretisk nedregrense. Lengst unna teoretisk nedregrense er banchmarksettene med 2 kraner og over 100 aktiviteter, hvor makespan ligger i gjennomsnitt 90.5\% over teoretisk nedregrense. Alle benchmarksettene med den første løsningsstrategien er i gjennomsnittet 74.5\% over teoretisk nedregrense.
 
+Ut ifra figur \ref{fig:RessursWithoutAct50Loc10Crew5Crane2} er det lokasjon som er den mest begrensede ressursen. På lokasjon 2 er kapasiteten helt brukt opp gjennom hele makespan og på lokasjon 2 finnes også kran 1.
+
 De beste løsningene uten varmebegrensning er med den andre løsningsstrategien, hvor det i gjennomsnitt er 4.2\% over teoretisk nedregrense med 3 kraner og over 100 aktiviteter. Da finner den kun løsning på 10.91\% av probleminstansene. Med 3 kraner og under 100 aktiviteter er de dårligste løsningene med den andre løsningsstrategien, hvor det i gjennomsnitt er 60\% over teoretisk nedregrense. Den finner løsninger på 68\% av probleminstansene. Totalt sett med den andre løsningstrategien, er makespan 14.2\% over teoretisk nedregrense og den finner løsninger på 36.88\% av probleminstansene.
 
 Tidene som Scheduler bruker for å finne løsninger på probleminstansene er sammenliggnet med å se på tidene for samme antall aktiviteter og se på de med to og tre kraner. Det er ingen klare skiller om probleminstansene inneholder to eller tre kraner. Tidene for å finne løsninger varierer fra 0 til over 100 sekunder og det er ikke tilfelle de probleminstansene med flest aktiviteter som bruker lengst tid. Tiden på å finne en løsning variere også stort innenfor probleminstansene av et antall aktiviteter.
@@ -48,6 +50,8 @@ I den første probleminstansen var det kun noen løsninger under 100 aktiviteter
 \label{fig:GantWithAct50Loc10Crew5Crane2AssignHeat}
 \end{figure}
 Med det andre genererte probleminstansene ble det flere løsninger, med den første løsningsstrategien med varmebegrensning gir løsninger på alle probleminstansene, men makespan er ganske langt unna teoretisk nedregrense. Med denne løsningstratteien, er det probleminstansene med to kraner og under 100 aktiviteter, hvor gjennomsnittsverdien er nærmest den teoretiske nedregrensen med 67.2\% over. Probleminstansene med to kraner og over 100 aktiviteter er i gjennomsnitt 96.1\% over teoretisk nedregrense. Totalt sett for den første løsningstrategien er gjennomsnittsverdien 81.0\% over teoretisk nedregrense. Figur \ref{fig:GantWithAct50Loc10Crew5Crane2AssignHeat} viser en av løsningene med 50 aktiviteter og 2 kraner.
+
+Ut ifra figur \ref{fig:RessursWithAct50Loc10Crew5Crane2} er lokasjon tydelig den mest begrensende ressursen. Grunnen til dette er fodi den er helt fyllt opp uten at det er noen ledig kapasitet. Lokasjonen som er helt fyllt opp er lokasjon 2 og på denne lokasjonen befinner også kran 1 seg. Disse to figurene viser ressursene på probleminstansene med 50 aktiviteter og 2 kraner, med og uten varmebegrensning. På figur \ref{fig:RessursWithAct50Loc10Crew5Crane3} hvor det er 3 kraner er ikke lokasjon den mest begrensende, men mannskap er her den mest begrensende.
 
 \begin{figure}[!h]
 \centering

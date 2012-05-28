@@ -11,7 +11,7 @@ Den første løsningsstrategien (LS1) finner løsninger på alle de 160 benchmar
 Den andre løsningsstrategien (LS2) finner endel færre løsninger, henholdsvis 36.88\% og 40\%. Løsningene er vesentlig nærmere den teoretiske nedregrensen, hvor 4.1\% over teoretisk nedregrense på det nærmeste og 60\%.
 
 \subsection{Resultater}
-I dette prosjektet er en eksisterende løsning utvidet med en ressurs kalt varmeressurs. For å evaluere resultatene fra den utvidete løsningen, kommer det en evaluering av den eksisterende løsningen med 25 lokasjoner sett opp mot den utvidede løsningen med 10 lokasjoner. Evalueringen av resultatene baserer seg på gjennomsnittsverdiene i tabell \ref{tab:resultaterSum}. En tilsvarende oppsummering av løsningene eksisterer også for 25 lokasjoner \cite{tvedtbezem}.
+I dette prosjektet er en eksisterende løsning utvidet med en ressurs kalt varmeressurs. For å evaluere resultatene fra den utvidete løsningen, kommer det en evaluering av den eksisterende løsningen med 25 lokasjoner sett opp mot den utvidede løsningen med 10 lokasjoner. Evalueringen innebærer også å analysere effekten av varmebegrensingen, som er gjort ved å sammenligne resultatene med 10 lokasjoner med og uten varmebegrensing. Evalueringen av resultatene baserer seg på gjennomsnittsverdiene i tabell \ref{tab:resultaterSum}. En tilsvarende oppsummering av løsningene eksisterer også for 25 lokasjoner \cite{tvedtbezem}. Hensikten med å sammenligne resultatene fra den opprinnelige løsningen med 25 lokasjoner og 10 lokasjoner er å analysere effekten av antall lokasjoner.
 
 \subsubsection{10 lokasjoner}
 Løsningene er i ganske god overomstemmelse med forventningene i seksjon \ref{sec:implprocess}. Med løsningsstrategi 1 hvor kranfordelingen ble valgt først var gjennomsnittlig makespan dårligere enn med løsningsstrategi 2.
@@ -49,8 +49,10 @@ Sammenliggnes LS2 så løser verken programmet med eller uten varme alle problem
 
 Det var forventet at LS1 skulle ha dårligere makespan enn LS2. I LS1 tildeles kraner først i søket i Solver, mens i LS2 settes starttiden til aktivitetene først.
 
+Den teoretiske nedregrensen som er benyttet i dette prosjektet er basert på mannskap, men med 2 kraner er det tydelig lokasjon som er den mest begrensende ressursen. Ved å se litt nærmere på lokasjonen som er mest begrenset finner man at det er samme lokasjon som kran 1 er lokaslisert på. Fra målingene av kranstyrke er det funnet ut at probleminstansene med 2 kraner er der hvor kran er sterkest og det er kran 1 som er mest begrenset i forhold til de to kranene som er i probleminstansene. Det at lokasjonen hvor kran 1 da er lokalisert blir den som er mest begrenset er ganske naturlig. Når det er sett på figur \ref{fig:RessursWithAct50Loc10Crew5Crane3} så er ikke lokasjon den mest begrensende lengere, men her er det mannskap som er den mest begrensende ressursen. Når det ble sjekket kranstyrken på probleminstansene med 3 kraner var disse vesentlig svakere enn probleminstansene med 2 kraner. Dette underbygger grunnen til at lokasjon er den mest begrensende ressursen i probleminstansene med 2 kraner.
+
 \subsubsection{10 lokasjoner mot 25 lokasjoner}
-For å sammenligne løsningene i dette prosjektet med 10 lokasjoner, med løsningene til \bht med 25 lokasjoner, tabell (\ref{tab:resultaterSumTvedt}) hentet fra \cite{tvedtbezem}.
+For å sammenligne løsningene i dette prosjektet med 10 lokasjoner, med løsningene til \bht med 25 lokasjoner, tabell \ref{tab:resultaterSumTvedt} hentet fra \cite{tvedtbezem}.
 \begin{table}[!h]
 \caption{Relativ optimalitets indeks $w_{rq}$ for de forskjellige modellene}
 \begin{center}
