@@ -1,12 +1,12 @@
-Forskningen er motivert av praktisk erfaring fra planleggingsprosesser i bedrifter og samfunnet forøvrig. Det å finne optimale løsninger på planleggingsoppgaver er viktig og ressurs besparende. Det er ikke bare i oljeindustrien som det fokuseres på i denne oppgaven hvor planleggingsløsninger er aktuelt, men generelt bemannings- og ressursplanlegging som hele næringslivet i større eller mindre grad er berørt av. I menneskers personlige hverdagen er det også mange planleggingsproblemer, alt fra buss- og togtabeller til personlige gjøremål som skal inn i en stram tidsplan.
+Prosjektoppaven er motivert av praktisk(generell?) erfaring fra planleggingsprosesser i bedrifter og samfunnet forøvrig. I hverdagen har hver og en av oss mange planleggingsproblemer, alt fra buss- og togtabeller til personlige gjøremål som skal inn i en stram tidsplan. Nærligslivet har i bedriver i varierende grad bemannings- og ressursplanlegging. Det å finne optimale løsninger på planleggingsoppgaver er viktig og ressursbesparende. I denne prosjektoppgaven er det planlegging i oljeindustrien som er i fokus.
 
-Planlegging i oljeindustrien er viktig for på en mest mulig effektiv måte benytte seg av de ressursene som er tilgjengelige til enhver tid, samtidig som visse begrensinger blir fastsatt med tanke på blandt annet sikkerheten. Det er mye penger involvert i olje- og gassindustrien og det å utføre vedlikeholdsaktiviteter på en ineffektiv måte kan det for selskapene både bli svært kostbart og også medføre risiko hvis sikkerheten ikke er godt nok ivaretatt. Det er derfor viktig å ha gode løsninger for å ta seg av planleggingen av vedlikeholdsaktivitetene og ressursene. Operatører innen olje- og gassektorens mål er å minimere antallet farlige situasjoner, minimere miljømessige skade og maksimere produksjon og dermed økonomisk resultat. På veien for å nå disse kompliserte og utfordrende målene, kan det i enkelte situasjoner oppstå konflikter (overfylte lokasjoner, manglende utstyrskrav, feil i rekkefølgen aktiviteter utføres, etc.).
+Planlegging i oljeindustrien er viktig, for på en mest mulig effektiv måte benytte seg av de ressursene som er tilgjengelige til enhver tid, samtidig som visse begrensinger blir fastsatt med tanke på blandt annet sikkerheten. Det er også mye penger involvert i oljeindustrien. Det å utføre vedlikeholdsaktiviteter på en inneffektiv måte kan for selskapene både bli svært kostbart samt medføre stor risiko dersom sikkerheten ikke er godt nok ivaretatt. Det er derfor svært viktig å ha gode løsninger for planlegging av vedlikeholdsaktiviteter og ressurser. Målet til operatører er bl.a å minimere antallet farlige situasjoner og minimere fare for miljøskader samtidig som de ønsker å maksimere produksjon og dermed økonomisk resultat. På veien for å nå disse kompliserte og utfordrende målene, kan det i planleggingen oppstå konflikter i enkelte situasjoner (overfylte lokasjoner, manglende utstyrskrav, feil i rekkefølgen aktiviteter utføres, etc.).
 
-Spesifikke planleggingssituasjoner i oljeindustrien har forskjellige forutsetninger i forhold til om plattformen er offshore eller på land. Offshore kan mange aktiviteter bli utført på et relativt lite lukket område, mens områder på land kan ha mange aktiviteter utført på et relativt stort område. Selvom forutsetningene for disse to typene plattformer er ganske forskjellige, så har de flere likhetstrekk som:
+Spesifikke planleggingssituasjoner i oljeindustrien har forskjellige forutsetninger i forhold til om det er offshore eller onshore. Offshore blir mange aktiviteter utført på et relativt lite lukket område. Onshore blir mange aktiviteter utføres på et relativt stort område. Selv om forutsetningene for disse er ganske forskjellige, så har de flere likhetstrekk:
 \begin{itemize}
-\item størrelse - antall aktiviteter kan være noen hunder til titusener, for å gjøre planleggingen interaktiv.
-\item kompleksitet - et stort antall av begrensningene som skal bli gjennomført, gjør en mulig planlegging vanskelig.
-\item dynamikk - avhengigheter som vær, logistikk og utstyr som feiler kan avbryte planleggingen.
+\item størrelse - antall aktiviteter kan være noen hundre til titusener, som gjør planlegging uoversiktelig.
+\item kompleksitet - et stort antall begrensninger skal tilfredsstilles og gjør planlegging vanskelig.
+\item dynamikk - avhengigheter som vær, logistikk og defekt på utstyr endrer planleggingsforutsetningene.
 \end{itemize}
 
 \subsection{Målet med prosjektet}
@@ -17,12 +17,12 @@ Målet med prosjektet er å utvide den eksisterende Scheduler løsningen med en 
 \item implementere i Scheduler
 \end{itemize}
 
-I den opprinnelige problemstillingen vil noen aktiviteter være relativt lite begrenset. Dette gjør at løsningsrommet er stort, og traverseringen opp og ned i søketreet tar lang tid. På tross av et antatt stort løsningsrom så sliter den Scheduler implementerte løsningsstrategien med å finne løsninger i mange av probleminstansene. Dette prosjektet vil søke å finne ut:
+I den opprinnelige problemstillingen \cite{tvedtbezem} er noen aktiviteter relativt lite begrenset. Dette gjør at løsningsrommet er stort, og traverseringen opp og ned i søketreet tar lang tid. På tross av et antatt stort løsningsrom så sliter den Scheduler implementerte løsningsstrategien med å finne løsninger i mange av probleminstansene. Dette prosjektet vil søke å finne ut:
 
 \begin{itemize}
 \item Vil flere begrensninger gjøre det lettere å finne en løsning?
-\item Er det noe spesielt med akkurat disse probleminstansene eller er det implementasjon i Scheduler som er årsaken til at Scheduler implementerte løsningenstrategien sliter med å finne løsninger i mange av probleminstansene?
+\item Er det noe spesielt med akkurat disse probleminstansene eller er det implementasjon i Scheduler som er årsaken til at den Scheduler implementerte løsningenstrategien sliter med å finne løsninger i mange av probleminstansene?
 \end{itemize}
 
-\subsection{Relevans for forskingen}
-Denne forskningen er er ment for å undersøke om løsningene blir bedre når et eksistrende problem får lagt til en ekstra begrensning, kalt varmebegrensning. Ved å evaluere løsningene med og uten varmebegrensing vil det si noe om løsningene når søketreet er stort i forhold til når søketreet er litt mindre etter å ha lagt til den ekstra begrensningen.
+\subsection{Relevans for forskingen(prosjektoppgave?)}
+Denne forskningen har som hensikt å undersøker om løsningene blir bedre når et eksistrende planleggingsproblem får lagt til en ekstra begrensning, kalt varmebegrensning. Ved å evaluere løsningene med og uten varmebegrensing vil effekten av tillagt varmebegrensing fremgå. I tillegg fremgår effekten av lokasjon ved å sammenstille resultatene i denne oppgaven med resultatene i \cite{tvedtbezem}.

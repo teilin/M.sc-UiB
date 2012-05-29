@@ -1,8 +1,8 @@
 \nomenclatureentry{aAPO@[{APO}]\begingroup Automatisk Planlegging i Oljeindustrien\nomeqref {0}|nompageref}{8}
 \nomenclatureentry{aCP@[{CP}]\begingroup Begrensningsprogrammering (engelsk: Constraint programming)\nomeqref {0}|nompageref}{8}
 \nomenclatureentry{aAI@[{AI}]\begingroup Kunstig intelligens (engelsk: artificial inteligence)\nomeqref {0}|nompageref}{8}
-\nomenclatureentry{aAvgjøringsvariable@[{Avgjøringsvariable}]\begingroup På engelsk: decision variable\nomeqref {0}|nompageref}{12}
-\nomenclatureentry{aAvledningsvariable@[{Avledningsvariable}]\begingroup Derived variable\nomeqref {0}|nompageref}{12}
+\nomenclatureentry{aAvgjørings-variable@[{Avgjørings-variable}]\begingroup På engelsk: decision variable\nomeqref {0}|nompageref}{12}
+\nomenclatureentry{aAvlednings-variable@[{Avlednings-variable}]\begingroup Derived variable\nomeqref {0}|nompageref}{12}
 \nomenclatureentry{aEneressurs@[{Eneressurs}]\begingroup På engelsk: Unary resource\nomeqref {0}|nompageref}{13}
 \nomenclatureentry{aPåstander@[{Påstander}]\begingroup Engelsk: Assertions\nomeqref {8}|nompageref}{18}
 \nomenclatureentry{aMSProject@[{MSProject}]\begingroup Microsoft Project 2010\nomeqref {8}|nompageref}{19}

@@ -1,4 +1,4 @@
-Problemstillingen til denne oppgaven tar utgangspunkt i den opprinnelige problemstillingen til \bht. Beskrivelsen følger i første omgang \cite{tvedtbezem}, som jeg har oversatt norsk. Problemet er på en innbilt oljeplattform inndelt i et sett av lokasjoner. Utstyr som er krevd for vedlikehold er tilfeldig plassert rundt på plattformen, og ulike aktiviteter skal planlegges. Aktivitetene blir opprettet med et gitt sett av ressurskrav og muligens avhengigheter til andre aktiviteter. Alle aktiviteter krever et mannskap til å utføre dem og en lokasjon til å bli utført på. I tillegg krever noen aktiviteter kranressurser, fordi tung løfting er involvert. Mannskap- og kranressurser er knappe, som betyr at de er begrenset tilførsel.
+Problemstillingen i denne oppgaven tar utgangspunkt i den opprinnelige problemstillingen til \bht. Beskrivelsen i det etterfølgende og frem til det fremkommer i etterfølgende tekst, er en oversettelse av \cite{tvedtbezem} til norsk. Problemet er på en fiktiv oljeplattform inndelt i et sett av lokasjoner. Utstyr som er krevd for vedlikehold er tilfeldig plassert rundt på plattformen og ulike aktiviteter skal planlegges. Aktivitetene blir opprettet med et gitt sett av ressurskrav og mulige avhengigheter til andre aktiviteter. Alle aktiviteter krever et mannskap til å utføre dem og en lokasjon til å bli utført på. I tillegg krever noen aktiviteter kranressurser, fordi tung løfting er involvert. Mannskaps- og kranressurser er knappe, det vil si de har begrenset tilførsel.
 
 Så langt er problemet klassifisert som et \textit{''Resource-Constrained Project Scheduling Problem (RCPSP)"}\cite{RcpspPaperSchutt}, som kjennetegnes ved:
 \begin{itemize}
@@ -8,26 +8,26 @@ Så langt er problemet klassifisert som et \textit{''Resource-Constrained Projec
 \item En mengde av ressurser som er krevd av aktivitetene
 \end{itemize}
 
-Det er en mengde planleggingsproblemer som ikke kan klassifiseres under beskrivelsen av RCPSP, selvom det også er et bredt antall planleggingsproblemer som gjør det. Det er mange tilleggsbegrensinger, typisk i oljeindustrien og andre store industrier, som ikke passer inn i denne klassifiseringen. Siden målet er å generere probleminstanser med begrensinger som finnes i industrien, så må det legges til andre mer komplekse begrensinger. Et eksempel  er sikkerhetsbegrensing rundt farlig arbeid, for eksempel kranbruk. I planleggingsløsninger i dag blir informasjon som sikkerhetsbegrensninger lagt til manuelt av de som planlegger aktivitetene på platformen. Ved å definere forutsetninger som aktiverer sikkerhetsbegrensninger, blir resultatet en veldefinert problembeskrivelse. En løsning til et problem $ S(P_{i}) $ er en planlegging hvor aktiviteter er tilegnet en starttid og begrensningene er gjeldende.
+Det er en mengde planleggingsproblemer som ikke kan klassifiseres under beskrivelsen av RCPSP, selv om det også er et bredt antall planleggingsproblemer som gjør det. Det er mange tilleggsbegrensninger, typisk i oljeindustrien og andre store industrier, som ikke passer inn i denne klassifiseringen. Siden målet er å generere probleminstanser med begrensninger som finnes i industrien, så må det legges til andre mer komplekse begrensinger. Et eksempel  er sikkerhetsbegrensing rundt farlig arbeid, for eksempel kranbruk. I planleggingsløsninger i dag blir informasjon som sikkerhetsbegrensninger lagt til manuelt av de som planlegger aktivitetene på platformen. Ved å definere forutsetninger som aktiverer sikkerhetsbegrensninger, blir resultatet en veldefinert problembeskrivelse. En løsning til et problem $ S(P_{i}) $ er en planlegging hvor aktiviteter er tilegnet en starttid og begrensningene er gjeldende.
 
 \subsection{Notasjoner og terminologi}
-En probleminstans $ P $ inneholder aktiviteter som skal gjennomføres, ressurser som er påkrevd for å gjennomføre aktivitene og begrensninger som blandt annet er begrensinger mellom aktiviteter og ressursbruk. Det blir skillt mellom forskjellige typer variable som \textit{avgjørelsesvariable}\nomenclature{Avgjøringsvariable}{På engelsk: decision variable}, \textit{konstanter} og \textit{avledetvariable}\nomenclature{Avledningsvariable}{Derived variable}. Et eksempel på en avgjøringsvariabel er starttiden til en aktivitet $ Act_{i} $ betegnet som $ v_{sta}(Act_{i}) $. En aktivitets varighet blir betegnet som fast og er derfor en konstant, betegnet som $ c_{dur}(Act_{i}) $. Tilslutt så er det avledetvariable som for eksempel er en aktivitets sluttid, som er summen av starttiden og varigheten, som er betegnet $ w_{end}(Act_{i}) $. Objekter som aktiviteter og ressurser er skrevet med en stor bokstav.
+En probleminstans $ P $ inneholder aktiviteter som skal gjennomføres, ressurser som er påkrevd for å gjennomføre aktivitene og begrensninger som blant annet er begrensinger mellom aktiviteter og ressursbruk. Det blir skilt mellom forskjellige typer variable som \textit{avgjørelses-variable}\nomenclature{Avgjørings-variable}{På engelsk: decision variable}, \textit{konstanter} og \textit{avledet-variable}\nomenclature{Avlednings-variable}{Derived variable}. Et eksempel på en avgjørings-variabel er starttiden til en aktivitet $ Act_{i} $ betegnet som $ v_{sta}(Act_{i}) $. En aktivitets varighet blir betegnet som fast og er derfor en konstant, betegnet som $ c_{dur}(Act_{i}) $. Til slutt er det avledet-variable som for eksempel er en aktivitets sluttid, som er summen av starttiden og varigheten, som er betegnet $ w_{end}(Act_{i}) $. Objekter som aktiviteter og ressurser er skrevet med stor bokstav.
 
 \subsection{Ressurser}
-En \textit{lokasjon} $ Loc_{l} \in Locs = \{ Loc_{1},\dots,Loc_{n} \} $ er stedet hvor aktiviteter blir utført. Lokasjoner blir vist som ressurser, og det er med varmebegrensning en begrensning en maksimal kapasitet av hva lokasjonen tåler. Det er også begrensinger når farlig arbeid som tung løfting blir utført, da er lokasjonen utilgjengelig for alle andre aktiviteter. Når en lokasjon er stengt på grunn av kranbruk sier vi at en sikkerhetsone har blitt opprettet.
+En \textit{lokasjon} $ Loc_{l} \in Locs = \{ Loc_{1},\dots,Loc_{n} \} $ er stedet hvor aktiviteter blir utført. Lokasjoner blir vist som ressurser, og varmebegrensning er en begrensning som viser maksimal kapasitet av hva lokasjonen tåler. Det er også begrensninger når farlig arbeid som tung løfting blir utført, og da er lokasjonen utilgjengelig for alle andre aktiviteter. Når en lokasjon er stengt på grunn av kranbruk, sier vi at en sikkerhetsone har blitt opprettet.
 
-\textit{Mannskaper} er ansvarlige for utførelsene av aktivitetene. Et mannskap er betegnet $ Crew_{j} \in Crews = \{ Crew_{1},\dots,Crew_{n} \} $. Mannskaper er vist som ressurser, og har fått varmebegrensning. Varmen blir brukt til å begrense hvor mange mannskaper som kan være på en lokasjon på samme tid.
+\textit{Mannskaper} er ansvarlige for utførelse av aktiviteter. Et mannskap er betegnet $ Crew_{j} \in Crews = \{ Crew_{1},\dots,Crew_{n} \} $. Mannskaper er vist som ressurser, og har fått varmebegrensning. Varmen blir brukt til å begrense hvor mange mannskaper som kan være på en lokasjon på samme tid.
 
-En \textit{kran} $ Crane_{k} \in Cranes = \{ Crane_{1},\dots,Crane_{n} \} $ er en potensiell ressurs for aktiviteter. Noen aktiviteter trenger kran og alle probleminstanser har et mindre antall av aktiviteter som krever kranbruk. Kraner er eneressurs \nomenclature{Eneressurs}{På engelsk: Unary resource} som betyr at de kun kan utføre en aktivitet av gangen. En aktivitet som krever kran, spesifiserer ikke en spesifikk kran, men kun sier den trenger kran. En gyldig løsning må derfor tildele en kran til alle aktiviteter som krever kran fra et sett av kraner tilgjengelig, gitt av $ v_{crane}(Act_{i}) \in Cranes $. Dette gjør settet av kraner til en alternativ ressurs.
+En \textit{kran} $ Crane_{k} \in Cranes = \{ Crane_{1},\dots,Crane_{n} \} $ er en potensiell ressurs for aktiviteter. Noen aktiviteter trenger kran og alle probleminstanser har et mindre antall av aktiviteter som krever kranbruk. Kraner er eneressurs, \nomenclature{Eneressurs}{På engelsk: Unary resource} som betyr at de kun kan utføre en aktivitet av gangen. En aktivitet som krever kran, spesifiserer ikke en spesifikk kran, men sier kun den trenger kran. En gyldig løsning må derfor tildele en kran til alle aktiviteter som krever kran fra et sett av kraner tilgjengelig, gitt av $ v_{crane}(Act_{i}) \in Cranes $. Dette gjør settet av kraner til en alternativ ressurs.
 
-Kraner har en lokasjon $ c_{loc}(Crane_{k}) \in Locs $, og hver lokasjon kan bare ha en kran. På grunn av at tung løfting er et farlig arbeid, er kranbruk omgitt med sikkerhetssoner. Disse sikkerhetssonene er satt til både loksjonen hvor aktiviteten som krever kranbruk er utført og kranens egen lokasjon. Sikkerhetssonen som blir satt vil derfor variere ut ifra hvilken kran som er tilegnet til aktiviteten.
+Kraner har en lokasjon $ c_{loc}(Crane_{k}) \in Locs $, og hver lokasjon kan bare ha en kran. På grunn av at tung løfting er farlig arbeid, er kranbruk omgitt med sikkerhetssoner. Disse sikkerhetssonene er satt til både lokasjonen hvor aktiviteten som krever kranbruk er utført og kranens egen lokasjon. Sikkerhetssonen som blir satt vil derfor variere ut ifra hvilken kran som er tilegnet til aktiviteten.
 
 \subsection{Aktiviteter}
-En \textit{aktivitet} $ Act_{i} \in Acts = \{ Act_{i},\dots,Act_{n} \} $ kommer med en startvariabel, en konstant varighet og ressurskrav. Initielt er domenet til startvariabelen er $ v_{sta}(Act_{i}) \in [ 0, c_{hor}(P)) $, hvor horisonten, indikerer planleggingens maksimale fullføringstid, som er gitt ved $ c_{hor}(P) = \sum_{i} c_{dur}(Act_{i}) $.
+En \textit{aktivitet} $ Act_{i} \in Acts = \{ Act_{i},\dots,Act_{n} \} $ kommer med en startvariabel, en konstant varighet og ressurskrav. Initielt er domenet til startvariabelen $ v_{sta}(Act_{i}) \in [ 0, c_{hor}(P)) $, hvor horisonten som indikerer planleggingens maksimale fullføringstid er gitt ved $ c_{hor}(P) = \sum_{i} c_{dur}(Act_{i}) $.
 
-En aktivitet $ Act_{i} $ krever et mannskap $ c_{crew}(Act_{i}) \in Crews $ for å utføre aktiviteten og en lokasjon $ c_{loc}(Act_{i}) \in Locs $ til å bli utført på. En aktivitet avhenger av et enkelt medlem av et mannskap og det er ikke mulig å samle ressurser for å redusere varigheten. Kraner er den siste ressursen som er tilgjengelig, men er ikke nødvendig for alle aktivitetene.
+En aktivitet $ Act_{i} $ krever et mannskap $ c_{crew}(Act_{i}) \in Crews $ for å utføre aktiviteten og en lokasjon $ c_{loc}(Act_{i}) \in Locs $ til å bli utført på. En aktivitet er avhenger av hvert enkelt medlem av et mannskap og det er ikke mulig å samle ressurser for å redusere varigheten. Kraner er den siste ressursen som er tilgjengelig, men er ikke nødvendig for alle aktivitetene.
 
-I tilegg til ressurskravene, kan en aktivitet være avhengig av andre aktiviteter, det betyr at en aktivitet ikke kan starte før en annen aktivitet er ferdig utført.
+I tillegg til ressurskravene, kan en aktivitet være avhengig av andre aktiviteter, det betyr at en aktivitet ikke kan starte før en annen aktivitet er ferdig utført.
 
 \subsection{Begrensinger}
 \textit{Avhengigheter} mellom aktiviteter er vanlig i industrien. En vedlikeholdsaktivitet kan for eksempel være avhengig av både levering av reservedeler og stillasbygging for å sikre tilgang til området hvor vedlikeholdet skal gjøres. Forholdet som viser at aktivitet $ Act_{i'} $ avhenger av aktivitet $ Act_{i} $ er uttrykt ved følgende begrensning: 
@@ -35,17 +35,17 @@ I tilegg til ressurskravene, kan en aktivitet være avhengig av andre aktivitete
 w_{end}(Act_{i}) \leq v_{sta}(Act_{i'})
 \end{equation}
 
-En \textit{kummulativ ressurs begrensing} påføres alle mannskaper for å være sikkert på at den totale ressursbruken ikke overstiger tilgjengelig kapasitet. Det er utrykt ved: 
+En \textit{kummulativ ressursbegrensing} påføres alle mannskaper for å være sikkert på at den totale ressursbruken ikke overstiger tilgjengelig kapasitet. Det er utrykt ved: 
 \begin{equation}
 \forall t,j : \sharp \{ Act_{i} | t \in [(v_{sta}(Act_{i}), w_{end}(Act_{i})) \wedge c_{crew}(Act_{i}) = Crew_{j}] \} \leq c_{cap}(Crew_{j})
 \end{equation}
 hvor $ c_{cap}(Crew_{j}) $ er kapasiteten av j's mannskap.
 
-Kraner er unikt induvidielle og er derfor modellert som et sett av eneressurser. Begrensingene tar for seg hvis to aktiviteter er tilegnet den samme kranen, så kan de ikke bli utført samtidig. Vi starter ved å definere de underliggende overlapping uttrykt som to aktiviteter overlapper i tid: 
+Kraner er unikt induvidielle og er derfor modellert som et sett av eneressurser. Begrensingene tar for seg hvis to aktiviteter er tilegnet den samme kranen, så kan de ikke bli utført samtidig. Vi starter ved å definere den underliggende overlappingen uttrykt som to aktiviteter som overlapper i tid: 
 \begin{equation}
 overlap(Act_{i},Act_{i'}) \equiv \exists t : v_{sta}(Act_{i}),v_{sta}(Act_{i'}) \leq t < w_{end}(Act_{i}),w_{end}(Act_{i'})
 \end{equation}
-Den gjensidge uttelukkelsen opprettet av den eneressursbegrensningen blir da: 
+Den gjensidge uttelukkelsen opprettet av eneressursbegrensningen blir da: 
 \begin{equation}
 \forall i,i' \neq i : c_{crane}(Act_{i}) = v_{crane}(Act_{i'}) \rightarrow \neg overlap(Act_{i},Act_{i'})
 \end{equation}
@@ -57,7 +57,7 @@ Sikkerhetsbegrensningene utelukker bruken av lokasjonen hvor en aktivitet som kr
 \begin{equation}
 \forall i,i' \neq i : c_{crane}(Act_{i}) \wedge c_{loc}(Act_{i}) = c_{loc}(Act_{i'}) \wedge \neg overlap(Act_{i},Act_{i'})
 \end{equation}
-når sikkerhetsbegrensingene utelukker bruken av lokasjonen til denne krannen er gitt ved:
+Når sikkerhetsbegrensningene utelukker bruken av lokasjonen til denne kranen er gitt ved:
 \begin{equation}
 \forall i,i' \neq i : v_{crane}(Act_{i}) = Crane_{j} \wedge c_{loc}(Act_{i'}) = c_{loc}(Crane_{j}) \rightarrow \neg overlap(Act_{i},Act_{i'})
 \end{equation}

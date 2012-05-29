@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=latex 2011.7.3)  28 MAY 2012 17:55
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=latex 2011.7.3)  29 MAY 2012 12:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -489,13 +489,8 @@ LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <142.26378> not available
 \openout6 = `Msc.lof'.
 
  [6]
-(./Msc.nls) [7] (./content/introduction.tex) (./content/background.tex
-Overfull \hbox (22.16095pt too wide) in paragraph at lines 4--5
-\OT1/cmr/m/n/12 blem: ''Et pro-blem med ^^Wa fin-ne den bes-te l^^\sningen ut i
-fra alle gyl-di-ge l^^\sninger". 
- []
-
-[8]) (./content/motivation.tex [9]
+(./Msc.nls) [7] (./content/introduction.tex) (./content/background.tex [8])
+(./content/motivation.tex [9]
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 7.
 
 (/usr/local/texlive/2011/texmf-dist/tex/latex/base/omscmr.fd
@@ -504,11 +499,7 @@ File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 7.
  [10])
-(./content/problem.tex [11]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [12]
-[13]
+(./content/problem.tex [11] [12] [13]
 Overfull \hbox (9.95023pt too wide) in paragraph at lines 47--49
 \OT1/cmr/m/n/12 Den gjen-sid-ge ut-te-luk-kel-sen opp-ret-tet av den ene-res-su
 rs-be-grens-nin-gen blir da: 
@@ -803,12 +794,12 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 4061 strings out of 493634
- 52575 string characters out of 3143401
+ 4060 strings out of 493634
+ 52562 string characters out of 3143401
  127497 words of memory out of 3000000
- 7246 multiletter control sequences out of 15000+200000
+ 7245 multiletter control sequences out of 15000+200000
  12159 words of font info for 43 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
  32i,15n,32p,1350b,1564s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on Msc.dvi (46 pages, 159040 bytes).
+Output written on Msc.dvi (46 pages, 159300 bytes).
