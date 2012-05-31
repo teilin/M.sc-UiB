@@ -1,19 +1,22 @@
 \begin{thebibliography}{10}
 
-\bibitem{challengesManuel}
-
-
-\bibitem{exact}
-\url{http://www.softwareadvice.com/manufacturing/exact-jobboss-profile/}.
-
 \bibitem{begrensingermsproject}
 Definition of microsoft project constraints.
 \newblock \url{http://support.microsoft.com/kb/74978}.
+
+\bibitem{exact}
+Exact jobboss software.
+\newblock
+  \url{http://www.softwareadvice.com/manufacturing/exact-jobboss-profile/}.
 
 \bibitem{msproject2010blog}
 Manual vs. autoscheduled tasks in microsoft project 2010.
 \newblock
   \url{http://www.techrepublic.com/blog/tech-manager/manual-vs-autoscheduled-tasks-in-microsoft-project-2010/5591}.
+
+\bibitem{challengesManuel}
+Some challenges for constraint programming.
+\newblock \url{http://clip.dia.fi.upm.es/herme/con.html}.
 
 \bibitem{cpwikipedia}
 Wikipedia.

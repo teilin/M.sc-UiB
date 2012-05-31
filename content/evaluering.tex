@@ -1,41 +1,52 @@
-I denne delen blir probleminstanser, løsningsstrategier og løsninger evaluert. Denne delen blir avsluttet med å evaluere løsningene funnet i dette prosjektet opp mot løsningene funnet i artikkelen til \bht.
+I denne delen blir probleminstanser, løsningsstrategier og løsninger evaluert. Denne delen blir avsluttet med å evaluere løsningene funnet i dette prosjektet opp mot løsningene funnet i artikkelen til Bård Henning Tvedt.
 
 \subsection{Probleminstanser}
-Probleminstansene har fra 50-5000 aktiviteter, mens antall lokasjoner og mannskaper i de generert probleminstansene er henholdsvis 10 og 5. Det ble eksperimentert litt med mannskapets varme og lokasjoners varmekapsitet og i det første settet med probleminstanser var det overlapp mellom mannskapers varme og en lokasjons varmekapasitet. Dette førte til veldig få løsninger når varmekapasiteten ble tatt med. Det ble funnet løsninger på noen av probleminstansene under 100 aktiviteter, mens over 100 aktiviteter var det en løsning. Det er grunn til å tro dette var tilfeldig, ut ifra at varme og varmekapasitet blir tilfeldig plassert innenfor et gitt område. Probleminstansene hvor varme og varmekapasitet ikke er overlappende har mange flere løsninger og med den første løsningsstrateien er det også løsning på alle probleminstansene, uavhengig om de er kjørt med eller uten varmebegrensing. I løsningene er det probleminstansene med under 100 aktiviteter som har makespan nærmest teoretisk nedregrense, uanhengig av løsningsstrategi. Ut ifra det Taillard \cite{Taillard1993278} kom frem til er da probleminstansene over 100 aktiviteter vanskeligere å løse i og med at makespan er lenger unna teoretisk nedregrense.
+Probleminstansene har fra 50-5000 aktiviteter, mens antall lokasjoner og mannskaper i de genererte probleminstansene er henholdsvis 10 og 5.
+
+Det ble først eksperimentert litt med mannskapets varme og lokasjoners varmekapsitet og i det første settet med probleminstanser var det overlapp mellom mannskapers varme og en lokasjons varmekapasitet. Dette førte til veldig få løsninger når varmebegrensningen ble tatt med. Det ble funnet løsninger på noen av probleminstansene under 100 aktiviteter, mens over 100 aktiviteter var det kun en løsning. Det er grunn til å tro dette var tilfeldig, ut i fra at varme og varmekapasitet blir tilfeldig plassert innenfor et gitt område. Erfaringene fra dette er kun tatt til etterretning og resultatene er ikke interessante her pga. få løsninger.
+
+Probleminstansene hvor varme og varmekapasitet ikke er overlappende, ga flere løsninger og er brukt videre gjennom prosjektoppgaven.
 
 \subsection{Løsningsstrategier}
-Ut ifra tabell \ref{tab:resultaterSum} er det et ganske klart bilde av de sterke og svake sidene til de to løsningsstrategiene som er brukt. Den ene løsningsstrategien finner flest løsninger, mens den andre løsningsstrategien finner løsninger som er nærmest teoretisk nedregrense.
+Tabell \ref{tab:resultaterSum} viser et ganske klart bilde av de sterke og svake sidene til de to løsningsstrategiene som er brukt. LS1 løser alle probleminstanser, mens LS2 gir betydelig bedre makespan.
 
-Den første løsningsstrategien (LS1) finner løsninger på alle de 160 benchmarksettene, men løsningene er i gjennomsnitt 74.5\% og 81.0\% over teoretisk nedregrense. Det er løsninger uten varmebegrensningen som er nærmest den teoretisk nedregrensen, både med 2 og 3 kraner.
-
-Den andre løsningsstrategien (LS2) finner endel færre løsninger, henholdsvis 36.88\% og 40\%. Løsningene er vesentlig nærmere den teoretiske nedregrensen, hvor 4.1\% over teoretisk nedregrense på det nærmeste og 60\%.
+Ser vi samtidig på ressursskjemaene for $LS1\sharp1\sharp3$, figur \ref{fig:RessursWithoutAct50Loc10Crew5Crane2LS1}, og $LS2\sharp1\sharp3$, figur \ref{fig:ResourceAct50Crane2LS2_UtenVarme_100s}, for gitte tilfeller, ser vi følgende:
+\begin{itemize}
+\item $LS1\sharp1\sharp3$ har få aktiviteter mot enden av tidsaksen. Det er langere makespan.
+\item $LS2\sharp1\sharp3$ har jevnt med aktiviteter langs tidsaksen. Det er kortere makespan.
+\end{itemize}
+Dette har mest sannsynlig sin årsak i at LS1 produserer flere løsninger fordi begrensningene er på plass tidlig i søkeprosessen.
+LS2 produserer bedre løsninger fordi det tildeles startverdier til aktiviteter uten å betrakte kranfordelingen så nøye. Men antallet løsninger blir gjerne redusert fordi søkeprosessen ikke klarer å komme ut av konfliktene som oppstår når man tildeler kran på slutten.
 
 \subsection{Resultater}
-I dette prosjektet er en eksisterende løsning utvidet med en ressurs kalt varmeressurs. For å evaluere resultatene fra den utvidete løsningen, kommer det en evaluering av den eksisterende løsningen med 25 lokasjoner sett opp mot den utvidede løsningen med 10 lokasjoner. Evalueringen innebærer også å analysere effekten av varmebegrensingen, som er gjort ved å sammenligne resultatene med 10 lokasjoner med og uten varmebegrensing. Evalueringen av resultatene baserer seg på gjennomsnittsverdiene i tabell \ref{tab:resultaterSum}. En tilsvarende oppsummering av løsningene eksisterer også for 25 lokasjoner \cite{tvedtbezem}. Hensikten med å sammenligne resultatene fra den opprinnelige løsningen med 25 lokasjoner og 10 lokasjoner er å analysere effekten av antall lokasjoner.
+I denne prosjektoppgaven er en eksisterende løsning utvidet med en ressurs kalt varmeressurs. For å evaluere resultatene fra den utvidete løsningen, evalueres den utvidete løsningen med 10 lokasjoner opp mot den opprinnelige løsningen med 25 lokasjoner. Hensikten med å sammenligne resultatene fra den opprinnelige løsningen med 25 lokasjoner og 10 lokasjoner er å analysere effekten av antall lokasjoner.
 
-\subsubsection{10 lokasjoner}
-Løsningene er i ganske god overomstemmelse med forventningene i seksjon \ref{sec:implprocess}. Med løsningsstrategi 1 hvor kranfordelingen ble valgt først var gjennomsnittlig makespan dårligere enn med løsningsstrategi 2.
+Evalueringen innebærer også å analysere effekten av varmebegrensningen, som er gjort ved å sammenligne resultatene med 10 lokasjoner med og uten varmebegrensning. Evalueringen av resultatene baserer seg på gjennomsnittsverdiene i tabell \ref{tab:resultaterSum100s}.
+
+\subsubsection{10 Lokasjoner}
+Løsningene er i ganske god overensstemmelse med forventningene i kapitel \ref{sec:implprocess}. Med LS1 hvor kranfordelingen ble valgt først var gjennomsnittlig makespan dårligere enn med LS2.
 
 \begin{figure}[!h]
 \centering
 \includegraphics[scale=0.3]{content/gfx/Act50Crane2AssignHeatResourceCrane}
-\caption{Ressursoversikt på Act50Loc10Crew5Crane2 med varmebegrensning}
-\label{fig:RessursWithAct50Loc10Crew5Crane2}
+\caption{Ressursoversikt på Act50Loc10Crew5Crane2 med varmebegrensning, LS1, $\sharp2\sharp3$}
+\label{fig:RessursWithAct50Loc10Crew5Crane2LS1}
 \end{figure}
 \begin{figure}[!h]
 \centering
 \includegraphics[scale=0.3]{content/gfx/Act50Crane2WithoutResourceCrane}
-\caption{Ressursoversikt på Act50Loc10Crew5Crane2 uten varmebegrensning}
-\label{fig:RessursWithoutAct50Loc10Crew5Crane2}
+\caption{Ressursoversikt på Act50Loc10Crew5Crane2 uten varmebegrensning, LS1, $\sharp1\sharp3$}
+\label{fig:RessursWithoutAct50Loc10Crew5Crane2LS1}
 \end{figure}
-I figur \ref{fig:RessursWithAct50Loc10Crew5Crane2} er en av probleminstansene med to kraner kjørt med varmebegrensing. Ut ifra denne grafiske fremstilling er det kran som er den mest begrensende ressursen. På figur \ref{fig:RessursWithoutAct50Loc10Crew5Crane2} er det også kran som er den mest begrensende ressursen.
 \begin{figure}[!h]
 \centering
 \includegraphics[scale=0.3]{content/gfx/Act50Crane3AssignHeatResourceCrew}
-\caption{Ressursoversikt på Act50Loc10Crew5Crane3 med varmebegrensning}
-\label{fig:RessursWithAct50Loc10Crew5Crane3}
+\caption{Ressursoversikt på Act50Loc10Crew5Crane3 med varmebegrensning, LS1 og $\sharp2\sharp3$}
+\label{fig:RessursWithAct50Loc10Crew5Crane3LS1}
 \end{figure}
-Når ser på figur \ref{fig:RessursWithAct50Loc10Crew5Crane3} hvor det er tre kraner, så er det ikke lengere kran som er den mest begrensende ressursen. Her er det mannskap som over tid bruker hele kapasiteten.
+Figur \ref{fig:RessursWithoutAct50Loc10Crew5Crane2LS1} er en gitt situasjon uten varmebegrensning og figur \ref{fig:RessursWithAct50Loc10Crew5Crane2LS1} er den samme med varmebegrensning. Begge figurene har lokasjon 2 fullt utnyttet. Kran 1 er på lokasjonen og er den reelle begrensningen. Innføring av varmebegrensningen gir i dette tilfellet med kran som begrensning lite utslag i henhold til tabell \ref{tab:resultaterSum100s} (liten økning i makespan). Generelt er det forventet en økning i makespan når varmebegrensing innføres. Denne økningen antas ikke i sin helhet å kun komme fra varmebegrensningen, men sannsynligvis også være et resultat at det blir vanskeligere å løse problemet.
+
+Figur \ref{fig:RessursWithAct50Loc10Crew5Crane3LS1} kontra figur \ref{fig:RessursWithoutAct50Loc10Crew5Crane2LS1} er en gitt situasjon og økning fra til tre kraner. Det er samme betrakning rundt utnyttelse, men i figur \ref{fig:RessursWithAct50Loc10Crew5Crane3LS1} endres dette. Her er det mannskap som over tid bruker hele kapasiteten.
 
 \begin{equation}
 c_{load}(Crane_{k}) = \sum_{c_{Crane}(Act_{i})=Crane_{k}} c_{dur}(Act_{i})
@@ -43,16 +54,12 @@ c_{load}(Crane_{k}) = \sum_{c_{Crane}(Act_{i})=Crane_{k}} c_{dur}(Act_{i})
 \end{equation}
 Ved å sammenligne om verdier fra (\ref{eq:kranstyrke}) er mindre eller større enn (\ref{eq:mannskapsstyrke}), gir det et uttryk for hvor sterk eller svak kranressursen er. Hvis (\ref{eq:kranstyrke}) er mindre vil det si at kranressursen er svak. Ut ifra dette er det en signifikant forskjell på to og tre kraner. Ved to kraner er kranressursen veldig sterke, mens kranressursen ikke er fullt så sterke med tre kraner.
 
-Når sammenligner LS1 løses alle probleminstanser både med og uten varme. Den gjennomsnittlige makespanen er litt bedre uten varmebegrensning enn med varmebegrensing, men forskjellen er ikke så stor. Totalt sett er den 74.5\% over teoretisk nedregrense uten varme, mens den 81.0\% over teoretisk nedregrense med varme. Tiden det tar og løse probleminstansene er også veldig lik uten noe spesielt mønster både med og uten varmebegrensning. Det er derfor litt bedre løsninger uten varmebegrensning.
+Tiden det tar å løse probleminstansene er også veldig lik uten noe spesielt mønster både med og uten varmebegrensning. Det er derfor litt bedre løsninger uten varmebegrensning.
 
-Sammenliggnes LS2 så løser verken programmet med eller uten varme alle probleminstansene. Her løser programmet uten varme flest probleminstanser når antall aktiviteter er under 100, men forskjellen er ikke stor. Totalt sett løser programmet med varmebegrensning 40\% av probleminstansene, mens uten varmebegrensing løser 36.88\% av probleminstansne. Selve løsningene i forhold til teoretisk nedregrense så er den gjennomsnittlige makespanen bedre uten varmebegrensing, hvor den ligger 14.2\% over og med varmebegrensing ligger den 23.2\% over.
-
-Det var forventet at LS1 skulle ha dårligere makespan enn LS2. I LS1 tildeles kraner først i søket i Solver, mens i LS2 settes starttiden til aktivitetene først.
-
-Den teoretiske nedregrensen som er benyttet i dette prosjektet er basert på mannskap, men med 2 kraner er det tydelig lokasjon som er den mest begrensende ressursen. Ved å se litt nærmere på lokasjonen som er mest begrenset finner man at det er samme lokasjon som kran 1 er lokaslisert på. Fra målingene av kranstyrke er det funnet ut at probleminstansene med 2 kraner er der hvor kran er sterkest og det er kran 1 som er mest begrenset i forhold til de to kranene som er i probleminstansene. Det at lokasjonen hvor kran 1 da er lokalisert blir den som er mest begrenset er ganske naturlig. Når det er sett på figur \ref{fig:RessursWithAct50Loc10Crew5Crane3} så er ikke lokasjon den mest begrensende lengere, men her er det mannskap som er den mest begrensende ressursen. Når det ble sjekket kranstyrken på probleminstansene med 3 kraner var disse vesentlig svakere enn probleminstansene med 2 kraner. Dette underbygger grunnen til at lokasjon er den mest begrensende ressursen i probleminstansene med 2 kraner.
+Ved å ta utgangspunkt i LS2 uten varmebegrensing og uten sikkerhetsbegrensing på kran fra tabell \ref{tab:resultaterSum100s} er makespan totalt sett 1.0\% over teoretisk nedregrense med tidsgrense på 100 sekunder. Det er også løsninger på alle probleminstanser. Denne løsningen er veldig lite begrenset, da det ikke er noe grense for hvor mange mannskaper som kan være på en lokasjon og heller ingen begrensing på gjennomføring av aktiviteter ved kranbruk. Når sikkerhetsbegrensingene blir lagt til øker makespan med 13.2\% og det er ikke løsninger på mer enn 36.88\% av probleminstansene. Med tanke på at sikkerhetsbegrensingene vil opprette sikkerhetssoner som vil stenge lokasjonen til kranen og lokasjonen aktiviteten som bruker kranen blir utført på. Yterligere øker makespan med 9\% og det blir funnet løsninger på 40\% av probleminstansene da varmebegrensingen blir lagt til. Når varmebegrensigen blir lagt til, begrenses antall mannskaper som kan jobbe på lokasjonene samtidig. Det kan se ut som Scheduler sliter med sikkerhetsbegrensningene på kran.
 
 \subsubsection{10 lokasjoner mot 25 lokasjoner}
-For å sammenligne løsningene i dette prosjektet med 10 lokasjoner, med løsningene til \bht med 25 lokasjoner, tabell \ref{tab:resultaterSumTvedt} hentet fra \cite{tvedtbezem}.
+For å sammenligne løsningene i denne prosjektoppgaven med 10 lokasjoner, mot løsningene til \bht med 25 lokasjoner, er tabell \ref{tab:resultaterSumTvedt} hentet fra \cite{tvedtbezem}. Det benyttes henholdsvis $LS2\sharp1\sharp3$ og Inferred.
 \begin{table}[!h]
 \caption{Relativ optimalitets indeks $w_{rq}$ for de forskjellige modellene}
 \begin{center}
@@ -74,6 +81,4 @@ $^{(2)}$ prosentandel løste instanser \end{minipage}}
 \end{center}
 \label{tab:resultaterSumTvedt}
 \end{table}
-Begge løsningene inneholder modeller som klarer å løse alle probleminstansene. I Greedy modellen løses alle probleminstansene, men løsningene har en gjennomsnittlig makespan godt over teoretisk nedregrense. Det samme gjelder løsningene i dette prosjektet, hvor det er løsninger på alle probleminstansene når kranfordelingen blir valgt først (LS1). Her er også det løsninger hvor gjennomsnittlig makespan ligger over teoretisk nedregrense. Med Greedy ligger det totalt 37\% over teoretisk nedregrense, mens med løsningsstrategi 1 i dette prosjektet ligger det henholdsvis 74.5\% og 81.0\% over teoretisk nedregrense.
-
-I løsningene til \bht er det den underbegrensede modellen som gir de beste løsningene med en gjennomsnittlig makespan 1.6\% over teoretisk nedregrense. Denne modellen kan sees i sammenheng med løsningene i dette prosjektet som er løst uten varmebegrensing. Løsningene uten varmebegrensing i dette prosjektet gir bedre løsninger med begge løsningsstrategiene. Med løsningsstrategi 1 er den gjennomsnittlige makespanen 74.5\% over teoretisk nedregrense, mens for løsningstrategi 2 er den 14.2\% over teoretisk nedregrense.
+Det er stort samsvar mellom både makespan og løsningsgrad. Makespan er bra og varierer lite. Løsningsgrad reduseres svært mye med mange aktiviteter, både for to og tre kraner. I begge modellene tildeles tid til aktiviteter før kranressurser. Som tidligere også beskrevet om LS2 antas dette å skyldes at kranressurser skal tildeles i et økende antall allerede disponerte aktiviteter.

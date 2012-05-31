@@ -1,69 +1,107 @@
-I denne delen, blir verktøy og teknologier som er brukt i prosjektet beskrevet. I tilegg vil forskingsmetoder som er brukt bli beskrevet og beskrivelse av strategiene for evaluering av løsningene.
+I denne delen blir verktøy og teknologier i prosjektoppgaven beskrevet. I tilegg vil metodene som er brukt og strategiene for evaluering av løsningene bli beskrevet.
 
-\subsection{Forskningsmetoder}
-Forskningsmetoden som er brukt i prosjektet er å eksperimentere med implementasjonen av ressursene og løsningsstrategien. Samt å gjøre en kvalitativ vurdering av løsningene og vurdere makespan mot teoretisk- øvre og nedregrense som blir forklart under. Det blir i denne delen gått gjennom implementeringsprosessen og evalueringsprosessen som er brukt i prosjektet.
+\subsection{Metode}
+I prosjektoppgaven er det eksperimentert med implementasjonen av ressursene og løsningsstrategien, hvilket er en empirisk metode. Det er gjort en kvalitativ evaluering av løsningene, og makespan er evaluert mot teoretisk øvregrense og nedregrense. Det blir i denne delen gjennomgått implementerings- og evalueringsprosessen som er brukt i prosjektoppgaven.
 
 \subsubsection{Implementeringsprosessen}
 \label{sec:implprocess}
-\begin{lstlisting}[caption=Opprinnelig kranfordeling, label=codeCrane1]
-IloRandom rnd = IloRandom(env, (IloInt)time(NULL));
-int nbActivities = dModel.getActNames()->size();
-for (int i = 0; i < nbActivities; i++)
+Måten kraner blir tildelt aktiviteter som krever kran på er endret fra løsningen til Bård Henning Tvedt. Kraner er fortsatt modellert som eneressurser, men i Bård Henning Tvedts løsning ble kraner tilfeldig tildelt ved å bruke IloRandom. Denne metoden plukket en tildeldig kran fra tilgjengelige kraner i problemstillingen og tildelte den til en ressursen. Ved en slik tildeling vil det oppnås forskjellige initielle løsninger for krantildelingen.
+
+I denne prosjektoppgaven er krantildelingen modellert med alternative ressurser. Ved å modellere med alternative ressurser kan krantildelingen endres underveis i søkestrategien ved å bruke søkemålet IloAssignAlternatives.
+
+Det er problematisk å fastslå om en RCPSP løsning med makespan mindre enn en gitt frist er NP-hard. Hvis denne løsningen er NP-hard er det utvidede problemet med varmeressursen også være NP-hard. Da er en optimal løsning på selv de enkleste formene av problemet ikke garantert innen polynomisk tid. To forskjellige løsningsstrategier er testet. Begge løsningsstrategiene er implementert i Solver og Scheduler bibliotekene. I begge løsningsstrategiene brukes standard søkemål i Solver, men oppsatt i forskjellig rekkefølge i de ulike løsningsstrategiene.
+
+Varmebegrensningen i prosjektoppgaven er implementert med to metoder som er gjengitt i listing \ref{heatCodeDef} og \ref{heatConstraintDef}. Mannskapers varme og lokasjoners varmekapasitet blir i første omgang lest inn fra probleminstansene og lagt til i hver sine vektorer. Vektoren med mannskapets varme er blir lagt til i samme rekkefølge som andre vektorer som omhandler mannskap. På den måten vil en indeks i varmevektoren kunne brukes på en av de andre vektorene som omhandler mannskap og få tilhørende annen informasjon om mannskapets navn for eksempel. På samme måte er det gjort med varmekapasitet på lokasjon i og med at også alle lokasjonene har en varmekapasitet. Varmebegrensingen er definert som diskrete ressurser. Først opprettes det en diskrete ressursmatrise med samme lengde som antall varmekapasiteter. Det neste da er å iterere over denne matrisen og legge inn instanser av diskrete ressurser, hvor varmekapasiteten blir definert.
+
+{\tiny % START TINY
+\begin{lstlisting}[label=heatCodeDef,caption=Oppretting av varmebegrensing]
+void CpModel::createLocationHeat(EpsModel &dModel)
 {
-	if (dModel.getRequireCrane()->at(i))
+	int nbOfHeatCap = dModel.getHeatcapacity()->size();
+	cumulativeLocationsHeat = IloDiscreteResourceArray(env, nbOfHeatCap);
+
+	for (int i = 0; i < nbOfHeatCap; i++)
 	{
-		IloInt cIndex = rnd.getInt(nbCranes);
-		model.add(altConstraint.select(cranes[cIndex]));
-		altConstraint.setSelected(cranes[cIndex]);
-		index=index+1;
+		cumulativeLocationsHeat[i] 
+			= IloDiscreteResource(env,dModel.getHeatcapacity()->at(i));
 	}
 }
 \end{lstlisting}
-Måten kraner blir tildelt til aktiviteter som krever kran er endret fra løsningen til \bht. Kraner er fortsatt modellert som eneressurser, men tildelingen av kraner i den opprinnelige løsningen til \bht tildelte kraner tilfeldig ved å bruke IloRandom (listing \ref{codeCrane1}). Denne metoden plukket en tildeldig kran fra tilgjengelige kraner i problemstillingen og tildelte den til ressursen. Da varierte løsningene på hvor god den tilfeldig tildelingen av kran var.
-\begin{lstlisting}[caption=Endret kranfordeling, label=codeCrane2]
-int nbActivities = dModel.getActNames()->size();
-
-for (int i = 0; i < nbActivities; i++)
+I listing \ref{heatConstraintDef} tillegnes varmebegrensingen til aktivitetene. Dette gjøres ved å iterere over aktivitetene og legge til varmebegrensing som et krav på alle aktivitetene. Fra matrisen med instansene av varmebegrensingene som diskrete ressurser brukes indeksen $getActLocation()->at(i)$ for legge til varmebegrensingen til riktig aktivitet som er tilhørende til lokasjonen på den aktuelle aktiviteten. Så legges varmen til mannskapet som er brukt på den aktuelle aktiviteten.
+\begin{lstlisting}[label=heatConstraintDef,caption=Tilegning av varmebegrensing til aktiviteter]
+void CpModel::createCrewHeatConstraints(EpsModel &dModel)
 {
-	if (dModel.getRequireCrane()->at(i))
+	int nbActs = dModel.getActLocation()->size();
+
+	for (int i = 0; i < nbActs; i++)
 	{
-		IloAltResConstraint altConstraint 
-			= activities[i].requires(altCranes);
-		model.add(altConstraint);
-		model.add(activities[i].requires(cumulativeCrane));
+		model.add(activities[i].requires
+			(cumulativeLocationsHeat[dModel.getActLocation()->at(i)], 
+				dModel.getCrewHeat()->at(dModel.getCrewUsed()->at(i))));
 	}
 }
 \end{lstlisting}
-I dette prosjektet er kranbegrensningen modellert med alternative ressurser (listing \ref{codeCrane2}). Ved å modellere kranbegrensningen med alternative ressurser kan krantildelingen endre underveis i søkestrategien, ved å bruke søkemålet IloAssignAlternatives.
+} %END TINY
 
-Problemet med å finne ut om en RCPSP løsning i tillegg til sikkerhetsbegrensningene med makespan mindre enn en gitt frist er NP-hard. Dette betyr at det utvidede problemet med varmeressursen også må være NP-hard og derfor en optimal løsning med til og med de enkleste formene av problemet er ikke garantert innen polynomisk tid. To forskjellige løsningsstrategier er testet. Begge løsningsstrategiene er implementert i Solver og Scheduler biblotekene. I begge løsningsstrategiene brukes standard søkemål i Solver.
+Den første løsningsstrategien (LS1)\nomenclature{LS1}{Løsningsstrategi 1} bruker som første søkemål IloAssignAlternatives. Denne tildeler kraner til aktiviteter som krever kran. Rangering er mulig for alle ressursbegrensningene. Når begrensninger blir rangert, blir aktiviteten ressursen tilhører flyttet foran alle aktivitetene som ikke har blitt rangert. Det andre søkemålet IloRankForward rangerer alle eneressursbegrensningene i modellen. Det tredje søkemålet er IloSetTimesForward. Denne tilegner starttid til aktiviteter i planleggingen. Ved å velge en kranfordeling først, vil denne styre valget av starttid til aktivitetene. Da antall aktiviteter som krever kran bare er 20\% av alle aktivitetene, vil forventningen er da at søketreet blir for stort til at valget av kranfordeling kan gjøres på nytt på en god måte. Det kan forventes at løsningene som fremkommer vil være noe dårligere når det gjelder makespan enn LS2.
 
-Den første løsningsstrategien (LS1)\nomenclature{LS1}{Løsningsstrategi 1} bruker IloAssignAlternatives, som blir brukt til å tildele kraner til aktivitetene ved å tilegne en mulig ressurs til en alternativ ressurs, her kran. Det å rangering er mulig for alle ressursbegrensingene. Når begrensninger blir rankert, blir aktiviteten ressursen tilhører flyttet først av alle aktivitetene som ikke har blitt rangert. Søkemålet som kommer nå er da IloRankForward, som rangerer alle ressursenebegrensningene av typen eneressurs i modellen. Tilslutt blir IloSetTimesForward brukt, denne tillegner starttid til aktiviteter i planleggingen. Ved å velge en kranfordeling først, så løses resten av problemet rundt kranfordelingen. Da blir søketreet for stort til at valget av kranfordeling kan gjøres på nytt på en god måte. Det fører til en forventning at disse løsningene vil være noe dårligere når det gjelder makespan.
-
-Den andre løsningsstrategien (LS2)\nomenclature{LS2}{Løsningsstategi 2} tillegner starttid til alle aktivitetene først, ved å bruke IloSetTimesForward. Når alle aktivitetene har fått tildelt en starttid brukes IloAssignAlternatived for å fordele kran til aktiviteter som krever det. Tilslutt brukes IloRankForward som rangerer eneressurser og når en ressurs blir rangert, kan aktiviteten til denne ressursen bli rangert først av de aktivitetene som ikke har blitt rangert. Med denne løsningsstrategien vil starttidspunktene for aktivitetene settes først, det kan føre til ugyldige løsninger når kranfordelingen blir valg på grunn av sikkerhetssonene.
+Den andre løsningsstrategien (LS2)\nomenclature{LS2}{Løsningsstategi 2} tillegner starttid til alle aktivitetene først, ved å bruke IloSetTimesForward. Når alle aktivitetene har fått tildelt en starttid, brukes deretter IloAssignAlternatived for å fordele kran til aktiviteter som krever det. Tilslutt brukes IloRankForward som rangerer eneressurser, og når en ressurs blir rangert, kan aktiviteten til denne ressursen bli rangert foran de aktivitetene som ikke har blitt rangert. Med denne løsningsstrategien vil starttidspunktene for aktivitetene settes først og det forventes at dette kan føre til ugyldige løsninger når kranfordelingen er gjort og lokasjonene har fått etablert sikkerhetssoner.
 
 \subsubsection{Evaluering av prosessen}
-Prosessen med eksperimenteringen av implementasjonen blir evaluert ved å undersøke makespan opp mot teoretisk øvregrense (se \ref{sec:teoretiskovre}) og teoretisk nedregrense (se \ref{sec:teoretisknedre}) i både løsningene uten varmebegrensning og med varmebegrensning. Løsningene fra prosessen med og uten varmebegrensningen vil også bli evaluert opp mot hverandre. Dette innebærer bruk av kvantitative metoder. Løsningene med med 10 lokasjoner vil også bli evaluert opp mot løsningene med 25 lokasjoner, men da vil gjennomsnitsverdien \ref{eq:relativkvalitet} bli brukt.
+Resultatet av eksperimentering med implementasjonen blir evaluert ved å undersøke makespan opp mot teoretisk nedregrense (se \ref{sec:teoretisknedre}) i løsningene uten varmebegrensning og med varmebegrensning. Løsningene fra prosessen med og uten varmebegrensningen vil også bli evaluert opp mot hverandre. Dette innebærer bruk av kvantitative metoder. Løsningene med 10 lokasjoner vil også bli evaluert opp mot løsningene med 25 lokasjoner, men da vil gjennomsnitsverdien $w_{rq}$ i formel (\ref{eq:relativkvalitet}) bli brukt.
 
-Forskningsmetoden vil bli evaluert ved å bruke genererte probleminstanser, som er generert av et eksternt program. Probleminstansene som genereres kan bestemmes hvor mange av de forskjellige ressursene som skal være med i probleminstansene. I dette prosjektet er det et sprang på 50 - 5000 aktiviteter som implementasjon blir evaluert på. I dette prosjektet er det generert forhåndsdefinerte problemer (her: probleminstanser) og håper resultatet kan blir overført til applikasjoner som krever denne forskningen.
+Metoden vil bli evaluert ved å bruke genererte probleminstanser som er generert av et eksternt program. I probleminstansene som genereres bestemmes hvor mange av de forskjellige ressursene som skal være med i probleminstansene. I dette prosjektet er flere aktiviteter i intervallet sprang på 50 - 5000 som implementasjon er blir evaluert på. Denne prosjektoppgavens automatisk genererte probleminstanser er i en kommersiell situasjon selve vedlikeholdsbehovet. Det er et håp at probleminstansene representerer vedlikeholdsbehovet så godt at resultatene i denne prosjektoppgaven er relevant også i kommersiell bruk.
 
-Løsningene blir evaluert av et eksternt program, som sjekker begrensningene som avhengigheter, varme og sikkerhetsbegrensninger. Det programmet er utviklet i \textit{Java} og leser inn en løsning og tilhørende probleminstans. Det blir opprettet en vektor med objekter som aktiviteter, kraner og mannskaper. På den måten er all informasjon om de forskjellige objektene samlet, som gjør det enkelt å sjekke begrensninger som avhangigheter, varme og sikkerhetsbegrensning. Løsningene har i tillegg varifisert løsningene for alle begrensninger unntatt varmebegrensningen med et eget program.
+Resultatene blir evaluert av et eksternt program, som sjekker begrensningene som avhengigheter, varme og sikkerhetsbegrensninger. Programmet er utviklet i \textit{Java} og leser inn en løsning og tilhørende probleminstans. Det blir opprettet en vektor med objekter som aktiviteter, kraner og mannskaper. På den måten er all informasjon om de forskjellige objektene samlet, noe som gjør det enkelt å sjekke begrensninger som avhangigheter, varme og sikkerhetsbegrensning. I listings \ref{heatChecker} er implementasjonen i Java som verifiserer varmebegrensingen. Her itereres det over aktivitetene og sjekker mannskapers varme på en aktivitet som er innenfor samme start- og sluttid for aktiviteten (mannskaper som jobber samtidig på en aktivitet) og sjekker summen av mannskapenes varme sjekkes opp mot aktivitetens lokasjonens varmekapasitet.
+
+{\tiny %START TINY
+\begin{lstlisting}[label=heatChecker,caption=Validering av varmebegrensing]
+public boolean checkHeat() {
+	int c_checkHeat = 0;
+	int ms = getMakespan();
+	for(int t=0;t<ms;t++) {
+		int[] heatLoc = new int[locations.size()];
+		for(int tmp=0;tmp<heatLoc.length;tmp++) heatLoc[tmp] = 0;
+		for(int a = 0;a<activity.size();a++) {
+			int aStart = activity.get(a).getStart();
+			int aEnd = activity.get(a).getStart() + activity.get(a).getDuration();
+			if(aStart <=  t && aEnd > t) {
+				for(int c=0;c<crew.size();c++) {
+					if(activity.get(a).getCrew().equals(crew.get(c).getName())) {
+						heatLoc[Integer.parseInt(
+							activity.get(a).getLocation().replace("location", ""))-1] 
+								+= crew.get(c).getHeatConsumption();
+					}
+				}
+			}
+		}
+		for(int check=0;check<heatLoc.length;check++) {
+			if(heatLoc[check] > locations.get(check).getHeatCapacity()) c_checkHeat+=1;
+		}
+	}
+	if(c_checkHeat == 0) return true;
+	else return false;
+}
+\end{lstlisting}
+} % END TINY
+
+En uavhengnig verifisering av alle resultatene i prosjektoppgaven er gjort med et program skrevet i Prolog. Dette programmet sjekker alle begrensingene unntatt varmebegrensingen og er utført av Professor Marc Bezem.
 
 \subsection{Evalueringsstrategi}
 \label{sec:strategy}
-For å evaluere kvaliteten på løsningene, er teoretisk- øvregrense og nedregrense for makespan blir kalkulert.
+For å evaluere kvaliteten på løsningene er teoretisk- øvregrense og nedregrense for makespan blir kalkulert.
 
 \subsubsection{Teoretisk øvregrense}
 \label{sec:teoretiskovre}
-Teoretisk øvregrense for makespan er
+Teoretisk øvregrense for makespan er:
 \begin{equation}
 c_{ub,ms}(P) = c_{hor}(P) = \sum_{i} c_{dur}(Act_{i})
 \end{equation}
-som indikerer at i det verste tilfelle blir alle aktivitetene utført etter hverandre, en om gangen.
+Dette indikerer at i det ugunstigste tilfelle blir alle aktivitetene utført etter hverandre, en om gangen.
 
 \subsubsection{Teoretisk nedregrense}
 \label{sec:teoretisknedre}
-En teoretisk nedregrense er kalkulert basert på ressurstilgjengeligheten for den mest begrensede mannskapet. Resultatløsningen blir kanskje ikke gyldig for hele problemet, men er komprimert tett sammen for mannskapet og utnytte hver eneste mannskapstime.
+En teoretisk nedregrense er kalkulert basert på ressurstilgjengeligheten for den mest begrensede mannskapet. Mannskapet er optimalisert og teoretisk nedregrense basert på mannskap er:
 \begin{equation}
 c_{load}(Crew_{j}) = \sum_{c_{crew}(Act_{i}) = Crew_{j}} c_{dur}(Act_{i})
 \end{equation}

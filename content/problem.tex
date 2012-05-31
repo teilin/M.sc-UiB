@@ -1,4 +1,4 @@
-Problemstillingen i denne oppgaven tar utgangspunkt i den opprinnelige problemstillingen til \bht. Beskrivelsen i det etterfølgende og frem til det fremkommer i etterfølgende tekst, er en oversettelse av \cite{tvedtbezem} til norsk. Problemet er på en fiktiv oljeplattform inndelt i et sett av lokasjoner. Utstyr som er krevd for vedlikehold er tilfeldig plassert rundt på plattformen og ulike aktiviteter skal planlegges. Aktivitetene blir opprettet med et gitt sett av ressurskrav og mulige avhengigheter til andre aktiviteter. Alle aktiviteter krever et mannskap til å utføre dem og en lokasjon til å bli utført på. I tillegg krever noen aktiviteter kranressurser, fordi tung løfting er involvert. Mannskaps- og kranressurser er knappe, det vil si de har begrenset tilførsel.
+Problemstillingen i denne prosjektoppgaven tar utgangspunkt i den opprinnelige problemstillingen til Bård Henning Tvedt. Beskrivelsen i det etterfølgende og frem til det fremkommer i etterfølgende tekst, er i hovedsak en oversettelse av \cite{tvedtbezem} til norsk. Problemet er på en fiktiv oljeplattform inndelt i et sett av lokasjoner. Utstyr som er krevd for vedlikehold er tilfeldig plassert rundt på plattformen og ulike aktiviteter skal planlegges. Aktivitetene blir opprettet med et gitt sett av ressurskrav og mulige avhengigheter til andre aktiviteter. Alle aktiviteter krever et mannskap til å utføre dem og en lokasjon de blir utført på. I tillegg krever noen aktiviteter kranressurser, fordi tung løfting er involvert. Mannskaps- og kranressurser er knappe, det vil si de har begrenset tilførsel.
 
 Så langt er problemet klassifisert som et \textit{''Resource-Constrained Project Scheduling Problem (RCPSP)"}\cite{RcpspPaperSchutt}, som kjennetegnes ved:
 \begin{itemize}
@@ -29,13 +29,13 @@ En aktivitet $ Act_{i} $ krever et mannskap $ c_{crew}(Act_{i}) \in Crews $ for 
 
 I tillegg til ressurskravene, kan en aktivitet være avhengig av andre aktiviteter, det betyr at en aktivitet ikke kan starte før en annen aktivitet er ferdig utført.
 
-\subsection{Begrensinger}
+\subsection{Begrensninger}
 \textit{Avhengigheter} mellom aktiviteter er vanlig i industrien. En vedlikeholdsaktivitet kan for eksempel være avhengig av både levering av reservedeler og stillasbygging for å sikre tilgang til området hvor vedlikeholdet skal gjøres. Forholdet som viser at aktivitet $ Act_{i'} $ avhenger av aktivitet $ Act_{i} $ er uttrykt ved følgende begrensning: 
 \begin{equation}
 w_{end}(Act_{i}) \leq v_{sta}(Act_{i'})
 \end{equation}
 
-En \textit{kummulativ ressursbegrensing} påføres alle mannskaper for å være sikkert på at den totale ressursbruken ikke overstiger tilgjengelig kapasitet. Det er utrykt ved: 
+En \textit{kummulativ ressursbegrensing} påføres alle mannskaper for å være sikker på at den totale ressursbruken ikke overstiger tilgjengelig kapasitet. Det er uttrykt ved: 
 \begin{equation}
 \forall t,j : \sharp \{ Act_{i} | t \in [(v_{sta}(Act_{i}), w_{end}(Act_{i})) \wedge c_{crew}(Act_{i}) = Crew_{j}] \} \leq c_{cap}(Crew_{j})
 \end{equation}
@@ -51,35 +51,37 @@ Den gjensidge uttelukkelsen opprettet av eneressursbegrensningen blir da:
 \end{equation}
 for alle aktiviteter som krever kran.
 
-\textit{Sikkerhetsbegrensningene} er uttrykt i form av lokasjonen til aktiviten som krever kran og lokasjonen til den valgte kranen. Den første lokasjonen er kjent på forhånd, mens den andre avhenger av hvilken kran som blir brukt. Tilfellet at begrensingene i problemet endrer seg etter hvert som avgjørelser tas, er interessant på grunn av den tillagte kompleksiteten det medfører.
+\textit{Sikkerhetsbegrensningene} er uttrykt i form av lokasjonen til aktiviteten som krever kran og lokasjonen til den valgte kranen. Den første lokasjonen er kjent på forhånd, mens den andre avhenger av hvilken kran som blir brukt. Tilfellet at begrensingene i problemet endrer seg etter hvert som avgjørelser tas, er interessant på grunn av den tillagte kompleksiteten det medfører.
 
 Sikkerhetsbegrensningene utelukker bruken av lokasjonen hvor en aktivitet som krever kran befinner seg:
 \begin{equation}
 \forall i,i' \neq i : c_{crane}(Act_{i}) \wedge c_{loc}(Act_{i}) = c_{loc}(Act_{i'}) \wedge \neg overlap(Act_{i},Act_{i'})
 \end{equation}
-Når sikkerhetsbegrensningene utelukker bruken av lokasjonen til denne kranen er gitt ved:
+Når sikkerhetsbegrensningene utelukker bruken av denne kranens lokasjon er gitt ved:
 \begin{equation}
 \forall i,i' \neq i : v_{crane}(Act_{i}) = Crane_{j} \wedge c_{loc}(Act_{i'}) = c_{loc}(Crane_{j}) \rightarrow \neg overlap(Act_{i},Act_{i'})
 \end{equation}
 
-Så langt er formler og tekst hentet fra \cite{tvedtbezem}. I det neste tillegges en ny type begrensning kalt \textit{varmebegrensning}. Med dette, så menes ikke varme i tradisjonell forstand, men som en måte å kunne sette en verdi på et mannskap og en kapasitet på en lokasjon. Det kan være lokasjoner som av forskjellige årsaker (begrenset plass, restriksjoner til lokasjonen, etc.) ikke kan ha ubegrenset med mannskap til å jobbe der samtidig. Forskjellige mannskaper kan også ha forskjellig kapasitet ut ifra hva slags arbeid de utfører. Mannskaper som driver arbeid som sveising, kan for eksempel ha en høyere varmeverdi enn et mannskap med elektrikere. Grunnen til at sveisere kan ha en høyere varmeverdi er fordi det er en aktivitet som gjør det ugunstig å ha for mange på lokasjonen. Det kan være grunner til farlige gasser, eksplosjonsfare osv. De er uttrykt som kummulativ ressursbegrensning og er påført lokasjon for å være sikkert på at total varmebruk ikke overstiger varmekapasiteten tilgjengelig på hver lokasjon. Varmebegrensingen skal også etterhvert kunne erstatte sikkerhetsbegrensningene på for eksempel kranbruk, ved at lokasjoner med kran får en varmekapasitet og aktiviter som bruker kran bruker opp denne varmekapasiten på lokasjonen. Den er uttrykt ved:
+Så langt er formler og tekst hentet fra \cite{tvedtbezem}. I det neste tillegges en ny type begrensning kalt \textit{varmebegrensning}. Med dette menes ikke varme i tradisjonell forstand, men som en måte å kunne sette en verdi på et mannskap og en kapasitet til en lokasjon. Det kan være lokasjoner som av forskjellige årsaker (begrenset plass, restriksjoner til lokasjonen, etc.) ikke kan ha ubegrenset med mannskap til å jobbe der samtidig. Forskjellige mannskaper kan også ha forskjellig kapasitet ut i fra hva slags arbeid de utfører. Mannskaper som driver arbeid som for eksempel sveising, kan ha en høyere varmeverdi enn et mannskap med elektrikere. Dette fordi sveisere kan ha en høyere varmeverdi da aktivitetene som utføres krever mye av den lokasjonen de er på. De kan for eksempel utgjøre en fare på grunn av farlige gasser, varmeutvikling etc. Varmebegrensningen er uttrykt som kummulativ ressursbegrensning og er påført en lokasjon for å sikre at total varmebruk ikke overstiger varmekapasiteten tilgjengelig på lokasjonen. Den er uttrykt ved:
 \begin{equation}
 \begin{split}
 \forall t,l: \sum\{c_{heat}(Crew_j) \mid t \in [ v_{sta}(Act_{i}), w_{end}(Act_{i})) \wedge c_{crew}(Act_{i}) = Crew_{j} \\
 \wedge c_{loc}(Act_{i}) = Loc_{l} ] \} \le c_{heatcap}(Loc_{l})
 \end{split}
 \end{equation}
+Ved en videreutvikling av planleggingsmetodikken skal varmebegrensingen også etterhvert kunne erstatte sikkerhetsbegrensningene på for eksempel kranbruk. Dette ved at lokasjoner med kran får en varmekapasitet, og aktiviteter som bruker kran bruker opp denne varmekapasiten på lokasjonen.
 
 \subsection{Målfunksjon}
-Målet er å minimalisere makespan $ w_{ms}(P) $ eller varigheten av planleggingen, som er definert ved:
+\label{sec:makespandef}
+Målet er å minimalisere makespan $ w_{ms}(P) $, eller varigheten av planen, som er definert ved:
 \begin{equation}
-w_{ms}(P) = max_{i} \{ w_{end}(A_{i}) \} \in [0,c_{hor}(P)]
+w_{ms}(P) = max_{i} \{ w_{end}(Act_{i}) \} \in [0,c_{hor}(P)]
 \end{equation}
-Dette uttrykker at makespanet er likt den siste slutten eller fullføringstiden i settet av aktiviteter.
+Dette uttrykker at makespan er likt den siste slutten eller fullføringstiden i settet av aktiviteter.
 
 \subsection{Probleminstanser}
-Problemene er beskrevet ved størrelsen fastsatt av det totale nummeret av aktiviteter, $ \#Acts \in \{ 50,60, 70, 80, 90, 100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 5000 \} $ og kraner, $ \#Cranes = [2,3] $. Det ble generert totalt 5 probleminstanser for hver av de 32 problem størrelsene, som summert opp blir 160 instanser.
+Probleminstansene er beskrevet ved størrelsen fastsatt av det totale nummeret av aktiviteter, $ \sharp Acts \in \{ 50,60, 70, 80, 90, 100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 5000 \} $ og kraner, $ \sharp Cranes = [2,3] $. Det er generert totalt 5 probleminstanser for hver av de 32 problemstørrelsene. Summert opp blir dette 160 probleminstanser.
 
-Probleminstansene ble tilfeldig generert, ved å tildele mannskaper til aktiviteter, lokasjoner til aktiviteter, lokasjoner til kraner, avhengigheter mellom aktiviteter og aktiviteter som trenger kran. Når instansene ble generert, er det spesifisert at det ikke skal forekomme sirkulasjoner på aktivitetsavhengigheter og at det ikke skal være mer enn en kran på en lokasjon. Så alle 160 instansene er gyldige.
+Probleminstansene ble tilfeldig generert, ved å tildele mannskaper til aktiviteter, lokasjoner til aktiviteter, lokasjoner til kraner, avhengigheter mellom aktiviteter og aktiviteter som trenger kran. Når instansene ble generert, er det spesifisert at det ikke skal forekomme sirkulasjoner på aktivitetsavhengigheter (banalt som for eksempel: aktivitet 2 er avhengig av aktivitet 1, som igjen er avhengig av aktivitet 2) og at det ikke skal være mer enn en kran på en lokasjon, slik at alle 160 instansene er gyldige.
 
-Alle problemene har 10 lokasjoner, som er redusert fra 25 i de opprinnelige probleminstansene til \bht. Med aktiviteter fordelt utover 25 lokasjoner, så ville det vært så få aktiviteter på hver lokasjon at varmebegrensingen til en lokasjon aldri ville blitt oversteget. Det er 4 forskjellige mannskaper med kapasitet $ c_{cap}(Crew_{j}) \in [2,3] $ tatt fra en uniform fordeling. Domenet for aktivitenes startvariabel er generelt $ v_{sta}(Act_{i}) = [0,c_{hor}(P)] $ og de konstante varighetene $ c_{dur}(Act_{i}) $ er tilfeldig tatt fra en uniform fordeling i området $ [1,6] $ tidssteg. Omtrent 20\% av aktivitetene er tilfeldig valgt til å bruke kran og omtrent 10\% av aktivitetene er begrenset ved avhengighet til en annen aktivitet. I det første settet med probleminstanser ble mannskapers varme tilfeldig generert i området: $c_{heat}(Crew_{j}) \in [5,15]$ og lokasjoners varmekapasitet ble tilfeldig generert i området: $c_{heatcap}(Loc_{l} \in [10,20]$. Det ble generert et nytt sett med probleminstanser, hvor mannskapers varme er tilfeldig generert i området: $c_{heat}(Crew_{j}) \in [1,5]$, mens lokasjoners varmekapasitet er tilfeldig generert i området: $c_{heatcap}(Loc_{l}) \in [6,10]$.
+Alle probleminstansene har 10 lokasjoner, som er en reduksjon fra de 25 lokasjonene i de opprinnelige probleminstansene til Bård Henning Tvedt. Dette er gjort fordi med 25 lokasjoner ville det vært så få aktiviteter på hver lokasjon at varmebegrensingen til en lokasjon har liten sannsynlighet for å bli oversteget. Det er 4 forskjellige mannskaper med kapasitet $ c_{cap}(Crew_{j}) \in [2,3] $ tatt fra en uniform fordeling. Domenet for aktivitenes startvariabel er generelt $ v_{sta}(Act_{i}) = [0,c_{hor}(P)] $ og de konstante varighetene $ c_{dur}(Act_{i}) $ er tilfeldig tatt fra en uniform fordeling i området $ [1,6] $ tidssteg. Omtrent 20\% av aktivitetene er tilfeldig valgt til å bruke kran og omtrent 10\% av aktivitetene er begrenset ved avhengighet til en annen aktivitet. De resterende 70\% er følgelig uten avhengigheter eller kranbruk. I det første settet med probleminstanser ble mannskapers varme tilfeldig generert i området: $c_{heat}(Crew_{j}) \in [5,15]$ og lokasjoners varmekapasitet ble tilfeldig generert i området: $c_{heatcap}(Loc_{l} \in [10,20]$. Det ble generert et ytterligere sett med probleminstanser, hvor mannskapers varme er tilfeldig generert i området: $c_{heat}(Crew_{j}) \in [1,5]$, mens lokasjoners varmekapasitet er tilfeldig generert i området: $c_{heatcap}(Loc_{l}) \in [6,10]$.

@@ -3,16 +3,6 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: Msc.aux
 The style file: plain.bst
 Database file #1: ref.bib
-I was expecting a `,' or a `}'---line 29 of file ref.bib
- :  
- :  Title = {Exact JobBOSS Software}
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 54 of file ref.bib
- :  
- :  Date-Modified = {2012-04-05 19:43:55 +0000},
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
 Warning--to sort, need author or key in compcomplextheory
 Warning--to sort, need author or key in nphardwikipedia
 Warning--to sort, need author or key in optimizationproblemwiki
@@ -26,34 +16,34 @@ Warning--empty journal in RcpspPaperSchutt
 Warning--empty year in RcpspPaperSchutt
 You've used 18 entries,
             2118 wiz_defined-function locations,
-            572 strings with 6386 characters,
-and the built_in function-call counts, 3738 in all, are:
-= -- 357
+            575 strings with 6496 characters,
+and the built_in function-call counts, 3770 in all, are:
+= -- 366
 > -- 100
 < -- 0
 + -- 46
 - -- 28
 * -- 193
-:= -- 559
-add.period$ -- 43
+:= -- 568
+add.period$ -- 45
 call.type$ -- 18
-change.case$ -- 63
+change.case$ -- 65
 chr.to.int$ -- 0
 cite$ -- 29
 duplicate$ -- 154
 empty$ -- 400
 format.name$ -- 28
-if$ -- 821
+if$ -- 830
 int.to.chr$ -- 0
 int.to.str$ -- 18
 missing$ -- 6
-newline$ -- 82
+newline$ -- 84
 num.names$ -- 18
-pop$ -- 118
+pop$ -- 117
 preamble$ -- 1
 purify$ -- 50
 quote$ -- 0
-skip$ -- 131
+skip$ -- 126
 stack$ -- 0
 substring$ -- 177
 swap$ -- 20
@@ -64,5 +54,5 @@ type$ -- 72
 warning$ -- 11
 while$ -- 25
 width$ -- 20
-write$ -- 150
-(There were 2 error messages)
+write$ -- 155
+(There were 11 warnings)

@@ -1,7 +1,7 @@
-Eksperimenteringen er utført på en Macbook Air med 1.8 GHz Intel Core i7 prosessor og 4 GB 1333 MHz DDR3 minne. Det er totalt sett 160 benchmarksett som implementasjonene er evaluert på. Hvor mange det ble funnet en løsning på, varierte avhengig av om tilleggsressursene var med eller ikke og tidsgrensen som var satt.
+Eksperimenteringen er utført på en Macbook Air med 1.8 GHz Intel Core i7 prosessor og 4 GB 1333 MHz DDR3 minne. Det er totalt sett 160 benchmarksett som implementasjonene er evaluert på. Hvor mange det ble funnet en løsning på varierte avhengig av om tilleggsressursene var med eller ikke og tidsgrensen som var satt.
 
-\begin{table}[h]
-\caption{Relativ optimalitets indeks $w_{rq}$ for de forskjellige modellene}
+\begin{table}[!h]
+\caption{Relativ optimalitets indeks $w_{rq}$ for de forskjellige modellene med tidsgrense på 100 sekunder}
 \begin{center}
 \begin{tabular}{ | c | c | c | c | c | c | c | c | c | c | c | }
 \hline
@@ -9,17 +9,45 @@ Eksperimenteringen er utført på en Macbook Air med 1.8 GHz Intel Core i7 prose
 $\sharp Act(\sharp P)$ & \multicolumn{2}{|c|}{$< 100 (25)$} & \multicolumn{2}{|c|}{$\ge 100 (55)$} & \multicolumn{2}{|c|}{$< 100 (25)$} & \multicolumn{2}{|c|}{$\ge 100 (55)$} & \multicolumn{2}{|c|}{(160)} \\ 
 \hline
 Modell & $w_{rq}$ & $\%^{(1)}$ & $w_{rq}$ & $\%^{(1)}$  & $w_{rq}$ & $\%^{(1)}$ & $w_{rq}$ & $\%^{(1)}$ & $w_{rq}$ & $\%^{(1)}$ \\ \hline
-$LS1 \sharp 1^{(2)}$ & 1.578 & 100 & 1.905 & 100 & 1.593 & 100 & 1.731 & 100 & 1.745 & 100 \\
-$LS1 \sharp 2^{(3)}$ & 1.672 & 100 & 1.961 & 100 & 1.711 & 100 & 1.766 & 100 & 1.810 & 100 \\
-$LS2 \sharp 1^{(2)}$ & 1.144 & 84 & 1.160 & 27.3 & 1.60 & 68 & 1.042 & 10.91 & 1.142 & 36.88 \\
-$LS2 \sharp 2^{(3)}$ & 1.256 & 76 & 1.313 & 30.91 & 1.243 & 72 & 1.041 & 18.18 & 1.232 & 40 \\
+$LS1 \sharp 1\sharp 3$ & 1.578 & 100 & 1.905 & 100 & 1.593 & 100 & 1.731 & 100 & 1.745 & 100 \\
+$LS1 \sharp 2\sharp 3$ & 1.672 & 100 & 1.961 & 100 & 1.711 & 100 & 1.766 & 100 & 1.810 & 100 \\
+$LS2 \sharp 1\sharp 3$ & 1.144 & 84 & 1.160 & 27.3 & 1.157 & 68 & 1.042 & 10.91 & 1.142 & 36.88 \\
+$LS2 \sharp 2\sharp 3$ & 1.256 & 76 & 1.313 & 30.91 & 1.243 & 72 & 1.041 & 18.18 & 1.232 & 40 \\
+$LS2 \sharp 1\sharp 4$ & 1.031 & 100 & 1.002 & 100 & 1.023 & 100 & 1.003 & 100 & 1.010 & 100 \\
 \hline
-\multicolumn{11}{l}{\begin{minipage}{6in}$^{(1)}$ prosentandel løste probleminstanser
-$^{(2)}$ $\sharp 1$ er løsninger uten varmebegrensning
-$^{(3)}$ $\sharp 2$ er løsninger med varmebegrensning \end{minipage}}
+\multicolumn{11}{l}{\begin{minipage}{6in}$^{(1)}$ prosentandel løste probleminstanser\newline
+$\sharp 1$ er løsninger uten varmebegrensning\newline
+$\sharp 2$ er løsninger med varmebegrensning \newline
+$\sharp 3$ er løsninger med sikkerhetsbegrensning \newline
+$\sharp 4$ er løsninger uten sikkerhetsbegrensning\end{minipage}}
 \end{tabular}
 \end{center}
-\label{tab:resultaterSum}
+\label{tab:resultaterSum100s}
+\end{table}
+
+\begin{table}[!h]
+\caption{Relativ optimalitets indeks $w_{rq}$ for de forskjellige modellene med tidsgrense på 5 sekunder}
+\begin{center}
+\begin{tabular}{ | c | c | c | c | c | c | c | c | c | c | c | }
+\hline
+\textbf{Modell} & \multicolumn{4}{|c|}{\textbf{2 kraner}} & \multicolumn{4}{|c|}{\textbf{3 kraner}} & \multicolumn{2}{|c|}{\textbf{Alle}} \\ \hline
+$\sharp Act(\sharp P)$ & \multicolumn{2}{|c|}{$< 100 (25)$} & \multicolumn{2}{|c|}{$\ge 100 (55)$} & \multicolumn{2}{|c|}{$< 100 (25)$} & \multicolumn{2}{|c|}{$\ge 100 (55)$} & \multicolumn{2}{|c|}{(160)} \\ 
+\hline
+Modell & $w_{rq}$ & $\%^{(1)}$ & $w_{rq}$ & $\%^{(1)}$  & $w_{rq}$ & $\%^{(1)}$ & $w_{rq}$ & $\%^{(1)}$ & $w_{rq}$ & $\%^{(1)}$ \\ \hline
+$LS1 \sharp 1\sharp 3$ & 1.585 & 100 & 1.907 & 91 & 1.608 & 100 & 1.731 & 91 & 1.745 & 94 \\
+$LS1 \sharp 2\sharp 3$ & 1.674 & 100 & 1.963 & 91 & 1.718 & 100 & 1.767 & 91 & 1.808 & 94 \\
+$LS2 \sharp 1\sharp 3$ & 1.155 & 84 & 1.160 & 25 & 1.323 & 60 & 1.060 & 9 & 1.151 & 36 \\
+$LS2 \sharp 2\sharp 3$ & 1.245 & 84 & 1.288 & 24 & 1.385 & 60 & 1.046 & 15 & 1.221 & 37 \\
+$LS2 \sharp 1\sharp 4$ & 1.031 & 100 & 1.003 & 91 & 1.023 & 100 & 1.004 & 91 & 1.011 & 94 \\
+\hline
+\multicolumn{11}{l}{\begin{minipage}{6in}$^{(1)}$ prosentandel løste probleminstanser\newline
+$\sharp 1$ er løsninger uten varmebegrensning\newline
+$\sharp 2$ er løsninger med varmebegrensning \newline
+$\sharp 3$ er løsninger med sikkerhetsbegrensning \newline
+$\sharp 4$ er løsninger uten sikkerhetsbegrensning\end{minipage}}
+\end{tabular}
+\end{center}
+\label{tab:resultaterSum5s}
 \end{table}
 
 En måling av relativ kvalitet er brukt for å evaluere resultatene fra forskjellige strategier. Den avledede variabelen $w_{rq}$ er gitt ved (\ref{eq:relativkvalitet}).
@@ -27,38 +55,41 @@ En måling av relativ kvalitet er brukt for å evaluere resultatene fra forskjel
 w_{rq} = \frac{1}{| P_{sol} |} \sum_{P \in P_{sol}} \frac{w_{ms}(P)}{c_{lb,ms}(P)}
 \label{eq:relativkvalitet}
 \end{equation}
-$P_{sol}$ er det settet med probleminstanser som er løst ved hver enkelt løsningsstrategi. Verdiene av $P_{sol}$ varierer fra løsningsstrategi til løsningsstrategi og disse gjennomsnittene er derfor ikke helt sammenlignbare, men de vil gi en indikasjon på kvaliteten på løsningen. $w_{rq}$ skiller ikke på strategier som feiler med å finne løsninger, men hvor robust løsningen er vil antallet løste probleminstanser indikere. Resultatene er summert opp i tabell \ref{tab:resultaterSum}.
+$P_{sol}$ er det settet med probleminstanser som er løst ved hver enkelt løsningsstrategi. Verdiene av $P_{sol}$ varierer fra løsningsstrategi til løsningsstrategi og disse gjennomsnittene er derfor ikke helt sammenlignbare, men de vil gi en indikasjon på kvaliteten på løsningen. $w_{rq}$ skiller ikke på strategier som feiler med å finne løsninger, men hvor robust løsningen er vil antallet løste probleminstanser indikere. Resultatene er summert opp i tabell \ref{tab:resultaterSum100s} og i tabell \ref{tab:resultaterSum5s}.
 
-Teoretisk nedregrense er basert på mannskaper som er den mest begrensende ressursen. Det er ikke sikkert det finnes gyldige løsninger er ikke sikkert finnes, men i og med den er beregnet ut fra den mest begrensede ressursen er det fornufig benchmark å sammenligne løsningene med denne.
+Det kan finnes en annen teoretisk nedregrense da det her er valgt teoretisk nedregrense basert på det mest begrensede mannskap. Men i og med den er beregnet ut fra den mest begrensede ressursen er det fornufig benchmark å sammenligne løsningene med denne.
 
 \subsection{Uten varmebegrensning}
-Løsningene som er kommentert her er fra det andre genererte benchmarksettet, den første løsningsstrategien uten varmebegrensing finner løsninger på alle 160 benchmarksettene. Makespan på er nærmest teoretisk nedregrense med to kraner og under 100 aktiviteter, hvor det i gjennomsnitt er 57.8\% over teoretisk nedregrense. Lengst unna teoretisk nedregrense er banchmarksettene med 2 kraner og over 100 aktiviteter, hvor makespan ligger i gjennomsnitt 90.5\% over teoretisk nedregrense. Alle benchmarksettene med den første løsningsstrategien er i gjennomsnittet 74.5\% over teoretisk nedregrense.
+I tabell \ref{tab:resultaterSum100s} er dette benevnt LS1 og 2 $\sharp 1$ $\sharp 3$ og $\sharp 4$ (dvs. med og uten sikkerhetsbegrensing).
 
-Ut ifra figur \ref{fig:RessursWithoutAct50Loc10Crew5Crane2} er det lokasjon som er den mest begrensede ressursen. På lokasjon 2 er kapasiteten helt brukt opp gjennom hele makespan og på lokasjon 2 finnes også kran 1.
+LS1 løser alle probleminstanser og har en gjennomsnittlig makespan på 74.5\%. Makespan er for alle $Act(P)$ høye - i intervallet 57.8\%-90.5\%. Figur \ref{fig:RessursWithoutAct50Loc10Crew5Crane2LS1} viser at lokasjon 2 er fullt utnyttet. Kran 1 er på lokasjon 2 (fra probleminstansene).
 
-De beste løsningene uten varmebegrensning er med den andre løsningsstrategien, hvor det i gjennomsnitt er 4.2\% over teoretisk nedregrense med 3 kraner og over 100 aktiviteter. Da finner den kun løsning på 10.91\% av probleminstansene. Med 3 kraner og under 100 aktiviteter er de dårligste løsningene med den andre løsningsstrategien, hvor det i gjennomsnitt er 60\% over teoretisk nedregrense. Den finner løsninger på 68\% av probleminstansene. Totalt sett med den andre løsningstrategien, er makespan 14.2\% over teoretisk nedregrense og den finner løsninger på 36.88\% av probleminstansene.
+LS2 løser i gjennomsnitt 36.9\% av probleminstansene og har makespan på 14.2\%. Makespan for alle $Act(P)$ varierer - i intervallet 4.2\%-15.7\%. Det laveste/høyeste resultatet er for henholdsvis 3 og 2 kraner $\ge 100(55)$. Dersom sikkerhetsbegrensningen fjernes i dette tilfellet reduseres makespan til intervall 2.3\%-0.3\% og alle probleminstanser løses. Figur \ref{fig:ResourceAct50Crane2LS2_UtenVarme_100s} viser at for dette tilfelle er lokasjon 6 fullt utnyttet. Det er 2 kraner. Fordelingen av aktiviteter over tidsaksen er jevn.
 
-Tidene som Scheduler bruker for å finne løsninger på probleminstansene er sammenliggnet med å se på tidene for samme antall aktiviteter og se på de med to og tre kraner. Det er ingen klare skiller om probleminstansene inneholder to eller tre kraner. Tidene for å finne løsninger varierer fra 0 til over 100 sekunder og det er ikke tilfelle de probleminstansene med flest aktiviteter som bruker lengst tid. Tiden på å finne en løsning variere også stort innenfor probleminstansene av et antall aktiviteter.
+Tidene som Scheduler bruker for å finne løsninger på probleminstansene er sammenliggnet med å se på tidene for samme antall aktiviteter og henholdsvis to og tre kraner. Det er ingen klare skiller om probleminstansene inneholder to eller tre kraner. Tidene for å finne løsninger varierer fra 0 til over 100 sekunder, og det er ikke de probleminstansene med flest aktiviteter som bruker lengst tid. Tiden for å finne en løsning varierer også stort innenfor probleminstansene med samme antall aktiviteter.
+\begin{figure}[!h]
+\centering
+\includegraphics[scale=0.4]{content/gfx/ResourceAct50Crane2LS2_UtenVarme_100s}
+\caption{Ressursskjema på Act50Loc10Crew5Crane2, LS2 og $\sharp1\sharp3$}
+\label{fig:ResourceAct50Crane2LS2_UtenVarme_100s}
+\end{figure}
 
 \subsection{Med varmebegrensning}
-I den første probleminstansen var det kun noen løsninger under 100 aktiviteter. Probleminstansene over 100 aktiviteter hadde ingen løsninger, annet enn et av probleminstansene på 900 aktiviteter.
+I tabell \ref{tab:resultaterSum100s} er dette benevnt LS1 og 2 $\sharp 2\sharp 3$ (dvs. med sikkerhetsbegrensing).
 
+LS1 løser alle probleminstanser og har en gjennomsnittlig makespan på 81.0\%. Makespan er for alle $Act(P)$ høye - i intervallet 67.2\%-96.1\%. Figur \ref{fig:RessursWithAct50Loc10Crew5Crane2LS1} viser at for dette tilfellet er lokasjon 2 fullt utnyttet. Kran 1 er på lokasjon 2 (fra probleminstansene). Det er to kraner. Figur \ref{fig:RessursWithAct50Loc10Crew5Crane3LS1} viser at for dette tilfelle er mannskap fullt utnyttet. Det er 3 kraner. Figur \ref{fig:GantWithAct50Loc10Crew5Crane2AssignHeat} med resultat for gitt tilfelle og vist som eksempel. Diagramet viser mange aktiviteter tidlig i planleggingen og få aktiviteter mot slutten. Tidsaksen viser en makespan på 57.
+
+LS2 løser i gjennomsnitt 40\% av probleminstansene og har makespan på 23.2\%. Makespan for alle $Act(P)$ er lave - i intervallet 4.1\%-31.3\%. Det laveste resultatet er for 3 kraner og $\ge 100(55)$. Figur \ref{fig:GantWithAct50Loc10Crew5Crane2TFHeat} med resultat for gitt tilfelle og vises som eksempel. Diagrammet viser noe bedre fordeling av aktiviteter enn figur \ref{fig:GantWithAct50Loc10Crew5Crane2AssignHeat}. Tidsaksen viser en makespan på 48.
 \begin{figure}[!h]
 \centering
 \includegraphics[scale=0.25]{content/gfx/Act50Crane2GantAssignHeat}
-\caption{Gantskjema på Act50Loc10Crew5Crane2 med varmebegrensning}
+\caption{Gantskjema på Act50Loc10Crew5Crane2 med varmebegrensning, LS1 og $\sharp2\sharp3$}
 \label{fig:GantWithAct50Loc10Crew5Crane2AssignHeat}
 \end{figure}
-Med det andre genererte probleminstansene ble det flere løsninger, med den første løsningsstrategien med varmebegrensning gir løsninger på alle probleminstansene, men makespan er ganske langt unna teoretisk nedregrense. Med denne løsningstratteien, er det probleminstansene med to kraner og under 100 aktiviteter, hvor gjennomsnittsverdien er nærmest den teoretiske nedregrensen med 67.2\% over. Probleminstansene med to kraner og over 100 aktiviteter er i gjennomsnitt 96.1\% over teoretisk nedregrense. Totalt sett for den første løsningstrategien er gjennomsnittsverdien 81.0\% over teoretisk nedregrense. Figur \ref{fig:GantWithAct50Loc10Crew5Crane2AssignHeat} viser en av løsningene med 50 aktiviteter og 2 kraner.
-
-Ut ifra figur \ref{fig:RessursWithAct50Loc10Crew5Crane2} er lokasjon tydelig den mest begrensende ressursen. Grunnen til dette er fodi den er helt fyllt opp uten at det er noen ledig kapasitet. Lokasjonen som er helt fyllt opp er lokasjon 2 og på denne lokasjonen befinner også kran 1 seg. Disse to figurene viser ressursene på probleminstansene med 50 aktiviteter og 2 kraner, med og uten varmebegrensning. På figur \ref{fig:RessursWithAct50Loc10Crew5Crane3} hvor det er 3 kraner er ikke lokasjon den mest begrensende, men mannskap er her den mest begrensende.
-
 \begin{figure}[!h]
 \centering
 \includegraphics[scale=0.25]{content/gfx/Act50Crane2TimesForwardHeat}
-\caption{Gantskjema på Act50Loc10Crew5Crane2 med varmebegrensning}
+\caption{Gantskjema på Act50Loc10Crew5Crane2 med varmebegrensning, LS2 og $\sharp2\sharp3$}
 \label{fig:GantWithAct50Loc10Crew5Crane2TFHeat}
 \end{figure}
-Med den andre løsningsstrategien finner den bedre løsninger, men generelt sett færre av probleminstansene blir løst. Den beste løsningen her har gjenomsnittet 4.1\% over teoretisk nedregrense. Den dårligste løsningen ligger på 31.3\% over teoretisk nedregrense. Der har 18.18\% og 30.91\% av probleminstansene blitt løst. Totalt sett med den andre løsningstrategien ligger det 23.2\% over teoretisk nedregrense og 40\% av probleminstansene er løst med denne løsningsstrategien. Figur \ref{fig:GantWithAct50Loc10Crew5Crane2TFHeat} viser en av løsningene med 50 aktiviteter og 2 kraner.
-
-Tidene Scheduler bruker for å finne løsninger på probleminstansene er sammenliggnet med å se på de aktivitene som har samme antall aktiviteter og se de opp mot hverandre med to og tre kraner. Det er ikke noe klart mønster i utførelsestidene som kan si noe om Scheduler bruker lengere eller kortere tid med to eller tre kraner. Tidene varierer fra 0 sekunder til flere hundre sekunder. Det er ikke nødvenndigvis de probleminstansene med flest aktiviteter som bruker lengst tid. Innenfor et antall aktiviteter kan de forskjellige probleminstansene variere fra 0 til over 100 sekunder.
+Tidene som Scheduler bruker for å finne løsninger på probleminstansene er sammenliggnet med å se på tidene for samme antall aktiviteter og henholdsvis to og tre kraner. Det er ingen klare skiller om probleminstansene inneholder to eller tre kraner. Tidene for å finne løsninger varierer fra 0 til over 100 sekunder, og det er ikke de probleminstansene med flest aktiviteter som bruker lengst tid. Tiden for å finne en løsning varierer også stort innenfor probleminstansene med samme antall aktiviteter.

@@ -3,40 +3,39 @@
 \contentsline {subsection}{\numberline {1.1}Beskrivelse av kommende kapitler}{8}
 \contentsline {subsection}{\numberline {1.2}Bakgrunn}{8}
 \contentsline {section}{\numberline {2}Motivasjon og m\IeC {\r a}lsetting}{9}
-\contentsline {subsection}{\numberline {2.1}M\IeC {\r a}let med prosjektet}{10}
-\contentsline {subsection}{\numberline {2.2}Relevans for forskingen(prosjektoppgave?)}{11}
+\contentsline {subsection}{\numberline {2.1}M\IeC {\r a}let med prosjektoppgaven}{10}
 \contentsline {section}{\numberline {3}Problemstilling}{11}
 \contentsline {subsection}{\numberline {3.1}Notasjoner og terminologi}{12}
 \contentsline {subsection}{\numberline {3.2}Ressurser}{13}
 \contentsline {subsection}{\numberline {3.3}Aktiviteter}{13}
-\contentsline {subsection}{\numberline {3.4}Begrensinger}{14}
+\contentsline {subsection}{\numberline {3.4}Begrensninger}{14}
 \contentsline {subsection}{\numberline {3.5}M\IeC {\r a}lfunksjon}{16}
 \contentsline {subsection}{\numberline {3.6}Probleminstanser}{16}
 \contentsline {section}{\numberline {4}Begrensningsprogrammering}{17}
 \contentsline {subsection}{\numberline {4.1}Kort om begrensningsprogrammering}{17}
-\contentsline {subsection}{\numberline {4.2}Utfordringer med begrensningsprogrammering}{17}
+\contentsline {subsection}{\numberline {4.2}Utfordringer med begrensningsprogrammering}{18}
 \contentsline {subsection}{\numberline {4.3}Begrensingsprogrammeringsverkt\IeC {\o }y idag}{18}
-\contentsline {subsection}{\numberline {4.4}Verkt\IeC {\o }y brukt i prosjektet}{19}
+\contentsline {subsection}{\numberline {4.4}Verkt\IeC {\o }y brukt i prosjektoppgaven}{19}
 \contentsline {subsubsection}{\numberline {4.4.1}Kort om Concert}{19}
 \contentsline {subsubsection}{\numberline {4.4.2}Kort om Solver}{20}
 \contentsline {subsubsection}{\numberline {4.4.3}Kort om Scheduler}{21}
 \contentsline {section}{\numberline {5}Metode}{21}
-\contentsline {subsection}{\numberline {5.1}Forskningsmetoder}{22}
+\contentsline {subsection}{\numberline {5.1}Metode}{22}
 \contentsline {subsubsection}{\numberline {5.1.1}Implementeringsprosessen}{22}
 \contentsline {subsubsection}{\numberline {5.1.2}Evaluering av prosessen}{24}
 \contentsline {subsection}{\numberline {5.2}Evalueringsstrategi}{25}
 \contentsline {subsubsection}{\numberline {5.2.1}Teoretisk \IeC {\o }vregrense}{25}
-\contentsline {subsubsection}{\numberline {5.2.2}Teoretisk nedregrense}{25}
-\contentsline {section}{\numberline {6}Resultater}{25}
-\contentsline {subsection}{\numberline {6.1}Uten varmebegrensning}{26}
-\contentsline {subsection}{\numberline {6.2}Med varmebegrensning}{27}
+\contentsline {subsubsection}{\numberline {5.2.2}Teoretisk nedregrense}{26}
+\contentsline {section}{\numberline {6}Resultater}{26}
+\contentsline {subsection}{\numberline {6.1}Uten varmebegrensning}{28}
+\contentsline {subsection}{\numberline {6.2}Med varmebegrensning}{29}
 \contentsline {section}{\numberline {7}Evaluering}{30}
-\contentsline {subsection}{\numberline {7.1}Probleminstanser}{30}
-\contentsline {subsection}{\numberline {7.2}L\IeC {\o }sningsstrategier}{30}
-\contentsline {subsection}{\numberline {7.3}Resultater}{31}
-\contentsline {subsubsection}{\numberline {7.3.1}10 lokasjoner}{31}
-\contentsline {subsubsection}{\numberline {7.3.2}10 lokasjoner mot 25 lokasjoner}{34}
+\contentsline {subsection}{\numberline {7.1}Probleminstanser}{31}
+\contentsline {subsection}{\numberline {7.2}L\IeC {\o }sningsstrategier}{31}
+\contentsline {subsection}{\numberline {7.3}Resultater}{32}
+\contentsline {subsubsection}{\numberline {7.3.1}10 Lokasjoner}{32}
+\contentsline {subsubsection}{\numberline {7.3.2}10 lokasjoner mot 25 lokasjoner}{35}
 \contentsline {section}{\numberline {8}Relatert arbeid}{35}
-\contentsline {section}{\numberline {9}Fremtidig arbeid}{35}
+\contentsline {section}{\numberline {9}Fremtidig arbeid}{36}
 \contentsline {section}{\numberline {10}Konklusjon}{36}
-\contentsline {section}{\numberline {11}Vedlegg}{37}
+\contentsline {section}{\numberline {11}Vedlegg}{38}
