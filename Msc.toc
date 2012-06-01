@@ -29,13 +29,13 @@
 \contentsline {section}{\numberline {6}Resultater}{26}
 \contentsline {subsection}{\numberline {6.1}Uten varmebegrensning}{28}
 \contentsline {subsection}{\numberline {6.2}Med varmebegrensning}{29}
-\contentsline {section}{\numberline {7}Evaluering}{30}
-\contentsline {subsection}{\numberline {7.1}Probleminstanser}{31}
-\contentsline {subsection}{\numberline {7.2}L\IeC {\o }sningsstrategier}{31}
-\contentsline {subsection}{\numberline {7.3}Resultater}{32}
-\contentsline {subsubsection}{\numberline {7.3.1}10 Lokasjoner}{32}
-\contentsline {subsubsection}{\numberline {7.3.2}10 lokasjoner mot 25 lokasjoner}{35}
-\contentsline {section}{\numberline {8}Relatert arbeid}{35}
-\contentsline {section}{\numberline {9}Fremtidig arbeid}{36}
-\contentsline {section}{\numberline {10}Konklusjon}{36}
-\contentsline {section}{\numberline {11}Vedlegg}{38}
+\contentsline {section}{\numberline {7}Evaluering}{31}
+\contentsline {subsection}{\numberline {7.1}Probleminstanser}{32}
+\contentsline {subsection}{\numberline {7.2}L\IeC {\o }sningsstrategier}{32}
+\contentsline {subsection}{\numberline {7.3}Resultater}{33}
+\contentsline {subsubsection}{\numberline {7.3.1}10 Lokasjoner}{33}
+\contentsline {subsubsection}{\numberline {7.3.2}10 lokasjoner mot 25 lokasjoner}{37}
+\contentsline {section}{\numberline {8}Relatert arbeid}{38}
+\contentsline {section}{\numberline {9}Fremtidig arbeid}{38}
+\contentsline {section}{\numberline {10}Konklusjon}{39}
+\contentsline {section}{\numberline {11}Vedlegg}{40}
