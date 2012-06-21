@@ -43,6 +43,7 @@ Wikipedia: Optimization problem.
 Peter J.~Stuckey Andreas~Schutt, Thibaut~Feydy and Mark~G. Wallace.
 \newblock Solving the resource constrained project scheduling problem with
   generalized precedences by lazy clause generation.
+\newblock {\em Melbourne School of Engineering}.
 
 \bibitem{cpschedulerilog}
 IBM.
@@ -80,7 +81,7 @@ E.~Taillard.
 \newblock Benchmarks for basic scheduling problems.
 \newblock {\em European Journal of Operational Research}, 64(2):278 -- 285,
   1993.
-\newblock <ce:title>Project Management anf Scheduling</ce:title>.
+\newblock Project Management anf Scheduling.
 
 \bibitem{Wallace:2004:BCL:956860.956861}
 Mark Wallace, Joachim Schimpf, Kish Shen, and Warwick Harvey.

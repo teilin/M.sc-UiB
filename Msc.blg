@@ -12,47 +12,46 @@ Warning--to sort, need author or key in projectmanagmenttoolswiki
 Warning--to sort, need author or key in msproject2010blog
 Warning--to sort, need author or key in begrensingermsproject
 Warning--to sort, need author or key in exact
-Warning--empty journal in RcpspPaperSchutt
 Warning--empty year in RcpspPaperSchutt
 You've used 18 entries,
             2118 wiz_defined-function locations,
-            575 strings with 6496 characters,
-and the built_in function-call counts, 3770 in all, are:
-= -- 366
+            576 strings with 6506 characters,
+and the built_in function-call counts, 3776 in all, are:
+= -- 368
 > -- 100
 < -- 0
 + -- 46
 - -- 28
-* -- 193
-:= -- 568
-add.period$ -- 45
+* -- 192
+:= -- 570
+add.period$ -- 46
 call.type$ -- 18
 change.case$ -- 65
 chr.to.int$ -- 0
-cite$ -- 29
+cite$ -- 28
 duplicate$ -- 154
 empty$ -- 400
 format.name$ -- 28
-if$ -- 830
+if$ -- 832
 int.to.chr$ -- 0
 int.to.str$ -- 18
 missing$ -- 6
-newline$ -- 84
+newline$ -- 85
 num.names$ -- 18
-pop$ -- 117
+pop$ -- 115
 preamble$ -- 1
 purify$ -- 50
 quote$ -- 0
 skip$ -- 126
 stack$ -- 0
 substring$ -- 177
-swap$ -- 20
+swap$ -- 21
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 72
-warning$ -- 11
+warning$ -- 10
 while$ -- 25
 width$ -- 20
-write$ -- 155
-(There were 11 warnings)
+write$ -- 157
+(There were 10 warnings)

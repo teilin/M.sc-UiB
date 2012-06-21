@@ -60,16 +60,16 @@ w_{rq} = \frac{1}{| P_{sol} |} \sum_{P \in P_{sol}} \frac{w_{ms}(P)}{c_{lb,ms}(P
 \end{equation}
 $P_{sol}$ er det settet med probleminstanser som er løst ved hver enkelt løsningsstrategi. Verdiene av $P_{sol}$ varierer fra løsningsstrategi til løsningsstrategi og disse gjennomsnittene er derfor ikke helt sammenlignbare, men de vil gi en indikasjon på kvaliteten på løsningen. $w_{rq}$ skiller ikke på strategier som feiler med å finne løsninger, men hvor robust løsningen er vil antallet løste probleminstanser indikere. Resultatene er summert opp i tabell \ref{tab:resultaterSum100s} og i tabell \ref{tab:resultaterSum5s}. Tabell \ref{tab:resultaterSum5s} viser at 5 sekunders kjøringer også gir relevante løsninger for samme kjøringer som er gjort i tabell \ref{tab:resultaterSum100s}. Det er kjørt noen ytterligere modeller i tabell \ref{tab:resultaterSum5s}.
 
-Det kan finnes en annen teoretisk nedregrense da det her er valgt teoretisk nedregrense basert på det mest begrensede mannskap. Men i og med den er beregnet ut fra den mest begrensede ressursen er det fornuftig benchmark å sammenligne løsningene med denne.
+Det kan finnes en annen teoretisk nedregrense da det her er valgt teoretisk nedregrense basert på det mest begrensede mannskap. Men i og med at den er beregnet ut fra den mest begrensede ressursen er det fornuftig benchmark å sammenligne løsningene med denne.
 
-En praktisk forståelse av denne prosjektoppgavens innføring av varmebegrensning er at teoretisk nødvendigvis må være $\ge$ teoretisk nedregrense uten varmebegrensning. Da teoretisk nedregrense i denne prosjektoppgaven er basert på mannskap, vil makespan ved innføring av varmebegrensning ser mer ugunstig ut. Om dette er en reell økning av teoretisk nedregrense eller er et resultat av dårlig optimalisering i løsningen pga. økning av kompleksitet, er vanskelig å avgjøre (dette er diskutert annet sted i prosjektoppgaven). Men en positiv praktisk konsekvens er at den planlagte løsningen med varmebegrensning er bedre da lokasjonen ikke får ressurser ut over sin begrensning.
+En praktisk forståelse av denne prosjektoppgavens innføring av varmebegrensning er at teoretisk nødvendigvis må være $\ge$ teoretisk nedregrense uten varmebegrensning. Da teoretisk nedregrense i denne prosjektoppgaven er basert på mannskap, vil makespan ved innføring av varmebegrensning se mer ugunstig ut. Om dette er en reell økning av teoretisk nedregrense eller er et resultat av dårlig optimalisering i løsningen pga. økning av kompleksitet, er vanskelig å avgjøre (dette er diskutert annet sted i prosjektoppgaven). Men en positiv praktisk konsekvens er at den planlagte løsningen med varmebegrensning er bedre da lokasjonen ikke får ressurser ut over sin begrensning.
 
 \subsection{Uten varmebegrensning}
 I tabell \ref{tab:resultaterSum100s} og \ref{tab:resultaterSum5s} er dette benevnt LS1 og 2 $\sharp 1$ $\sharp 3$ og $\sharp 4$ (dvs. med og uten sikkerhetsbegrensing).
 
-LS1 løser alle probleminstanser og har en gjennomsnittlig makespan på 74.5\%. Makespan er for alle $Act(P)$ høye - i intervallet 57.8\%-90.5\%. Figur \ref{fig:RessursWithoutAct50Loc10Crew5Crane2LS1} viser at lokasjon 2 er fullt utnyttet. Kran 1 er på lokasjon 2 (fra probleminstansene). Ved å bruke søketid på 5 sekunder løser LS1 94\% av probleminstansene og har samme gjennomsnittlig makespan som med søketid på 100 sekunder, 74.5\%. Makespan er for alle $Act(P)$ høye - i intervallet 58.5\%-90.7\%.
+LS1 løser alle probleminstanser og har en gjennomsnittlig makespan på 74.5\% høyere enn teoretisk nedregrense. Makespan er for alle $Act(P)$ høye - i intervallet 57.8\%-90.5\%. Figur \ref{fig:RessursWithoutAct50Loc10Crew5Crane2LS1} viser at lokasjon 2 er fullt utnyttet. Kran 1 er på lokasjon 2 (fra probleminstansene). Ved å bruke søketid på 5 sekunder løser LS1 94\% av probleminstansene og har samme gjennomsnittlig makespan som med søketid på 100 sekunder, 74.5\%. Makespan er for alle $Act(P)$ høye - i intervallet 58.5\%-90.7\%.
 
-LS2 løser i gjennomsnitt 36.9\% av probleminstansene og har makespan på 14.2\%. Makespan for alle $Act(P)$ varierer - i intervallet 4.2\%-15.7\%. Det laveste/høyeste resultatet er for henholdsvis 3 og 2 kraner $\ge 100(55)$. Dersom sikkerhetsbegrensningen fjernes i dette tilfellet reduseres makespan til intervall 2.3\%-0.3\% og alle probleminstanser løses. Figur \ref{fig:ResourceAct50Crane2LS2_UtenVarme_100s} viser at for det viste tilfellet er lokasjon 6 fullt utnyttet. Det er 2 kraner. Fordelingen av aktiviteter over tidsaksen er jevn. Med å bruke en søketid på 5 sekunder løser LS2 36\% av probleminstansene og har en gjennomsnittlig makespan på 15.1\%. Makespan for alle $Act(P)$ varierer - i intervallet 6.0\%-32.3\%.
+LS2 løser i gjennomsnitt 36.9\% av probleminstansene og har makespan på 14.2\% høyere enn teoretisk nedregrense. Makespan for alle $Act(P)$ varierer - i intervallet 4.2\%-15.7\%. Det laveste/høyeste resultatet er for henholdsvis 3 og 2 kraner $\ge 100(55)$. Dersom sikkerhetsbegrensningen fjernes i dette tilfellet, reduseres makespan til intervall 2.3\%-0.3\% og alle probleminstanser løses. Figur \ref{fig:ResourceAct50Crane2LS2_UtenVarme_100s} viser at for det viste tilfellet er lokasjon 6 fullt utnyttet. Det er 2 kraner. Fordelingen av aktiviteter over tidsaksen er jevn. Med å bruke en søketid på 5 sekunder løser LS2 36\% av probleminstansene og har en gjennomsnittlig makespan på 15.1\%. Makespan for alle $Act(P)$ varierer - i intervallet 6.0\%-32.3\%.
 
 Løsningene fra tabell \ref{tab:resultaterSum5s} med LS1 og LS2 uten sikkerhetsbegrensinger er identiske. Like mange probleminstanser er løst og gjennomsnittlig makespan verdi er også lik.
 
@@ -90,13 +90,13 @@ LS2 løser i gjennomsnitt 40\% av probleminstansene og har makespan på 23.2\%. 
 \begin{figure}[!h]
 \centering
 \includegraphics[scale=0.25]{content/gfx/Act50Crane2GantAssignHeat}
-\caption{Gantskjema på Act50Loc10Crew5Crane2 med varmebegrensning, LS1 og $\sharp2\sharp3$}
+\caption{Ganttskjema på Act50Loc10Crew5Crane2 med varmebegrensning, LS1 og $\sharp2\sharp3$}
 \label{fig:GantWithAct50Loc10Crew5Crane2AssignHeat}
 \end{figure}
 \begin{figure}[!h]
 \centering
 \includegraphics[scale=0.25]{content/gfx/Act50Crane2TimesForwardHeat}
-\caption{Gantskjema på Act50Loc10Crew5Crane2 med varmebegrensning, LS2 og $\sharp2\sharp3$}
+\caption{Ganttskjema på Act50Loc10Crew5Crane2 med varmebegrensning, LS2 og $\sharp2\sharp3$}
 \label{fig:GantWithAct50Loc10Crew5Crane2TFHeat}
 \end{figure}
 
