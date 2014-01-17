@@ -1,7 +1,0 @@
-<h1>ABSTRACT</h1>
-
-This master thesis is about extending a constraint programing (CP) problem. The problem is a schuduling problem in the
-oil industry, where it has a number of constraints, like activityies, cranes, crews and so on. To get the makespan minimized
-the problem also has to satisfy some security constraints.
-
-To solve this problem, the IBM ILOG CP is used. That is a C++ libary that include CPSolver, CPModel and Concert.
